@@ -19,6 +19,14 @@ Highcharts.chart('graphique', {
       enabled:false
     },
 
+    plotOptions: {
+        series: {
+            marker: {
+                lineColor: '#00c3ff'
+            }
+        }
+    },
+
     yAxis: {
      title: {
         enabled: false,

@@ -38,6 +38,10 @@ p, li {
   min-width: 310px;
   height: 400px;
   margin: 0 auto;
+
+  .highcharts-axis-labels .highcharts-xaxis-labels .highcharts-navigator-xaxis {
+    display: none;
+  }
 }
 
 #emploi_salarie_cle{
