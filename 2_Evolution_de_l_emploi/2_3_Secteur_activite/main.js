@@ -12,7 +12,7 @@ Highcharts.chart('graphique', {
     },
 
     caption: {
-        text: 'Données CVS, en fin de trimestre, mises à jour le 11/02/2021. Sources: Insee, estimations d emploi d estimations trimestrielles Acoss-Urssaf, Dares, Insee.'
+        text: 'Données CVS, en fin de trimestre, mises à jour le 11/02/2021. Les données du dernier trimestre affiché sont provisoires. Sources: Insee, estimations d’emploi ; estimations trimestrielles Acoss-Urssaf, Dares, Insee.'
     },
 
     credits: {
@@ -24,7 +24,5 @@ Highcharts.chart('graphique', {
         enabled: false,
       }
      },
-    legend: {
-     enabled: false
-    },
+
 });
