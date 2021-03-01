@@ -3,7 +3,7 @@ Highcharts.chart('graphique', {
         type: 'spline'
     },
     title: {
-        text: 'Evolution de l’emploi salarié à Paris 2011-2020'
+        text: 'Evolution de l’emploi intérimaire à Paris 2011-2020'
     },
 
     data: {
@@ -35,4 +35,21 @@ Highcharts.chart('graphique', {
     legend: {
      enabled: false
     },
+
+    exporting: {
+        buttons: {
+            contextButton: {
+                menuItems: [
+                    'printChart',
+                    'separator',
+                    'downloadPNG',
+                    'downloadJPEG',
+                    'downloadPDF',
+                    'downloadSVG'
+                ]
+            }
+        }
+    }
+
+
 });

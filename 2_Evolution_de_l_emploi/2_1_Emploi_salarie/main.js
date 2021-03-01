@@ -33,4 +33,19 @@ Highcharts.chart('graphique', {
     legend: {
      enabled: false
     },
+    exporting: {
+            buttons: {
+                contextButton: {
+                    menuItems: [
+                        'printChart',
+                        'separator',
+                        'downloadPNG',
+                        'downloadJPEG',
+                        'downloadPDF',
+                        'downloadSVG'
+                    ]
+                }
+            }
+        }
+
 });
