@@ -1,3 +1,8 @@
+Highcharts.setOptions({
+    colors: ['#38cae9']
+});
+
+
 Highcharts.chart('graphique', {
     chart: {
         type: 'spline'

@@ -4,7 +4,8 @@ Highcharts.setOptions({
 
 Highcharts.stockChart('graphique', {
     chart: {
-        type: 'spline'
+        type: 'spline',
+        marginBottom: 100,
     },
     title: {
         text: 'Evolution de l’emploi salarié à Paris 2011-2020'
@@ -20,6 +21,7 @@ Highcharts.stockChart('graphique', {
         text: 'Données CVS, en fin de trimestre, mises à jour le 11/02/2021. Les données du dernier trimestre affiché sont provisoires. Sources: Insee, estimations d’emploi ; estimations trimestrielles Acoss-Urssaf, Dares, Insee.'
     },
     navigator: {
+      margin: 100,
       outlineWidth: 0,
       maskFill: 'rgba(0, 0, 0, 0.2)',
       handles: {
@@ -65,5 +67,19 @@ Highcharts.stockChart('graphique', {
      tooltip: {
          pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
          valueDecimals: 2
+     },
+     exporting: {
+         buttons: {
+             contextButton: {
+                 menuItems: [
+                     'printChart',
+                     'separator',
+                     'downloadPNG',
+                     'downloadJPEG',
+                     'downloadPDF',
+                     'downloadSVG'
+                 ]
+             }
+         }
      },
 });
