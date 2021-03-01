@@ -8,7 +8,7 @@ Highcharts.chart('graphique', {
         type: 'spline'
     },
     title: {
-        text: 'Evolution du nombre d’offres durables d’emploi à Paris 2015-2020(offres diffusées par Pôle emploi)'
+        text: 'Evolution du nombre d’offres durables d’emploi à Paris 2015-2020 (offres diffusées par Pôle emploi)'
     },
 
     data: {
