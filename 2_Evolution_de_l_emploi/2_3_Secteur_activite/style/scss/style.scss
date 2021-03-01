@@ -33,7 +33,7 @@ p, li {
 
 #graphique {
   min-width: 310px;
-  height: 400px;
+  min-height: 400px;
   margin: 0 auto;
 
   .highcharts-axis-labels .highcharts-xaxis-labels .highcharts-navigator-xaxis {
@@ -44,4 +44,7 @@ p, li {
 #secteur_active_cle{
   margin:10px;
   display:inline-flex;
+  div {
+    padding: 10px;
+  }
 }
