@@ -12,7 +12,7 @@ Highcharts.chart('graphique', {
     },
 
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_2_Emploi_interimaire/offres_durables.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_4_Offres_durables/offres_durables.csv',
         enablePolling: true
     },
 
