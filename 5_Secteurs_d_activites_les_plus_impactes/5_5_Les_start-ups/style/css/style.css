@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+div {
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+h1 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 18px;
+}
+
+p, li {
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  line-height: 27px !important;
+  font-family: "Roboto", sans-serif !important;
+}
+
+#graphique {
+  min-width: 310px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+#emploi_salarie_cle {
+  margin: 10px;
+  display: inline-flex;
+}
+
+/*# sourceMappingURL=style.css.map */
