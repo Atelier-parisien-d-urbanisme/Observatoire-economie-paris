@@ -14,7 +14,7 @@ Highcharts.stockChart('graphique', {
       enabled: false
     },
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/1_Recul_de_l_activite/1_6_Frequentation_commerces_loisirs/1_6_A_Commerce_loisirs/commerce_loisirs.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/1_Recul_de_l_activite/1_6_Frequentation_commerces_loisirs/1_6_B_Transports_commun/transports_commun.csv',
         enablePolling: true
     },
     caption: {
