@@ -3,7 +3,6 @@ Highcharts.setOptions({
 });
 
 Highcharts.chart('graphique', {
-
     title: {
         text: 'Global temperature change'
     },
@@ -14,20 +13,38 @@ Highcharts.chart('graphique', {
 
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/1_Recul_de_l_activite/1_5_Auto_entrepreneurs/auto_entrepreneurs.csv',
-        endColumn: 2,
+        startColumn:0,
+        endColumn:3,
     },
 
-    xAxis: {
-        allowDecimals: false
+    yAxis: [{ //--- Primary yAxis
+    title: {
+        text: 'Temperature'
+    }
+}, { //--- Secondary yAxis
+    title: {
+        text: 'Rainfall'
     },
-    tooltip: {
-    pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} €</b><br/>',
-     valueDecimals: 2
-    },
-    series: [{
-        name: 'Annual mean'
-    }]
+    opposite: true
+}],
+series: [{
+    yAxis: 0,
+    data: {
+        startColumn:2,
+        endColumn:3
+    }
+},{
+    yAxis: 1,
+    data: {
+        endColumn:2
+    }
+}]
+
 });
+
+
+
+
 // Highcharts.stockChart('graphique', {
 //     chart: {
 //         type: 'spline',
