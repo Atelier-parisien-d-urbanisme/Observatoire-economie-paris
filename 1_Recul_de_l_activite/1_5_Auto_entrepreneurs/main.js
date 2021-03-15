@@ -4,13 +4,11 @@ Highcharts.setOptions({
 
 Highcharts.chart('graphique', {
     title: {
-        text: 'Global temperature change'
+        text: 'Evolution du chiffre d’affaires déclaré des auto-entrepreneurs en Ile-de-France 2019-2020 (données provisoires)'
     },
-
-    subtitle: {
-        text: 'Data module: Show only last 20 years by limiting start row.'
+    caption: {
+        text: 'Source : Urssaf, 2020'
     },
-
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/1_Recul_de_l_activite/1_5_Auto_entrepreneurs/auto_entrepreneurs.csv',
         startColumn:0,
@@ -18,32 +16,59 @@ Highcharts.chart('graphique', {
     },
 
     yAxis: [{ //--- Primary yAxis
-    title: {
-        text: 'Temperature'
+    className: 'highcharts-color-0',
+     title: {
+        text: '€'
     }
 }, { //--- Secondary yAxis
+    className: 'highcharts-color-1',
     title: {
-        text: 'Rainfall'
+        text: '%',
+        style: {
+            color: '#D3BD00'
+        }
     },
     opposite: true
-}],
+}]
+,
 series: [{
     yAxis: 0,
     data: {
-        startColumn:2,
-        endColumn:3
-    }
+    },
+    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} €</b><br/>',
+    valueDecimals: 2
+   }
+},{
+    yAxis: 0,
+    data: {
+    },
+    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} €</b><br/>',
+    valueDecimals: 2
+   }
 },{
     yAxis: 1,
     data: {
-        endColumn:2
-    }
-}]
+    },
+    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
+    valueDecimals: 2
+   }
+}],
+     exporting: {
+         buttons: {
+             contextButton: {
+                 menuItems: [
+                     'printChart',
+                     'separator',
+                     'downloadPNG',
+                     'downloadJPEG',
+                     'downloadPDF',
+                     'downloadSVG'
+                 ]
+             }
+         }
+     },
 
 });
-
-
-
 
 // Highcharts.stockChart('graphique', {
 //     chart: {

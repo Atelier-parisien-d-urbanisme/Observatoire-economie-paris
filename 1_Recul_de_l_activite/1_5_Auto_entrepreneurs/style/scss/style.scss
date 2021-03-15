@@ -39,6 +39,7 @@ p, li {
   .highcharts-axis-labels .highcharts-xaxis-labels .highcharts-navigator-xaxis {
     display: none;
   }
+
 }
 
 #secteur_active_cle{
@@ -47,4 +48,19 @@ p, li {
   div {
     padding: 10px;
   }
+}
+
+
+/* Link the series colors to axis colors */
+
+.highcharts-color-0 {
+	stroke: #38cae9;
+}
+.highcharts-axis.highcharts-color-1 {
+  fill: #D3BD00;
+	stroke: #D3BD00;
+}
+
+.highcharts-yaxis .highcharts-axis-line {
+	stroke-width: 2px;
 }
