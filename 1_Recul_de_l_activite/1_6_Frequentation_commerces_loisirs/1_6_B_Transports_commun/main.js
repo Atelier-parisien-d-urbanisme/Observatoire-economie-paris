@@ -8,17 +8,17 @@ Highcharts.stockChart('graphique', {
          height: 600,
     },
     title: {
-        text: 'Commerces et loisirs'
+        text: 'Evolution du chiffre d’affaires déclaré des auto-entrepreneurs en Ile-de-France 2019-2020 (données provisoires)'
     },
     scrollbar: {
       enabled: false
     },
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/1_Recul_de_l_activite/1_6_Frequentation_commerces_loisirs/1_6_B_Transports_commun/transports_commun.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/1_Recul_de_l_activite/1_5_Auto_entrepreneurs/auto_entrepreneurs.csv',
         enablePolling: true
     },
     caption: {
-        text: 'Données lissées sur 7 jours. Source : https://www.google.com/covid19/mobility'
+        text: 'Source : Urssaf, 2020'
     },
     navigator: {
       outlineWidth: 0,
