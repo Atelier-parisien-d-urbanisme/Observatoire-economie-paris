@@ -36,9 +36,6 @@ p, li {
   min-height: 400px;
   margin: 0 auto;
 }
-#graphique .highcharts-axis-labels .highcharts-xaxis-labels .highcharts-navigator-xaxis {
-  display: none;
-}
 
 #secteur_active_cle {
   margin: 10px;
@@ -49,7 +46,7 @@ p, li {
 }
 
 /* Link the series colors to axis colors */
-.highcharts-color-0 {
+.highcharts-axis.highcharts-color-0 {
   stroke: #38cae9;
 }
 
