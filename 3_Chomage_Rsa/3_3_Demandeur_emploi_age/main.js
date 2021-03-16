@@ -8,17 +8,17 @@ Highcharts.stockChart('graphique', {
          height: 600,
     },
     title: {
-        text: 'Evolution de l’emploi salarié à Paris 2011-2020'
+        text: 'Evolution du nombre de demandeurs d’emploi (catégorie A) à Paris par âge 2017 - 2020 (Indice base 100 : 1er trimestre 2017)	'
     },
     scrollbar: {
       enabled: false
     },
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_3_Secteur_activite/secteur_activite.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_3_Demandeur_emploi_age/demandeur_emploi_age.csv',
         enablePolling: true
     },
     caption: {
-        text: 'Données CVS, en fin de trimestre, mises à jour le 11/02/2021. Les données du dernier trimestre affiché sont provisoires. Sources: Insee, estimations d’emploi ; estimations trimestrielles Acoss-Urssaf, Dares, Insee.'
+        text: 'Source : Pôle emploi-Dares, STMT ; données CVS-CJO'
     },
     navigator: {
 
