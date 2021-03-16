@@ -79,11 +79,3 @@ series: [{
        enabled:false
        },
 });
-
-// Highcharts.stockChart('graphique', {
-//
-//       series: {
-//         //
-//       }
-//     },
-// });
