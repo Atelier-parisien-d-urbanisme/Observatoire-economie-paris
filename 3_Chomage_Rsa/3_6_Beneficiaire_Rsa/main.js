@@ -6,7 +6,7 @@ Highcharts.setOptions({
 Highcharts.stockChart('graphique', {
     chart: {
         type: 'spline',
-         height: 600,
+         height: 400,
     },
     title: {
         text: 'Evolution du nombre de bénéficiaires du RSA à Paris 2017-2020'
