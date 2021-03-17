@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div {
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+h1 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 18px;
+}
+
+p, li {
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  line-height: 27px !important;
+  font-family: "Roboto", sans-serif !important;
+}
+
+#graphique {
+  min-width: 310px;
+  min-height: 400px;
+  margin: 0 auto;
+}
+
+#secteur_active_cle {
+  margin: 10px;
+  display: inline-flex;
+}
+#secteur_active_cle div {
+  padding: 10px;
+}
+
+/* Link the series colors to axis colors */
+.highcharts-axis.highcharts-color-0 {
+  stroke: #38cae9;
+}
+
+.highcharts-axis.highcharts-color-1 {
+  fill: #D3BD00;
+  stroke: #D3BD00;
+}
+
+.highcharts-yaxis .highcharts-axis-line {
+  stroke-width: 2px;
+}
+
+/*# sourceMappingURL=style.css.map */
