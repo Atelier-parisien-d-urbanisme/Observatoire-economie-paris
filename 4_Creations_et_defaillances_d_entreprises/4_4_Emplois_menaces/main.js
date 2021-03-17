@@ -2,18 +2,80 @@ Highcharts.setOptions({
     colors: ['#38cae9', '#2A8BA0','#D3BD00','#D39500']
 });
 
-Highcharts.chart('graphique', {
-  chart: {
-    type:'line',
-  },
-    title: {
-        text: 'Evolution du chiffre d’affaires déclaré des auto-entrepreneurs en Ile-de-France 2019-2020 (données provisoires)'
+Highcharts.chart('graphique1', {
+    chart: {
     },
-    caption: {
-        text: 'Source : Urssaf, 2020'
+    title: {
+        text: 'Liquidations judiciaires'
     },
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/1_Recul_de_l_activite/1_5_Auto_entrepreneurs/auto_entrepreneurs.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_4_Emplois_menaces/liquidations_judiciaires.csv',
+        enablePolling: true
+    },
+    caption: {
+        text: 'Source : Greffe du tribunal de commerce'
+    },
+    credits: {
+      enabled:false
+    },
+    plotOptions: {
+        series: {
+            marker: {
+                lineColor: '#00c3ff'
+            }
+        }
+    },
+    yAxis: {
+     title: {
+        enabled: false,
+      }
+     },
+    series: [{
+        type:'column',
+        name: '2019',
+        data: {
+        },
+        tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>',
+        valueDecimals: 0
+       }
+    },{
+        type:'column',
+        name: '2020',
+        data: {
+        },
+        tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>',
+        valueDecimals: 0
+       }
+    }],
+    exporting: {
+            buttons: {
+                contextButton: {
+                    menuItems: [
+                        'printChart',
+                        'separator',
+                        'downloadPNG',
+                        'downloadJPEG',
+                        'downloadPDF',
+                        'downloadSVG'
+                    ]
+                }
+            }
+        }
+
+});
+
+
+Highcharts.chart('graphique2', {
+  chart: {
+  },
+    title: {
+        text: 'Procédures d’observation et de traitement des difficultés'
+    },
+    caption: {
+        text: 'Source : Greffe du tribunal de commerce'
+    },
+    data: {
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_4_Emplois_menaces/procedures_observations.csv',
         startColumn:0,
         endColumn:3,
     },
@@ -35,31 +97,24 @@ Highcharts.chart('graphique', {
 }]
 ,
 series: [{
-    yAxis: 0,
-    data: {
-    },
-    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} €</b><br/>',
-    valueDecimals: 2
-   }
-},{
-    yAxis: 0,
-    data: {
-    },
-    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} €</b><br/>',
-    valueDecimals: 2
-   }
-},{
+    type:'column',
     yAxis: 1,
-    type: 'areaspline',
-    dashStyle: 'Dot',
     data: {
     },
-    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
-    valueDecimals: 2
+    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>',
+    valueDecimals: 0
   },
-  color: '#D3BD00',
-  negativeColor: '#C2B778',
-  opacity: 0.3,
+},
+  {
+    type:'spline',
+    yAxis: 0,
+    data: {
+    },
+    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>',
+    valueDecimals: 0
+  },
+    dashStyle: 'Dot',
+    color: '#D3BD00'
 }],
      exporting: {
          buttons: {
