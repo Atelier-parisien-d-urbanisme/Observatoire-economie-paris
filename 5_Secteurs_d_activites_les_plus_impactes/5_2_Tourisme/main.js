@@ -33,7 +33,16 @@ series: [{
     },
     tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
     valueDecimals: 0
-   }
+  },
+  dataLabels: {
+               enabled: true,
+               format: '{y}%',
+               style: {
+                fontSize: '10px',
+                fontFamily: 'Roboto',
+                color:'#38cae9',
+            }
+           },
 },{
   type:'spline',
     yAxis: 0,
