@@ -19,12 +19,15 @@ Highcharts.chart('graphique', {
 
     yAxis: [{
      title: {
-        text: '%'
-    }
+        enabled:false,
+    },
+    labels: {
+    format: '{value}%'
+  }
 }]
 ,
 series: [{
-    type:'line',
+    type:'column',
     yAxis: 0,
     data: {
     },
@@ -32,7 +35,7 @@ series: [{
     valueDecimals: 0
    }
 },{
-  type:'column',
+  type:'spline',
     yAxis: 0,
     data: {
     },
