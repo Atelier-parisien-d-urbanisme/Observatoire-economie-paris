@@ -82,13 +82,13 @@ Highcharts.chart('graphique2', {
 
     yAxis: [{ //--- Primary yAxis
     className: 'highcharts-color-0',
-     title: {
-        text: '€'
-    }
+    title: {
+       enabled: false,
+     }
 }, { //--- Secondary yAxis
     className: 'highcharts-color-1',
     title: {
-        text: '%',
+      enabled: false,
         style: {
             color: '#D3BD00'
         }
