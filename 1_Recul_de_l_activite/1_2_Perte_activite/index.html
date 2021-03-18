@@ -1,22 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Secteurs d'activité</title>
-      <link rel="stylesheet" type="text/css" href="style/css/style.css" /> <!-- main CSS -->
+    <title></title>
   </head>
   <body>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/mapdata/countries/mx/mx-all.js"></script>
 
-    <div title="Texte Auto-entrepreneurs" id="auto_entrepreneurs_text">
-      <p>Auto-entrepreneurs : +2,2% de chiffre d’affaires déclaré entre 2019 et 2020 en Ile-de-France, mais des évolutions contrastées sur l’année 2020</p>
-      <p>La chute la plus marquée est logiquement au mois de mai 2020 (-31% par rapport au mois de mai 2019), et un certain rebond en août et septembre 2020. </p>
-    </div>
 
-    <div title="Auto-entrepeneurs" id="graphique"></div>
+    <div id="container"></div>
 
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/data.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <style media="screen">
+    #container {
+  height: 500px;
+  min-width: 310px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.loading {
+  margin-top: 10em;
+  text-align: center;
+  color: gray;
+}
+
+    </style>
   </body>
+  <script type="text/javascript" src="main.js"></script> <!-- main JavaScript-->
 </html>
