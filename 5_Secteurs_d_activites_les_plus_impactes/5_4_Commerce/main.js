@@ -8,7 +8,7 @@ Highcharts.chart('graphique', {
         type: 'spline'
     },
     title: {
-        text: 'Evolution de l’emploi salarié à Paris 2011-2020'
+        text: 'Nombre et part des locaux vacants à Paris'
     },
 
     data: {
@@ -17,7 +17,7 @@ Highcharts.chart('graphique', {
     },
 
     caption: {
-        text: 'Données CVS, en fin de trimestre, mises à jour le 11/02/2021. Sources: Insee, estimations d emploi d estimations trimestrielles Acoss-Urssaf, Dares, Insee.'
+        text: "Source : Apur, BDCom. Note : Depuis 2014, l'enquête distingue les locaux strictement vacants des locaux en travaux."
     },
 
     credits: {
