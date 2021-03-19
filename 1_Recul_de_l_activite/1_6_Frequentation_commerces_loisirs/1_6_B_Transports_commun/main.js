@@ -2,7 +2,7 @@ Highcharts.setOptions({
     colors: ['#38cae9', '#2A8BA0','#D3BD00','#D39500']
 });
 
-Highcharts.stockChart('graphique', {
+Highcharts.stockChart('graphique2', {
     chart: {
         type: 'spline',
          height: 600,
