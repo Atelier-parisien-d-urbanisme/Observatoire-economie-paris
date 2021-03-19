@@ -8,16 +8,17 @@ Highcharts.chart('graphique', {
         type: 'spline'
     },
     title: {
-        text: 'Nombre et part des locaux vacants à Paris'
+        text: 'Evolution de l’emploi salarié à Paris 2011-2020'
     },
 
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_1_Emploi_salarie/emploi_salarie.csv',
-        enablePolling: true
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_4_Commerce/commerce.csv',
+        enablePolling: true,
+        endcolumn:2
     },
 
     caption: {
-        text: "Source : Apur, BDCom. Note : Depuis 2014, l'enquête distingue les locaux strictement vacants des locaux en travaux."
+        text: 'Données CVS, en fin de trimestre, mises à jour le 11/02/2021. Sources: Insee, estimations d emploi d estimations trimestrielles Acoss-Urssaf, Dares, Insee.'
     },
 
     credits: {
