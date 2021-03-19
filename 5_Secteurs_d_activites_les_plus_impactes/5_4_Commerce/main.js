@@ -1,68 +1,21 @@
 Highcharts.setOptions({
-    colors: ['#38cae9']
+    colors: ['#38cae9', '#9BD6E3','#D3BD00','#D39500']
 });
-
 
 Highcharts.chart('graphique', {
-    chart: {
-        type: 'spline'
-    },
-    title: {
-        text: 'Evolution de l’emploi salarié à Paris 2011-2020'
-    },
-
-    data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_4_Commerce/commerce.csv',
-        enablePolling: true,
-        endcolumn:2
-    },
-
-    caption: {
-        text: 'Données CVS, en fin de trimestre, mises à jour le 11/02/2021. Sources: Insee, estimations d emploi d estimations trimestrielles Acoss-Urssaf, Dares, Insee.'
-    },
-
-    credits: {
-      enabled:false
-    },
-    plotOptions: {
-        series: {
-            marker: {
-                lineColor: '#00c3ff'
-            }
-        }
-    },
-    yAxis: {
-     title: {
-        enabled: false,
-      }
-     },
-    legend: {
-     enabled: false
-    },
-    exporting: {
-            buttons: {
-                contextButton: {
-                    menuItems: [
-                        'printChart',
-                        'separator',
-                        'downloadPNG',
-                        'downloadJPEG',
-                        'downloadPDF',
-                        'downloadSVG'
-                    ]
-                }
-            }
-        }
-
-});
-
-Highcharts.chart('container', {
     chart: {
         type: 'column'
     },
     title: {
-        text: 'Stacked column chart'
+        text: 'Nombre et part des locaux vacants à Paris '
     },
+    caption: {
+      text: "Source : Apur, BDCom. Note : Depuis 2014, l'enquête distingue les locaux strictement vacants des locaux en travaux."
+    },
+    credits: {
+      enabled:false
+    },
+
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_4_Commerce/commerce.csv',
         enablePolling: true,
@@ -70,6 +23,7 @@ Highcharts.chart('container', {
     },
     yAxis: [{
       //--- Primary yAxis
+      className: 'highcharts-color-0',
         min: 0,
           title: {
            enabled: false,
@@ -77,35 +31,28 @@ Highcharts.chart('container', {
           stackLabels: {
               enabled: true,
               style: {
-                  fontWeight: 'bold',
-                  color: ( // theme
-                      Highcharts.defaultOptions.title.style &&
-                      Highcharts.defaultOptions.title.style.color
-                  ) || 'gray'
-              }
-          }
-      }, { //--- Secondary yAxis
-          className: 'highcharts-color-1',
-          title: {
-            enabled: false,
-              style: {
-                  color: '#D3BD00'
+                  fontWeight: 'light',
+                  color: '#C8C8C8',
+                  textOutline: 0
               }
           },
-          opposite: true
+
+      }, { //--- Secondary yAxis
+        className: 'highcharts-color-1',
+        min: 0,
+        title: {
+        enabled: false,
+        style: {
+            color: '#D3BD00'
+          }
+        },
+        labels: {
+        format: '{value}%'
+      },
+        opposite: true
       }],
 
     legend: {
-        align: 'right',
-        x: -30,
-        verticalAlign: 'top',
-        y: 25,
-        floating: true,
-        backgroundColor:
-            Highcharts.defaultOptions.legend.backgroundColor || 'white',
-        borderColor: '#CCC',
-        borderWidth: 1,
-        shadow: false
     },
     tooltip: {
         headerFormat: '<b>{point.x}</b><br/>',
@@ -114,32 +61,53 @@ Highcharts.chart('container', {
     plotOptions: {
         column: {
             stacking: 'normal',
+            minPointLength: 3,
             dataLabels: {
-                enabled: true
+                enabled: true,
+                style: {
+                  textOutline: 0,
+                  fontWeight: 'light',
+                  color: 'black',
+           }
             }
         }
     },
-    series: [{
-        yAxis: 1,
+    series: [
+      {
+         yAxis: 0,
+         name: 'locaux en travaux',
+         tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>Total: {point.stackTotal}'
+       },
+     },{
+        yAxis: 0,
         name: 'locaux vacants',
-        data: [5, 3, 4, 7, 2]
-    }, {
-        yAxis: 1,
-        name: 'locaux en travaux',
-        data: [2, 2, 3, 2, 1]
+        tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>Total: {point.stackTotal}'
+      },
     },
       {
         type:'spline',
-        yAxis: 0,
+        yAxis: 1,
         data: {
         },
-        tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>',
-        valueDecimals: 0
+        tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>'
       },
-        dashStyle: 'Dot',
+        dashStyle: 'solide',
         color: '#D3BD00'
-    }
+    },
 
-
-  ]
+  ],
+  exporting: {
+          buttons: {
+              contextButton: {
+                  menuItems: [
+                      'printChart',
+                      'separator',
+                      'downloadPNG',
+                      'downloadJPEG',
+                      'downloadPDF',
+                      'downloadSVG'
+                  ]
+              }
+          }
+      }
 });
