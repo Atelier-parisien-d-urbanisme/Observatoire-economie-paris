@@ -1,63 +1,59 @@
-// Prepare demo data
-// Data is joined to map using value of 'hc-key' property by default.
-// See API docs for 'joinBy' for more info on linking data and map.
 var data = [
-    ['T1', 0],
-    ['T2', 1]
+    ['T1', -10],
+    ['T2', -8],
+    ['T3', -8],
+    ['T4', -8],
+    ['T5', -9],
+    ['T6', -9],
+    ['T7', -10],
+    ['T8', -10],
+    ['T9', -8],
+    ['T10', -8],
+    ['T11', -8],
+    ['T12', -9]
 ];
 
-// Create the chart
-var chart = Highcharts.mapChart('container', {
-    chart: {
-        map: 'countries/mx/mx-all'
-    },
+Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/1_Recul_de_l_activite/1_2_Perte_activite/Territoires_MGP.json', function (geojson) {
 
-    title: {
-        text: 'Highmaps basic demo'
-    },
+    // Initiate the chart
+    Highcharts.mapChart('container', {
+        chart: {
+            map: geojson
+        },
+        // data: {
+        //     csvURL: 'https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/1_Recul_de_l_activite/1_2_Perte_activite/perte_activite_map.csv',
+        //     enablePolling: true
+        // },
 
-    subtitle: {
-        text: 'Source map: <a href="http://code.highcharts.com/mapdata/countries/mx/mx-all.js">Mexico</a>'
-    },
+        title: {
+            text: 'GeoJSON in Highmaps'
+        },
 
-    mapNavigation: {
-        enabled: true,
-        buttonOptions: {
-            verticalAlign: 'bottom'
-        }
-    },
-
-    colorAxis: {
-        min: 0
-    },
-
-    series: [{
-        data: data,
-        name: 'Random data',
-        states: {
-            hover: {
-                color: '#BADA55'
+        mapNavigation: {
+            enabled: true,
+            buttonOptions: {
+                verticalAlign: 'bottom'
             }
         },
-        dataLabels: {
-            enabled: true,
-            formatter: function() {
-                if (this.point['hc-key'] === 'T2') {
-                    return 'CDMX';
+
+        colorAxis: {
+            tickPixelInterval: 100
+        },
+
+        series: [{
+            data: data,
+            keys: ['EPT_NUM', 'value'],
+            joinBy: 'EPT_NUM',
+            name: 'Random data',
+            states: {
+                hover: {
+                    color: 'black'
                 }
-
-                return this.point.name;
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.properties.L_EPT}'
             }
-        }
-    }],
-
-    tooltip: {
-        pointFormatter: function() {
-            if (this['hc-key'] === 'T2') {
-                return 'CDMX: ' + this.value;
-            }
-
-            return this.name + ' ' + this.value;
-        }
-    }
+        }]
+    });
 });
