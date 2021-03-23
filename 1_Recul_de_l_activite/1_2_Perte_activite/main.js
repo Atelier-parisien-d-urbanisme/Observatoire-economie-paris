@@ -10,7 +10,7 @@ var data = [
     ['T9', -8],
     ['T10', -8],
     ['T11', -8],
-    ['T12', -9]
+    ['T12', -9,'myCustomClassName']
 ];
 
 Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/1_Recul_de_l_activite/1_2_Perte_activite/Territoires_MGP.json', function (geojson) {
@@ -37,12 +37,12 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
         },
 
         colorAxis: {
-            tickPixelInterval: 100
+            tickPixelInterval: 50
         },
 
         series: [{
             data: data,
-            keys: ['EPT_NUM', 'value'],
+            keys: ['EPT_NUM', 'value','className'],
             joinBy: 'EPT_NUM',
             name: 'Random data',
             states: {
