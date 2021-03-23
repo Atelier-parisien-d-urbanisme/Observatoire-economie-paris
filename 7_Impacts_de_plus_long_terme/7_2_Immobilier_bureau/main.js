@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#38cae9', '#9BD6E3','#D3BD00','#D39500']
+    colors: ['#38cae9', '#9BD6E3','#D3BD00','#D39500','#f4a261','#e76f51']
 });
 
 Highcharts.chart('graphique', {
@@ -21,78 +21,72 @@ Highcharts.chart('graphique', {
         enablePolling: true,
         endcolumn:2,
     },
-    yAxis: [{
-      //--- Primary yAxis
-      className: 'highcharts-color-0',
+    yAxis: {
         min: 0,
           title: {
            enabled: false,
           },
-          stackLabels: {
-              enabled: true,
-              style: {
-                  fontWeight: 'light',
-                  color: '#C8C8C8',
-                  textOutline: 0
-              }
-          },
-
-      }, { //--- Secondary yAxis
-        className: 'highcharts-color-1',
-        min: 0,
-        title: {
-        enabled: false,
-        style: {
-            color: '#D3BD00'
-          }
+          labels: {
+          format: '{value} m²'
         },
-        labels: {
-        format: '{value}%'
       },
-        opposite: true
-      }],
 
     legend: {
     },
     tooltip: {
         headerFormat: '<b>{point.x}</b><br/>',
-        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+        pointFormat: '{series.name}: {point.y} m²<br/>Île-de-France: {point.stackTotal} m²'
     },
     plotOptions: {
         column: {
             stacking: 'normal',
             minPointLength: 3,
-            dataLabels: {
-                enabled: true,
-                style: {
-                  textOutline: 0,
-                  fontWeight: 'light',
-                  color: 'black',
-           }
-            }
         }
     },
     series: [
       {
          yAxis: 0,
-         name: 'locaux en travaux',
-         tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>Total: {point.stackTotal}'
+         name: 'Paris Centre Ouest',
+         tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/>Île-de-France: {point.stackTotal} m²'
        },
      },{
         yAxis: 0,
-        name: 'locaux vacants',
-        tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>Total: {point.stackTotal}'
+        name: 'Reste Paris',
+        tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/>Île-de-France: {point.stackTotal} m²'
       },
+    },{
+       yAxis: 0,
+       name: 'Croissant Ouest et La Défense',
+       tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/>Île-de-France: {point.stackTotal} m²'
+     },
+   },{
+      yAxis: 0,
+      name: '1ère Couronne Hors Croissant Ouest',
+      tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/>Île-de-France: {point.stackTotal} m²'
     },
-      {
-        type:'spline',
-        yAxis: 1,
-        data: {
-        },
-        tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>'
-      },
-        dashStyle: 'solide',
-        color: '#D3BD00'
+  },{
+     yAxis: 0,
+     name: '2ème Couronne',
+     tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/>Île-de-France: {point.stackTotal} m²'
+   },
+ },  {
+    type:'spline',
+    yAxis: 0,
+    name:'Île-de-France',
+    data: {
+    },
+    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/>'
+  },
+  dataLabels: {
+      enabled: true,
+      style: {
+        textOutline: 0,
+        fontWeight: 'light',
+        color: 'black',
+ }
+},
+    dashStyle: 'dot',
+    color: 'black'
     },
 
   ],
