@@ -14,7 +14,7 @@ var data = [
 ];
 
 
-Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/1_Recul_de_l_activite/1_2_Perte_activite/mgp.geojson', function (geojson) {
+Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/1_Recul_de_l_activite/1_1_Perte_activite/mgp.geojson', function (geojson) {
 
     // Initiate the chart
     Highcharts.mapChart('container', {
