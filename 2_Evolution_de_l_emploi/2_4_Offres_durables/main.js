@@ -17,7 +17,7 @@ Highcharts.chart('graphique', {
     },
 
     caption: {
-        text: 'Données CVS, en fin de trimestre, mises à jour le 11/02/2021. Sources: Insee, estimations d emploi d estimations trimestrielles Acoss-Urssaf, Dares, Insee.'
+        text: "Source :  Pôle emploi, Fichier des offres d'emploi, Données brutes"
     },
 
     credits: {

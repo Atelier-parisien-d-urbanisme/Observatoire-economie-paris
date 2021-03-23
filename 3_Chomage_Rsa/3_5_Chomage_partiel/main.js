@@ -11,7 +11,7 @@ Highcharts.chart('graphique', {
         text: 'Evolution du nombre de salariés indemnisés à Paris - mars-octobre 2020'
     },
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_1_Emploi_salarie/emploi_salarie.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_5_Chomage_partiel/chomage_partiel.csv',
         enablePolling: true
     },
     caption: {

@@ -8,7 +8,7 @@ Highcharts.stockChart('graphique', {
          height: 600,
     },
     title: {
-        text: 'Evolution de l’emploi salarié à Paris 2011-2020'
+        text: 'Evolution de l’emploi salarié par secteur d’activité à Paris 2011-2020 (Indice base 100 : 1er trimestre 2011)'
     },
     scrollbar: {
       enabled: false
@@ -18,7 +18,7 @@ Highcharts.stockChart('graphique', {
         enablePolling: true
     },
     caption: {
-        text: 'Données CVS, en fin de trimestre, mises à jour le 11/02/2021. Les données du dernier trimestre affiché sont provisoires. Sources: Insee, estimations d’emploi ; estimations trimestrielles Acoss-Urssaf, Dares, Insee.'
+        text: 'Données CVS, en fin de trimestre. Les données du dernier trimestre affiché sont provisoires.Champ : emploi salarié total. Sources : Insee, estimations d’emploi ; estimations trimestrielles Acoss-Urssaf, Dares, Insee.					'
     },
     navigator: {
 

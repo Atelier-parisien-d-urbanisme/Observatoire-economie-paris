@@ -91,7 +91,7 @@ Highcharts.stockChart('graphique2', {
          height: 600,
     },
     title: {
-        text: 'Commerces et loisirs'
+        text: 'Transports en commun'
     },
     scrollbar: {
       enabled: false
