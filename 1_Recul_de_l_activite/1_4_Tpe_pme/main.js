@@ -1,4 +1,4 @@
-Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/1_Recul_de_l_activite/1_4_Tpe_pme/Departements_IDF.json', function (geojson) {
+Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/1_Recul_de_l_activite/1_4_Tpe_pme/dep_idf.geojson', function (geojson) {
     Highcharts.mapChart('graphique1', {
         chart: {
             map: geojson,
@@ -32,7 +32,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             keys: ['C_DEP', 'value','className'],
             joinBy: 'C_DEP',
             name: "Evolution du chiffre d'affaires moyen<br> par entreprise (du 1er au 3e trimestre 2020 <br>par rapport à la meme période en 2019)	",
-            tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_EPT}</span>: <b>{point.value} %</b><br/>'
+            tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_DEP}</span>: <b>{point.value} %</b><br/>'
           },
             states: {
                 hover: {
@@ -46,7 +46,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
                  // fontSize: '9px',
                  fontFamily: 'Roboto',
                  fontWeight: 'light',
-                 color: 'black',
+                 color: 'white',
                  textOutline: 0
              }
             },
