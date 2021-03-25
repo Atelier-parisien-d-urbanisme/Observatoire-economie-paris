@@ -35,7 +35,10 @@ Highcharts.chart('graphique', {
     yAxis: {
      title: {
         enabled: false,
-      }
+      },
+      labels: {
+      format: '{value}'
+    },
      },
     legend: {
      enabled: false
