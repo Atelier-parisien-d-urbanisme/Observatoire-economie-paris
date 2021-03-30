@@ -2,108 +2,76 @@
  * Create a constructor for sparklines that takes some sensible defaults and merges in the individual
  * chart options. This function is also available from the jQuery plugin as $(element).highcharts('SparkLine').
  */
+//  (function (Highcharts) {
+//
+//     var SplineSeries = Highcharts.seriesTypes.spline;
+//
+//     // override the drawLine method
+//     var splineDrawGraph = SplineSeries.prototype.drawGraph;
+//     SplineSeries.prototype.drawGraph = function() {
+//
+//         var arrowLength = 15,
+//             arrowWidth = 8,
+//             series = this,
+//             segments = series.points,
+//             lastPoint = segments[segments.length - 1],
+//             nextLastPoint = segments[segments.length - 2],
+//             angle = Math.atan((lastPoint.plotX - nextLastPoint.plotX) /
+//             (lastPoint.plotY - nextLastPoint.plotY)),
+//             path = [];
+//
+//         if (angle < 0) {
+//             angle = Math.PI + angle;
+//         }
+//
+//         // call the original method
+//         splineDrawGraph.apply(series, arguments);
+//
+//     		console.log(path);
+//
+//         // last point
+//         path.push('M', lastPoint.plotX, lastPoint.plotY);
+//         path.push(
+//             'L',
+//             lastPoint.plotX + arrowWidth * Math.cos(angle),
+//             lastPoint.plotY - arrowWidth * Math.sin(angle)
+//         );
+//         path.push(
+//             lastPoint.plotX + arrowLength * Math.sin(angle),
+//             lastPoint.plotY + arrowLength * Math.cos(angle)
+//         );
+//         path.push(
+//             lastPoint.plotX - arrowWidth * Math.cos(angle),
+//             lastPoint.plotY + arrowWidth * Math.sin(angle),
+//             'Z'
+//         );
+//
+//         series.chart.renderer.path(path)
+//             .attr({
+//                 fill: series.color
+//             })
+//             .add(series.group);
+//
+//     };
+//
+// }(Highcharts));
 
- (function(H) {
-
-     var arrowCheck = false,
-         pathTag;
-
-     H.wrap(H.Series.prototype, 'drawGraph', function(proceed) {
-
-       // Now apply the original function with the original arguments,
-       // which are sliced off this function's arguments
-       proceed.apply(this, Array.prototype.slice.call(arguments, 1));
-
-       var arrowLength = 15,
-         arrowWidth = 9,
-         series = this,
-         data = series.data,
-         len = data.length,
-         segments = data,
-         lastSeg = segments[segments.length - 1],
-         path = [],
-         lastPoint = null,
-         nextLastPoint = null;
-
-       if (lastSeg.y == 0) {
-         lastPoint = segments[segments.length - 2];
-         nextLastPoint = segments[segments.length - 1];
-       } else {
-         lastPoint = segments[segments.length - 1];
-         nextLastPoint = segments[segments.length - 2];
-       }
-
-       var angle = Math.atan((lastPoint.plotX - nextLastPoint.plotX) /
-         (lastPoint.plotY - nextLastPoint.plotY));
-
-       if (angle < 0) angle = Math.PI + angle;
-
-       path.push('M', lastPoint.plotX, lastPoint.plotY);
-
-       if (lastPoint.plotX > nextLastPoint.plotX) {
-
-         if (arrowCheck === true) {
-
-           pathTag = document.getElementById("arrow");
-           if (pathTag != null) {
-             pathTag.remove(pathTag);
-           }
-         }
-
-         path.push(
-           'L',
-           lastPoint.plotX + arrowWidth * Math.cos(angle),
-           lastPoint.plotY - arrowWidth * Math.sin(angle)
-         );
-         path.push(
-           lastPoint.plotX + arrowLength * Math.sin(angle),
-           lastPoint.plotY + arrowLength * Math.cos(angle)
-         );
-         path.push(
-           lastPoint.plotX - arrowWidth * Math.cos(angle),
-           lastPoint.plotY + arrowWidth * Math.sin(angle),
-           'Z'
-         );
-       } else {
-
-
-         if (arrowCheck === true) {
-
-           pathTag = document.getElementById("arrow");
-           if (pathTag != null) {
-             pathTag.remove(pathTag);
-           }
-         }
-
-         path.push(
-           'L',
-           lastPoint.plotX - arrowWidth * Math.cos(angle),
-           lastPoint.plotY + arrowWidth * Math.sin(angle)
-         );
-         path.push(
-           lastPoint.plotX - arrowLength * Math.sin(angle),
-           lastPoint.plotY - arrowLength * Math.cos(angle)
-         );
-         path.push(
-           lastPoint.plotX + arrowWidth * Math.cos(angle),
-           lastPoint.plotY - arrowWidth * Math.sin(angle),
-           'Z'
-         );
-       }
-
-       series.chart.renderer.path(path)
-         .attr({
-           fill: series.color,
-           id: 'arrow'
-         })
-         .add(series.group);
-
-        arrowCheck = true;
-
-     });
-   }(Highcharts));
-
-
+// var chart = new Highcharts.Chart({
+//
+//     chart: {
+//         renderTo: 'container',
+//         type: 'spline'
+//     },
+//     xAxis: {
+//         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+//     },
+//     series: [{
+//         data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 154.4],
+//         marker: {
+//             enabled: false
+//         }
+//     }]
+// });
 
 Highcharts.SparkLine = function (a, b, c) {
   var hasRenderToArg = typeof a === 'string' || a.nodeName,
@@ -115,7 +83,7 @@ Highcharts.SparkLine = function (a, b, c) {
         borderWidth: 0,
         type: 'area',
         margin: [2, 0, 2, 0],
-        width: 15,
+        width: 25,
         height: 30,
         style: {
           overflow: 'visible'
@@ -186,9 +154,7 @@ Highcharts.SparkLine = function (a, b, c) {
         }
       }
     };
-
   options = Highcharts.merge(defaultOptions, options);
-
   return hasRenderToArg ?
     new Highcharts.Chart(a, options, c) :
     new Highcharts.Chart(options, b);

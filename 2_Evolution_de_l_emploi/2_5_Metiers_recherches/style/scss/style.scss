@@ -31,9 +31,6 @@ p, li {
   font-family: "Roboto",sans-serif !important;
 }
 
-#emploi_salarie_text {
-}
-
 #graphique {
   min-width: 310px;
   height: 400px;
@@ -55,20 +52,44 @@ p, li {
     margin: 0 auto;
     border-collapse: collapse;
 }
-th {
-    font-weight: bold;
-    text-align: left;
-}
+
 td, th {
-    padding: 5px;
-    border-bottom: 1px solid silver;
-    height: 20px;
+    padding: 2px;
+    border-bottom: 0.5px solid silver;
 }
 
 thead th {
-    border-top: 2px solid gray;
-    border-bottom: 2px solid gray;
+    // border-top: 1px solid black;
+    border-bottom: 2px solid black;
 }
+
+th {
+    font-weight: bold;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight:bold;
+    font-size: 14px;
+}
+td {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.right {
+  text-align: right;
+}
+.sparkline {
+ text-align: center;
+ text-align: -webkit-center;
+ padding-left: 1em;
+}
+.arrow {
+  color: black;
+  font-weight:bold;
+  font-size: 22px;
+}
+
+
 .highcharts-tooltip>span {
     background: white;
     border: 1px solid silver;
