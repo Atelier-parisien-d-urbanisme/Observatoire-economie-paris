@@ -2,143 +2,251 @@
  * Create a constructor for sparklines that takes some sensible defaults and merges in the individual
  * chart options. This function is also available from the jQuery plugin as $(element).highcharts('SparkLine').
  */
+
+ (function(H) {
+
+     var arrowCheck = false,
+         pathTag;
+
+     H.wrap(H.Series.prototype, 'drawGraph', function(proceed) {
+
+       // Now apply the original function with the original arguments,
+       // which are sliced off this function's arguments
+       proceed.apply(this, Array.prototype.slice.call(arguments, 1));
+
+       var arrowLength = 15,
+         arrowWidth = 9,
+         series = this,
+         data = series.data,
+         len = data.length,
+         segments = data,
+         lastSeg = segments[segments.length - 1],
+         path = [],
+         lastPoint = null,
+         nextLastPoint = null;
+
+       if (lastSeg.y == 0) {
+         lastPoint = segments[segments.length - 2];
+         nextLastPoint = segments[segments.length - 1];
+       } else {
+         lastPoint = segments[segments.length - 1];
+         nextLastPoint = segments[segments.length - 2];
+       }
+
+       var angle = Math.atan((lastPoint.plotX - nextLastPoint.plotX) /
+         (lastPoint.plotY - nextLastPoint.plotY));
+
+       if (angle < 0) angle = Math.PI + angle;
+
+       path.push('M', lastPoint.plotX, lastPoint.plotY);
+
+       if (lastPoint.plotX > nextLastPoint.plotX) {
+
+         if (arrowCheck === true) {
+
+           pathTag = document.getElementById("arrow");
+           if (pathTag != null) {
+             pathTag.remove(pathTag);
+           }
+         }
+
+         path.push(
+           'L',
+           lastPoint.plotX + arrowWidth * Math.cos(angle),
+           lastPoint.plotY - arrowWidth * Math.sin(angle)
+         );
+         path.push(
+           lastPoint.plotX + arrowLength * Math.sin(angle),
+           lastPoint.plotY + arrowLength * Math.cos(angle)
+         );
+         path.push(
+           lastPoint.plotX - arrowWidth * Math.cos(angle),
+           lastPoint.plotY + arrowWidth * Math.sin(angle),
+           'Z'
+         );
+       } else {
+
+
+         if (arrowCheck === true) {
+
+           pathTag = document.getElementById("arrow");
+           if (pathTag != null) {
+             pathTag.remove(pathTag);
+           }
+         }
+
+         path.push(
+           'L',
+           lastPoint.plotX - arrowWidth * Math.cos(angle),
+           lastPoint.plotY + arrowWidth * Math.sin(angle)
+         );
+         path.push(
+           lastPoint.plotX - arrowLength * Math.sin(angle),
+           lastPoint.plotY - arrowLength * Math.cos(angle)
+         );
+         path.push(
+           lastPoint.plotX + arrowWidth * Math.cos(angle),
+           lastPoint.plotY - arrowWidth * Math.sin(angle),
+           'Z'
+         );
+       }
+
+       series.chart.renderer.path(path)
+         .attr({
+           fill: series.color,
+           id: 'arrow'
+         })
+         .add(series.group);
+
+        arrowCheck = true;
+
+     });
+   }(Highcharts));
+
+
+
 Highcharts.SparkLine = function (a, b, c) {
-    const hasRenderToArg = typeof a === 'string' || a.nodeName;
-    let options = arguments[hasRenderToArg ? 1 : 0];
-    const defaultOptions = {
-        chart: {
-            renderTo: (options.chart && options.chart.renderTo) || (hasRenderToArg && a),
-            backgroundColor: null,
-            borderWidth: 0,
-            type: 'area',
-            margin: [2, 0, 2, 0],
-            width: 120,
-            height: 20,
-            style: {
-                overflow: 'visible'
-            },
-            // small optimalization, saves 1-2 ms each sparkline
-            skipClone: true
+  var hasRenderToArg = typeof a === 'string' || a.nodeName,
+    options = arguments[hasRenderToArg ? 1 : 0],
+    defaultOptions = {
+      chart: {
+        renderTo: (options.chart && options.chart.renderTo) || this,
+        backgroundColor: null,
+        borderWidth: 0,
+        type: 'area',
+        margin: [2, 0, 2, 0],
+        width: 15,
+        height: 30,
+        style: {
+          overflow: 'visible'
+        },
+
+        // small optimalization, saves 1-2 ms each sparkline
+        skipClone: true
+      },
+      title: {
+        text: ''
+      },
+      credits: {
+        enabled: false
+      },
+      xAxis: {
+        labels: {
+          enabled: false
         },
         title: {
-            text: ''
+          text: null
         },
-        credits: {
-            enabled: false
+        startOnTick: false,
+        endOnTick: false,
+        tickPositions: []
+      },
+      yAxis: {
+        endOnTick: false,
+        startOnTick: false,
+        labels: {
+          enabled: false
         },
-        xAxis: {
-            labels: {
-                enabled: false
-            },
-            title: {
-                text: null
-            },
-            startOnTick: false,
-            endOnTick: false,
-            tickPositions: []
+        title: {
+          text: null
         },
-        yAxis: {
-            endOnTick: false,
-            startOnTick: false,
-            labels: {
-                enabled: false
-            },
-            title: {
-                text: null
-            },
-            tickPositions: [0]
-        },
-        legend: {
-            enabled: false
-        },
-        tooltip: {
-            hideDelay: 0,
-            outside: true,
-            shared: true
-        },
-        plotOptions: {
-            series: {
-                animation: false,
-                lineWidth: 1,
-                shadow: false,
-                states: {
-                    hover: {
-                        lineWidth: 1
-                    }
-                },
-                marker: {
-                    radius: 1,
-                    states: {
-                        hover: {
-                            radius: 2
-                        }
-                    }
-                },
-                fillOpacity: 0.25
-            },
-            column: {
-                negativeColor: '#910000',
-                borderColor: 'silver'
+        tickPositions: [0]
+      },
+      legend: {
+        enabled: false
+      },
+      tooltip: {
+        hideDelay: 0,
+        outside: true,
+        shared: true
+      },
+      plotOptions: {
+        series: {
+          animation: false,
+          lineWidth: 1,
+          shadow: false,
+          states: {
+            hover: {
+              lineWidth: 1
             }
+          },
+          marker: {
+            radius: 1,
+            states: {
+              hover: {
+                radius: 2
+              }
+            }
+          },
+          fillOpacity: 0.25
+        },
+        column: {
+          negativeColor: '#910000',
+          borderColor: 'silver'
         }
+      }
     };
 
-    options = Highcharts.merge(defaultOptions, options);
+  options = Highcharts.merge(defaultOptions, options);
 
-    return hasRenderToArg ?
-        new Highcharts.Chart(a, options, c) :
-        new Highcharts.Chart(options, b);
+  return hasRenderToArg ?
+    new Highcharts.Chart(a, options, c) :
+    new Highcharts.Chart(options, b);
 };
 
-const start = +new Date(),
-    tds = Array.from(document.querySelectorAll('td[data-sparkline]')),
-    fullLen = tds.length;
-
-let n = 0;
+var start = +new Date(),
+  $tds = $('td[data-sparkline]'),
+  fullLen = $tds.length,
+  n = 0;
 
 // Creating 153 sparkline charts is quite fast in modern browsers, but IE8 and mobile
 // can take some seconds, so we split the input into chunks and apply them in timeouts
 // in order avoid locking up the browser process and allow interaction.
 function doChunk() {
-    const time = +new Date(),
-        len = tds.length;
+  var time = +new Date(),
+    i,
+    len = $tds.length,
+    $td,
+    stringdata,
+    arr,
+    data,
+    chart;
 
-    for (let i = 0; i < len; i += 1) {
-        const td = tds[i];
-        const stringdata = td.dataset.sparkline;
-        const arr = stringdata.split('; ');
-        const data = arr[0].split(', ').map(parseFloat);
-        const chart = {};
+  for (i = 0; i < len; i += 1) {
+    $td = $($tds[i]);
+    stringdata = $td.data('sparkline');
+    arr = stringdata.split('; ');
+    data = $.map(arr[0].split(', '), parseFloat);
+    chart = {};
 
-        if (arr[1]) {
-            chart.type = arr[1];
-        }
-
-        Highcharts.SparkLine(td, {
-            series: [{
-                data: data,
-                pointStart: 1
-            }],
-            tooltip: {
-                headerFormat: '<span style="font-size: 10px">' + td.parentElement.querySelector('th').innerText + ', Q{point.x}:</span><br/>',
-                pointFormat: '<b>{point.y}.000</b> USD'
-            },
-            chart: chart
-        });
-
-        n += 1;
-
-        // If the process takes too much time, run a timeout to allow interaction with the browser
-        if (new Date() - time > 500) {
-            tds.splice(0, i + 1);
-            setTimeout(doChunk, 0);
-            break;
-        }
-
-        // Print a feedback on the performance
-        if (n === fullLen) {
-            document.getElementById('result').innerHTML = 'Generated ' + fullLen + ' sparklines in ' + (new Date() - start) + ' ms';
-        }
+    if (arr[1]) {
+      chart.type = arr[1];
     }
+    $td.highcharts('SparkLine', {
+      series: [{
+        data: data,
+        pointStart: 1
+      }],
+      tooltip: {
+        headerFormat: '<span style="font-size: 10px, font-weight:bold">' + "Offres d'emploi : ",
+        pointFormat: '<b>{point.y}</b>'
+      },
+      chart: chart
+    });
+
+    n += 1;
+
+    // If the process takes too much time, run a timeout to allow interaction with the browser
+    if (new Date() - time > 500) {
+      $tds.splice(0, i + 1);
+      setTimeout(doChunk, 0);
+      break;
+    }
+
+    // Print a feedback on the performance
+    if (n === fullLen) {
+      $('#result').html('Generated ' + fullLen + ' sparklines in ' + (new Date() - start) + ' ms');
+    }
+  }
 }
 doChunk();
