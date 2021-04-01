@@ -11,4 +11,62 @@
   color: gray;
 }
 
+#result {
+  text-align: right;
+  color: gray;
+  min-height: 2em;
+}
+
+#tableau {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+@media (max-width: 576px) {
+  #tableau {
+    display: grid;
+  }
+}
+@media (min-width: 576px) {
+  #tableau {
+    display: inline-flex;
+  }
+}
+
+td, th {
+  padding: 3px;
+}
+
+thead th.title {
+  border-bottom: 1px dotted silver;
+}
+thead th.subtitle {
+  border-bottom: 2px solid black;
+}
+thead th.subtitle.subtitle_left {
+  border-right: 1px dotted silver;
+}
+
+th {
+  font-weight: bold;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+td {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+@media (min-width: 576px) {
+  td.subtitle_left {
+    visibility: hidden;
+  }
+}
+
+.right {
+  text-align: right;
+  border-bottom: 0.5px solid silver;
+}
+
 /*# sourceMappingURL=style.css.map */

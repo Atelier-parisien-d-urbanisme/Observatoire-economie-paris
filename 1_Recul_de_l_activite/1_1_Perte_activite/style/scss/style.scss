@@ -9,3 +9,56 @@
   text-align: center;
   color: gray;
 }
+
+
+#result {
+    text-align: right;
+    color: gray;
+    min-height: 2em;
+}
+#tableau {
+    margin: 0 auto;
+    border-collapse: collapse;
+    @media (max-width: 576px) {
+      display: grid;
+    }
+    @media (min-width: 576px) {
+      display: inline-flex;
+    }
+}
+
+td, th {
+    padding: 3px;
+}
+
+thead th {
+   &.title {
+     border-bottom: 1px dotted silver;}
+   &.subtitle {
+     border-bottom: 2px solid black;
+     &.subtitle_left {
+       border-right: 1px dotted silver;
+     }
+   }
+}
+
+th {
+    font-weight: bold;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight:bold;
+    font-size: 14px;
+}
+td {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  &.subtitle_left {
+    @media (min-width: 576px) {
+      visibility: hidden;
+    }
+  }
+}
+.right {
+  text-align: right;
+      border-bottom: 0.5px solid silver;
+}
