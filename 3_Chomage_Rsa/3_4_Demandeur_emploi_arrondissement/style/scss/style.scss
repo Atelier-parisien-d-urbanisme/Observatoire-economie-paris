@@ -30,3 +30,18 @@ p, li {
   line-height: 27px !important;
   font-family: "Roboto",sans-serif !important;
 }
+
+#graphique {
+  @media (max-width: 576px) {
+    display: grid;
+  }
+  @media (min-width: 576px) {
+    display: inline-flex;
+  }
+}
+
+.map_title {
+  min-height:50px;
+  text-align: center;
+  padding: 5px;
+}

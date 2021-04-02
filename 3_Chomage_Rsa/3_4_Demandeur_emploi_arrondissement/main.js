@@ -2,7 +2,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
     Highcharts.mapChart('graphique1', {
         chart: {
             map: geojson,
-            height:600
+            height:300
         },
         mapNavigation: {
             enabled: true,
@@ -10,6 +10,9 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
                 verticalAlign: 'bottom'
             }
         },
+        title: {
+              text: undefined
+          },
         colorAxis: {
             tickPixelInterval: 80,
             reversed: false,
@@ -33,6 +36,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
                     color: '#38cae9'
                 }
             },
+
             dataLabels: {
                 enabled: true,
                 format: '{point.properties.l_ar}',
@@ -67,7 +71,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
     Highcharts.mapChart('graphique2', {
         chart: {
             map: geojson,
-            height:600
+            height:300
         },
         mapNavigation: {
             enabled: true,
@@ -75,6 +79,9 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
                 verticalAlign: 'bottom'
             }
         },
+        title: {
+              text: undefined
+          },
         colorAxis: {
             tickPixelInterval: 40,
             reversed: false,

@@ -31,4 +31,21 @@ p, li {
   font-family: "Roboto", sans-serif !important;
 }
 
+@media (max-width: 576px) {
+  #graphique {
+    display: grid;
+  }
+}
+@media (min-width: 576px) {
+  #graphique {
+    display: inline-flex;
+  }
+}
+
+.map_title {
+  min-height: 50px;
+  text-align: center;
+  padding: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */
