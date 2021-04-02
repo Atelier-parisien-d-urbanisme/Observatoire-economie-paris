@@ -1,4 +1,4 @@
-Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/3_Chomage_Rsa/3_4_Demandeur_emploi_arrondissement/arrondissement.json', function (geojson) {
+Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/3_Chomage_Rsa/3_4_Demandeur_emploi_arrondissement/arr.json', function (geojson) {
     Highcharts.mapChart('graphique1', {
         chart: {
             map: geojson,
@@ -23,8 +23,8 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
         },
         series: [{
             data: data_demandeur_emploi_arr,
-            keys: ['C_AR', 'value','className'],
-            joinBy: 'C_AR',
+            keys: ['c_ar', 'value','className'],
+            joinBy: 'c_ar',
             name: "Evolution du chiffre d'affaires moyen<br> par entreprise (du 1er au 3e trimestre 2020 <br>par rapport à la meme période en 2019)	",
             tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_DEP}</span>: <b>{point.value} %</b><br/>'
           },
@@ -35,7 +35,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             },
             dataLabels: {
                 enabled: true,
-                format: '{point.properties.L_AR}',
+                format: '{point.properties.l_ar}',
                 style: {
                  // fontSize: '9px',
                  fontFamily: 'Roboto',
