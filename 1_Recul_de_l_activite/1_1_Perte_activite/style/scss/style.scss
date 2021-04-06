@@ -1,33 +1,15 @@
-// @font-face {
-//   font-family: 'roboto';
-//   src: url('/fonts/Roboto-Regular.ttf') format("truetype");
-// }
-//
-// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-//
-// @font-face {
-//   font-family: 'robotoCondensed';
-//   src: url('./fonts/RobotoCondensed-Regular.ttf') format("truetype");
-// }
-
-html, body {
-  margin:0;
-  padding:0;
-  color: black;
-  width:100%;
-  height: 100%;
-  font-size: 15px;
-  font-family:"Roboto";
-  font-weight: light;
+#container {
+  height: 500px;
+  min-width: 310px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.loading {
+  margin-top: 10em;
+  text-align: center;
+  color: gray;
 }
 
-.icon_quote{
-  height:20px;
-  margin-right: 10px;
-}
-.commentaire {
-
-}
 
 #result {
     text-align: right;
@@ -44,7 +26,6 @@ html, body {
       display: inline-flex;
     }
 }
-
 
 td, th {
     padding: 3px;
