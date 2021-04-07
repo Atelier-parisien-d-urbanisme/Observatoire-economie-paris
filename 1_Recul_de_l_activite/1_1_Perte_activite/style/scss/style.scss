@@ -8,21 +8,6 @@ html, body {
   font-family:"Roboto";
 }
 
-$Theme1 : #991544;
-$black: #2A2A2A;
-$darkGrey: #707070;
-$lightGrey: #E9E9E9;
-$veryLightGrey: #EEEFEF;
-
-
-.quote{
-  color:$Theme1;
-  .quote_mark {
-    height:20px;
-    margin-right:10px;
-  }
-}
-
 #result {
     text-align: right;
     color: gray;
