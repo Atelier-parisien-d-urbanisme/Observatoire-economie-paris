@@ -9,13 +9,40 @@
   text-align: center;
   color: gray;
 }
-
-
 #result {
     text-align: right;
     color: gray;
     min-height: 2em;
 }
+
+
+$Theme1: #990041;
+body {
+  font-family: "Roboto";
+}
+
+.quote {
+  font-size: 16px;
+}
+.quote_mark {
+  height:20px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.title {
+  margin: 2px;
+  text-align: center;
+  color : $Theme1;
+}
+.subtitle {
+  margin: 2px;
+  text-align: center;
+  color : $Theme1;
+  font-style: italic;
+  font-size: 12px;
+}
+
 #tableau {
     margin: 0 auto;
     border-collapse: collapse;
