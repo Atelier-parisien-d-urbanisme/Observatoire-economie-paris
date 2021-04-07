@@ -3,6 +3,7 @@
   min-width: 310px;
   max-width: 800px;
   margin: 0 auto;
+<<<<<<< HEAD
 }
 .loading {
   margin-top: 10em;
@@ -10,15 +11,29 @@
   color: gray;
 }
 
-}
-.loading {
-  margin-top: 10em;
-  text-align: center;
-  color: gray;
-}
 
+$Theme1 : #991544;
+$black: #2A2A2A;
+$darkGrey: #707070;
+$lightGrey: #E9E9E9;
+$veryLightGrey: #EEEFEF;
+
+
+.quote{
+  color:$Theme1;
+  .quote_mark {
+    height:20px;
+    margin-right:10px;
+  }
 =======
 >>>>>>> parent of 0d42191 (init)
+}
+.loading {
+  margin-top: 10em;
+  text-align: center;
+  color: gray;
+}
+
 
 #result {
     text-align: right;
