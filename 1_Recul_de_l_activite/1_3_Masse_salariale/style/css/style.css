@@ -19,12 +19,21 @@
 
 body {
   font-family: "Roboto";
-  line-height: 27px;
   font-weight: 12px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #990041, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #990041, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #990041, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #990041, #f0f0f0);
 }
 
 .quote {
   font-size: 16px;
+  line-height: 27px;
 }
 
 .quote_mark {
@@ -35,16 +44,28 @@ body {
 
 .title {
   margin: 2px;
+  margin-left: 10px;
+  margin-right: 10px;
   text-align: center;
+  font-weight: bolder;
   color: #990041;
 }
 
 .subtitle {
-  margin: 2px;
   text-align: center;
-  color: #990041;
   font-style: italic;
   font-size: 12px;
+  line-height: 12px;
+}
+
+.subtitle_table {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.source {
+  font-size: 14px;
+  line-height: 27px;
 }
 
 #tableau {
