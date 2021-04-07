@@ -19,6 +19,8 @@
 
 body {
   font-family: "Roboto";
+  line-height: 27px;
+  font-weight: 12px;
 }
 
 .quote {
