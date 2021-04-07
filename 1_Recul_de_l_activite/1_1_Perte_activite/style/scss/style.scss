@@ -19,8 +19,12 @@
 
 body {
   font-family: "Roboto";
-  font-weight: 12px;
+  font-size: 14px;
 }
+
+$Theme1: #990041;
+$Apur: #00c3ff;
+
 
 hr {
   border: 0;
@@ -31,8 +35,6 @@ hr {
     background-image: -o-linear-gradient(left, #f0f0f0, $Theme1, #f0f0f0);
 }
 
-$Theme1: #990041;
-$Apur: #00c3ff;
 
 .quote {
   font-size: 16px;
@@ -46,7 +48,7 @@ $Apur: #00c3ff;
 }
 
 .title {
-  margin: 2px;
+  margin: 4px;
   margin-left:10px;
   margin-right: 10px;
   text-align: center;
@@ -54,8 +56,10 @@ $Apur: #00c3ff;
   color:$Theme1;
 }
 .subtitle {
+  margin: 4px;
   text-align: center;
   font-style: italic;
+  color:$Theme1;
   font-size: 12px;
   line-height: 12px;
 }
