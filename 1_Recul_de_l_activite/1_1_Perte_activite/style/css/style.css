@@ -8,6 +8,14 @@ html, body {
   font-family: "Roboto";
 }
 
+.quote {
+  color: #991544;
+}
+.quote .quote_mark {
+  height: 20px;
+  margin-right: 10px;
+}
+
 #result {
   text-align: right;
   color: gray;
