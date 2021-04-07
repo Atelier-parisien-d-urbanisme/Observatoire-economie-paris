@@ -1,89 +1,17 @@
-.loading {
-  margin-top: 10em;
-  text-align: center;
-  color: gray;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 28 |     background-image: -webkit-linear-gradient(left, #f0f0f0, $Theme1, #f0f0f0);
+ *    |                                                              ^^^^^^^
+ *    '
+ *   scss\style.scss 28:62  root stylesheet */
 
-.quote {
-  font-size: 16px;
-}
-
-.quote_mark {
-  height: 20px;
-  margin-right: 20px;
-  margin-left: 10px;
-}
-
-.title {
-  margin: 2px;
-  text-align: center;
-  color: #990041;
-}
-
-.subtitle {
-  margin: 2px;
-  text-align: center;
-  color: #990041;
-  font-style: italic;
-  font-size: 12px;
-}
-
-#result {
-  text-align: right;
-  color: gray;
-  min-height: 2em;
-}
-
-#tableau {
-  margin: 0 auto;
-  border-collapse: collapse;
-}
-@media (max-width: 576px) {
-  #tableau {
-    display: grid;
-  }
-}
-@media (min-width: 576px) {
-  #tableau {
-    display: inline-flex;
-  }
-}
-
-td, th {
-  padding: 3px;
-}
-
-thead th.title {
-  border-bottom: 1px dotted silver;
-}
-thead th.subtitle {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
   border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 28 \2502      background-image: -webkit-linear-gradient(left, #f0f0f0, $Theme1, #f0f0f0);\d\a    \2502                                                               ^^^^^^^\a    \2575 \a   scss\\style.scss 28:62  root stylesheet";
 }
-thead th.subtitle.subtitle_left {
-  border-right: 1px dotted silver;
-}
-
-th {
-  font-weight: bold;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-td {
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-}
-@media (min-width: 576px) {
-  td.subtitle_left {
-    visibility: hidden;
-  }
-}
-
-.right {
-  text-align: right;
-  border-bottom: 0.5px solid silver;
-}
-
-/*# sourceMappingURL=style.css.map */
