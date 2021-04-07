@@ -63,9 +63,16 @@ hr {
   line-height: 12px;
 }
 
-.source {
-  font-size: 14px;
+.source a {
+  font-size: 12px;
   line-height: 27px;
+  font-style: italic;
+  color: #990041;
+  text-decoration: overline dotted;
+}
+.source a:hover {
+  color: #00c3ff;
+  cursor: pointer;
 }
 
 #tableau {

@@ -16,6 +16,9 @@
 }
 
 $Theme1: #990041;
+$Apur: #00c3ff;
+
+
 body {
   font-family: "Roboto";
 
@@ -62,9 +65,16 @@ hr {
   line-height: 12px;
 }
 
-.source {
-  font-size: 14px;
+.source a {
+  font-size: 12px;
   line-height: 27px;
+  font-style: italic;
+  color: $Theme1;
+  text-decoration: overline dotted;
+  &:hover {
+    color: $Apur;
+    cursor: pointer;
+  }
 }
 
 #tableau {
