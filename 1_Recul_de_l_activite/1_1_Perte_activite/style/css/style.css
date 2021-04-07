@@ -9,6 +9,7 @@
   margin-top: 10em;
   text-align: center;
   color: gray;
+<<<<<<< HEAD
 }
 
 .quote {
@@ -17,6 +18,8 @@
 .quote .quote_mark {
   height: 20px;
   margin-right: 10px;
+=======
+>>>>>>> parent of 0d42191 (init)
 }
 
 #result {

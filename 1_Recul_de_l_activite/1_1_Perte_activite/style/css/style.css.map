@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 {"version":3,"sourceRoot":"","sources":["../scss/style.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;;AAUF;EACE,OARQ;;AASR;EACE;EACA;;;AAIJ;EACI;EACA;EACA;;;AAEJ;EACI;EACA;;AACA;EAHJ;IAIM;;;AAEF;EANJ;IAOM;;;;AAIN;EACI;;;AAID;EACE;;AACF;EACE;;AACA;EACE;;;AAKP;EACI;EACA;EACA;EACA;EACA;;;AAEJ;EACE;EACA;;AAEE;EADF;IAEI;;;;AAIN;EACE;EACI","file":"style.css"}
+=======
+{"version":3,"sourceRoot":"","sources":["../scss/style.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA;;;AAEF;EACE;EACA;EACA;;;AAIF;EACI;EACA;EACA;;;AAEJ;EACI;EACA;;AACA;EAHJ;IAIM;;;AAEF;EANJ;IAOM;;;;AAIN;EACI;;;AAID;EACE;;AACF;EACE;;AACA;EACE;;;AAKP;EACI;EACA;EACA;EACA;EACA;;;AAEJ;EACE;EACA;;AAEE;EADF;IAEI;;;;AAIN;EACE;EACI","file":"style.css"}
+>>>>>>> parent of 0d42191 (init)
 =======
 {"version":3,"sourceRoot":"","sources":["../scss/style.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA;;;AAEF;EACE;EACA;EACA;;;AAIF;EACI;EACA;EACA;;;AAEJ;EACI;EACA;;AACA;EAHJ;IAIM;;;AAEF;EANJ;IAOM;;;;AAIN;EACI;;;AAID;EACE;;AACF;EACE;;AACA;EACE;;;AAKP;EACI;EACA;EACA;EACA;EACA;;;AAEJ;EACE;EACA;;AAEE;EADF;IAEI;;;;AAIN;EACE;EACI","file":"style.css"}
 >>>>>>> parent of 0d42191 (init)
