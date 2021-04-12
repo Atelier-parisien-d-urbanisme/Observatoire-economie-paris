@@ -7,10 +7,7 @@ Highcharts.chart('graphique', {
     type:'line',
   },
     title: {
-        text: 'Evolution du chiffre d’affaires déclaré des auto-entrepreneurs en Ile-de-France 2019-2020 (données provisoires)'
-    },
-    caption: {
-        text: 'Source : Urssaf, 2020'
+        text: null
     },
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/1_Recul_de_l_activite/1_5_Auto_entrepreneurs/auto_entrepreneurs.csv',
@@ -21,16 +18,28 @@ Highcharts.chart('graphique', {
     yAxis: [{ //--- Primary yAxis
     className: 'highcharts-color-0',
      title: {
-        text: '€'
-    }
+        text: 'M€'
+    },
+    labels: {
+      // format: '{value} M€',
+      align: 'left',
+            x: 0,
+            y: -2,
+            style: {
+                color: '#00c3ff'
+            }
+        },
 }, { //--- Secondary yAxis
     className: 'highcharts-color-1',
     title: {
-        text: '%',
-        style: {
-            color: '#D3BD00'
-        }
+        text: null
     },
+    labels: {
+      format: '{value} %',
+            style: {
+                color: '#990041'
+            }
+        },
     opposite: true
 }]
 ,
@@ -50,16 +59,15 @@ series: [{
    }
 },{
     yAxis: 1,
-    type: 'areaspline',
+    type: 'spline',
     dashStyle: 'Dot',
     data: {
     },
     tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
     valueDecimals: 2
   },
-  color: '#D3BD00',
-  negativeColor: '#C2B778',
-  opacity: 0.3,
+  color: '#990041',
+  negativeColor: '#D5ADBE',
 }],
      exporting: {
          buttons: {
