@@ -5,10 +5,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             height:600
         },
         title: {
-            text: "Perte d'activité au quatrième trimestre 2020 (en %)"
-        },
-        caption: {
-          text:"Source : Insee - Point de conjoncture 15/12/2020,  recensement 2017, traitements Apur"
+            text: null
         },
         mapNavigation: {
             enabled: true,
@@ -31,7 +28,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             data: data_T4_2020,
             keys: ['EPT_NUM', 'value','className'],
             joinBy: 'EPT_NUM',
-            name: "Perte d'activité au quatrième trimestre 2020",
+            name: "Perte d'activité",
             tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_EPT}</span>: <b>{point.value} %</b><br/>'
           },
             states: {
@@ -76,10 +73,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             height:600
         },
         title: {
-            text: "Perte d'activité au premier trimestre 2021 (en %)"
-        },
-        caption: {
-          text:"Source : Insee - Point de conjoncture 15/12/2020,  recensement 2017, traitements Apur"
+            text: null
         },
         mapNavigation: {
             enabled: true,
@@ -102,7 +96,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             data: data_T1_2021,
             keys: ['EPT_NUM', 'value','className'],
             joinBy: 'EPT_NUM',
-            name: "Perte d'activité au premier trimestre 2021",
+            name: "Perte d'activité",
             tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_EPT}</span>: <b>{point.value} %</b><br/>'
           },
             states: {
