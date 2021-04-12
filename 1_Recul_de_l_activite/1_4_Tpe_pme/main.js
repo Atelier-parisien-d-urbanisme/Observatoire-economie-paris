@@ -5,10 +5,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             height:600
         },
         title: {
-            text: "Evolution du chiffre d'affaires des TPE/PME entre 2019 et 2020		"
-        },
-        caption: {
-          text:"Source : Ordre des Experts-Comptables de Paris Ile-de-France, CROCIS"
+            text: null
         },
         mapNavigation: {
             enabled: true,
@@ -31,7 +28,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             data: data_TPE,
             keys: ['C_DEP', 'value','className'],
             joinBy: 'C_DEP',
-            name: "Evolution du chiffre d'affaires moyen<br> par entreprise (du 1er au 3e trimestre 2020 <br>par rapport à la meme période en 2019)	",
+            name: "Evolution du chiffre d'affaires moyen par entreprise",
             tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_DEP}</span>: <b>{point.value} %</b><br/>'
           },
             states: {
