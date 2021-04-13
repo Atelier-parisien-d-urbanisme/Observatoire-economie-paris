@@ -40,6 +40,9 @@ hr {
   font-size: 12px;
   line-height: 12px;
 }
+.subtitle.left {
+  text-align: left;
+}
 
 .subtitle_table {
   font-size: 12px;
