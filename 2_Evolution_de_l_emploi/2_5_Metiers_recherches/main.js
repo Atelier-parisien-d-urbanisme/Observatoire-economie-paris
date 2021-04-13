@@ -73,6 +73,10 @@
 //     }]
 // });
 
+Highcharts.setOptions({
+    colors: ['#9fce9c']
+});
+
 Highcharts.SparkLine = function (a, b, c) {
   var hasRenderToArg = typeof a === 'string' || a.nodeName,
     options = arguments[hasRenderToArg ? 1 : 0],
