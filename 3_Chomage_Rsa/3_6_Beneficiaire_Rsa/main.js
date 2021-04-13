@@ -1,6 +1,6 @@
 
 Highcharts.setOptions({
-    colors: ['#38cae9', '#2A8BA0','#D3BD00','#D39500']
+    colors: ['#38cae9', '#2A8BA0','#3D71EA','#DAB464']
 });
 
 Highcharts.stockChart('graphique', {
@@ -9,7 +9,7 @@ Highcharts.stockChart('graphique', {
          height: 400,
     },
     title: {
-        text: 'Evolution du nombre de bénéficiaires du RSA à Paris 2017-2020'
+        text: null
     },
     scrollbar: {
       enabled: false
@@ -18,35 +18,19 @@ Highcharts.stockChart('graphique', {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_6_Beneficiaire_Rsa/beneficiaire_rsa.csv',
         enablePolling: true
     },
-    caption: {
-        text: 'Source : Caf de Paris – données mensuelles semi-définitives'
-    },
     navigator: {
-
-      outlineWidth: 0,
-      maskFill: 'rgba(0, 0, 0, 0.2)',
-      handles: {
-        symbols: ['o', 'o'],
-        backgroundColor: 'grey',
-        borderColor: 'grey',
-      },
-      xAxis: {
-        gridLineWidth: 0,
-        labels: {
-          enabled: false
-        }
-      },
-      series: {
-        // type: 'areaspline',
-        color: '#bbb'
-      }
+      enabled:false,
     },
     plotOptions: {
         series: {
-          showInNavigator: true,
-          marker: {
-            enabled: false,
-          },
+          lineWidth: 1,
+            marker: {
+              enabledThreshold: 2,
+              radius: 3,
+              fillColor: '#FFFFFF',
+              lineWidth: 2,
+              lineColor: null // inherit from series,
+            }
         }
     },
     rangeSelector:{
@@ -62,13 +46,25 @@ Highcharts.stockChart('graphique', {
       enabled:true
     },
     yAxis: {
+      opposite:false,
+      gridLineColor: '#efefef',
+      gridLineDashStyle: 'dash',
+      labels: {
+        format:'{value}',
+        align: 'left',
+              x: 0,
+              y: -2,
+              style: {
+                  color: '#CFCFCF'
+              }
+          },
      title: {
         enabled: false,
       }
      },
      tooltip: {
-         pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
-         valueDecimals: 2
+         pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>',
+         valueDecimals: 0
      },
      exporting: {
          buttons: {
