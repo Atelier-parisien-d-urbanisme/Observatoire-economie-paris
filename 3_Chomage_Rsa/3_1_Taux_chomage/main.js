@@ -19,6 +19,17 @@ Highcharts.chart('graphique', {
       enabled:false
     },
     yAxis: {
+      gridLineColor: '#efefef',
+      gridLineDashStyle: 'dash',
+      labels: {
+          format:'{value} ',
+        align: 'left',
+              x: 0,
+              y: -2,
+              style: {
+                  color: '#CFCFCF'
+              }
+          },
      title: {
         enabled: false,
       }
@@ -29,6 +40,7 @@ Highcharts.chart('graphique', {
     plotOptions: {
         series: {
           showInNavigator: true,
+          lineWidth: 1,
           marker: {
             enabled: false,
           },
