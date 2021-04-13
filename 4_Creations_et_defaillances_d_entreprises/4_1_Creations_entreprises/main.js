@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#38cae9']
+    colors: ['#f0836d']
 });
 
 
@@ -8,16 +8,11 @@ Highcharts.chart('graphique', {
         type: 'spline'
     },
     title: {
-        text: 'Evolution du nombre de créations d’entreprises à Paris 2018-2020'
+        text: null
     },
-
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_1_Creations_entreprises/creations_entreprises.csv',
         enablePolling: true
-    },
-
-    caption: {
-        text: 'Champ : activités marchandes hors agriculture. Données brutes.	Source : Insee, Répertoire des entreprises et des établissements.		'
     },
 
     credits: {
@@ -25,12 +20,28 @@ Highcharts.chart('graphique', {
     },
     plotOptions: {
         series: {
+          lineWidth: 1,
             marker: {
-                lineColor: '#00c3ff'
+              enabledThreshold: 2,
+              radius: 3,
+              fillColor: '#FFFFFF',
+              lineWidth: 2,
+              lineColor: null // inherit from series,
             }
         }
     },
     yAxis: {
+      gridLineColor: '#efefef',
+      gridLineDashStyle: 'dash',
+      labels: {
+          format:'{value}',
+        align: 'left',
+              x: 0,
+              y: -2,
+              style: {
+                  color: '#CFCFCF'
+              }
+          },
      title: {
         enabled: false,
       }
