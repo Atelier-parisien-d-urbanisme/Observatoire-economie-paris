@@ -16,10 +16,6 @@ Highcharts.chart('graphique', {
         enablePolling: true
     },
 
-    caption: {
-        text: 'Source : Pôle emploi-Dares, STMT ; données CVS-CJO'
-    },
-
     credits: {
       enabled:false
     },
