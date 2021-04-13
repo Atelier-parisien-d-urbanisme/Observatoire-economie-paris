@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#38cae9']
+    colors: ['#f0836d']
 });
 
 
@@ -8,7 +8,7 @@ Highcharts.chart('graphique', {
         type: 'spline'
     },
     title: {
-        text: 'Evolution du nombre de défaillances d’entreprises à Paris 2017-2020		'
+        text: null
     },
 
     data: {
@@ -16,21 +16,33 @@ Highcharts.chart('graphique', {
         enablePolling: true
     },
 
-    caption: {
-        text: 'Champ : par date de jugement - Données brutes. Source : Insee, Répertoire des entreprises et des établissements.		'
-    },
-
     credits: {
       enabled:false
     },
     plotOptions: {
         series: {
+          lineWidth: 1,
             marker: {
-                lineColor: '#00c3ff'
+              enabledThreshold: 2,
+              radius: 3,
+              fillColor: '#FFFFFF',
+              lineWidth: 2,
+              lineColor: null // inherit from series,
             }
         }
     },
     yAxis: {
+      gridLineColor: '#efefef',
+      gridLineDashStyle: 'dash',
+      labels: {
+          format:'{value}',
+        align: 'left',
+              x: 0,
+              y: -2,
+              style: {
+                  color: '#CFCFCF'
+              }
+          },
      title: {
         enabled: false,
       }
