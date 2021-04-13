@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#38cae9']
+    colors: ['#f0836d']
 });
 
 
@@ -8,7 +8,7 @@ Highcharts.chart('graphique', {
         type: 'spline'
     },
     title: {
-        text: 'Evolution de l’emploi salarié à Paris 2011-2020'
+        text: null
     },
 
     data: {
@@ -16,21 +16,33 @@ Highcharts.chart('graphique', {
         enablePolling: true
     },
 
-    caption: {
-        text: 'Données CVS, en fin de trimestre, mises à jour le 11/02/2021. Sources: Insee, estimations d emploi d estimations trimestrielles Acoss-Urssaf, Dares, Insee.'
-    },
-
     credits: {
       enabled:false
     },
+
     plotOptions: {
         series: {
+          lineWidth: 1,
             marker: {
-                lineColor: '#00c3ff'
+              enabledThreshold: 2,
+              radius: 3,
+              fillColor: '#FFFFFF',
+              lineWidth: 2,
+              lineColor: null // inherit from series
             }
         }
     },
     yAxis: {
+      gridLineColor: '#efefef',
+      gridLineDashStyle: 'dash',
+      labels: {
+        align: 'left',
+              x: 0,
+              y: -2,
+              style: {
+                  color: '#CFCFCF'
+              }
+          },
      title: {
         enabled: false,
       }
