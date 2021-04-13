@@ -22,7 +22,7 @@ Highcharts.chart('graphique', {
       gridLineColor: '#efefef',
       gridLineDashStyle: 'dash',
       labels: {
-          format:'{value} ',
+          format:'{value} %',
         align: 'left',
               x: 0,
               y: -2,

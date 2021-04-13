@@ -37,7 +37,8 @@ Highcharts.stockChart('graphique1', {
       }
     },
     plotOptions: {
-        series: {
+      series: {
+        lineWidth: 1,
           showInNavigator: true,
           marker: {
             enabled: false,
@@ -121,7 +122,8 @@ Highcharts.stockChart('graphique2', {
       }
     },
     plotOptions: {
-        series: {
+      series: {
+        lineWidth: 1,
           showInNavigator: true,
           marker: {
             enabled: false,

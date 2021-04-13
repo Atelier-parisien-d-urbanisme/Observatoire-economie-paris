@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#38cae9','#D3BD00']
+    colors: ['#38cae9','#3333cc']
 });
 
 Highcharts.chart('graphique', {
@@ -8,7 +8,7 @@ Highcharts.chart('graphique', {
         height:400
     },
     title: {
-        text: 'Evolution du nombre de demandeurs d’emploi à Paris 2011-2020'
+        text: null
     },
 
     data: {
@@ -24,6 +24,17 @@ Highcharts.chart('graphique', {
       enabled:false
     },
     yAxis: {
+      gridLineColor: '#efefef',
+      gridLineDashStyle: 'dash',
+      labels: {
+          format:'{value}',
+        align: 'left',
+              x: 0,
+              y: -2,
+              style: {
+                  color: '#CFCFCF'
+              }
+          },
      title: {
         enabled: false,
       }
@@ -33,6 +44,7 @@ Highcharts.chart('graphique', {
     },
     plotOptions: {
         series: {
+          lineWidth: 1,
           marker: {
             enabled: false,
           },

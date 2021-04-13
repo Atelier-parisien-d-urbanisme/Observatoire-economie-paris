@@ -52,7 +52,8 @@ Highcharts.stockChart('graphique', {
       }
     },
     plotOptions: {
-        series: {
+      series: {
+        lineWidth: 1,
           showInNavigator: true,
           marker: {
             enabled: false,
