@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#38cae9', '#2A8BA0','#D3BD00','#D39500']
+    colors: ['#FADFD9','#f0836d']
 });
 
 Highcharts.chart('graphique1', {
@@ -17,12 +17,28 @@ Highcharts.chart('graphique1', {
     },
     plotOptions: {
         series: {
+          lineWidth: 1,
             marker: {
-                lineColor: '#00c3ff'
+              enabledThreshold: 2,
+              radius: 3,
+              fillColor: '#FFFFFF',
+              lineWidth: 2,
+              lineColor: null // inherit from series,
             }
         }
     },
     yAxis: {
+      gridLineColor: '#efefef',
+      gridLineDashStyle: 'dash',
+      labels: {
+          format:'{value}',
+        align: 'left',
+              x: 0,
+              y: -2,
+              style: {
+                  color: '#CFCFCF'
+              }
+          },
      title: {
         enabled: false,
       }
@@ -66,10 +82,7 @@ Highcharts.chart('graphique2', {
   chart: {
   },
     title: {
-        text: 'Procédures d’observation et de traitement des difficultés'
-    },
-    caption: {
-        text: 'Source : Greffe du tribunal de commerce'
+        text: null
     },
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_4_Emplois_menaces/procedures_observations.csv',
@@ -79,11 +92,52 @@ Highcharts.chart('graphique2', {
 
     yAxis: [{ //--- Primary yAxis
     className: 'highcharts-color-0',
+    gridLineColor: '#efefef',
+    gridLineDashStyle: 'dash',
+    labels: {
+      format:'{value}',
+      align: 'left',
+            x: 0,
+            y: -2,
+            style: {
+                color: '#CFCFCF'
+            }
+        },
     title: {
        enabled: false,
      }
 }, { //--- Secondary yAxis
     className: 'highcharts-color-1',
+    plotOptions: {
+        series: {
+          lineWidth: 1,
+            marker: {
+              enabledThreshold: 2,
+              radius: 3,
+              fillColor: '#FFFFFF',
+              lineWidth: 2,
+              lineColor: null // inherit from series,
+            }
+        }
+    },
+
+    yAxis: [{
+      gridLineColor: '#efefef',
+      gridLineDashStyle: 'dash',
+      labels: {
+        format:'{value}',
+        align: 'left',
+              x: 0,
+              y: -2,
+              style: {
+                  color: '#CFCFCF'
+              }
+          },
+     title: {
+        enabled: false,
+      }
+      }]
+,
     title: {
       enabled: false,
         style: {
@@ -111,7 +165,7 @@ series: [{
     valueDecimals: 0
   },
     dashStyle: 'Dot',
-    color: '#D3BD00'
+    color: '#f0836d'
 }],
      exporting: {
          buttons: {
