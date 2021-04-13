@@ -1,21 +1,17 @@
 Highcharts.setOptions({
-    colors: ['#38cae9']
+    colors: ['#3D71EA']
 });
-
 
 Highcharts.chart('graphique', {
     chart: {
         type: 'spline'
     },
     title: {
-        text: 'Evolution du nombre de salariés indemnisés à Paris - mars-octobre 2020'
+        text: null
     },
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_5_Chomage_partiel/chomage_partiel.csv',
         enablePolling: true
-    },
-    caption: {
-        text: 'Source : ASP-DGEFP-Dares – Extraction du SI APART du 25 novembre 2020, s’arrêtant aux données du 24 novembre 2020.'
     },
 
     credits: {
@@ -23,12 +19,27 @@ Highcharts.chart('graphique', {
     },
     plotOptions: {
         series: {
+          lineWidth: 1,
             marker: {
-                lineColor: '#00c3ff'
+              enabledThreshold: 2,
+              radius: 3,
+              fillColor: '#FFFFFF',
+              lineWidth: 2,
+              lineColor: null // inherit from series,
             }
         }
     },
     yAxis: {
+      gridLineColor: '#efefef',
+      gridLineDashStyle: 'dash',
+      labels: {
+        align: 'left',
+              x: 0,
+              y: -2,
+              style: {
+                  color: '#CFCFCF'
+              }
+          },
      title: {
         enabled: false,
       }
