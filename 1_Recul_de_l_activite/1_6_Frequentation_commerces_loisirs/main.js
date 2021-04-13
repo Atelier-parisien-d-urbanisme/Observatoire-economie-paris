@@ -51,7 +51,7 @@ Highcharts.stockChart('graphique1', {
       enabled:false
     },
     xAxis: {
-          gapGridLineWidth: 0
+      gapGridLineWidth: 0
     },
     legend: {
       enabled:true
