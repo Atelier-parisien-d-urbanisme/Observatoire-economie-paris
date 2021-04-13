@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#f0836d']
+    colors: ['#9fce9c']
 });
 
 
@@ -28,10 +28,12 @@ Highcharts.chart('graphique', {
               radius: 3,
               fillColor: '#FFFFFF',
               lineWidth: 2,
-              lineColor: null // inherit from series
+              lineColor: null // inherit from series,
+
             }
         }
     },
+
     yAxis: {
       gridLineColor: '#efefef',
       gridLineDashStyle: 'dash',
