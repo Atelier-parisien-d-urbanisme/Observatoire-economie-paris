@@ -2,43 +2,41 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Évolution de l'emploi salarié</title>
+    <title>Évolution du taux de chômage</title>
     <link rel="stylesheet" type="text/css" href="style/css/style.css" /> <!-- main CSS -->
   </head>
   <body>
+    <p class="quote"><img src="./3_icon_quote.png" class="quote_mark">Après une baisse en trompe-l’œil liée au confinement, le taux de chômage augmente fortement au troisième trimestre 2020</p>
 
-    <div title="Texte Taux de chomage" id="taux_chomage_text">
-      <p>Après une baisse en trompe-l’œil liée au confinement, le taux de chômage augmente fortement au troisième trimestre 2020</p>
+    <p class="title">Evolution du taux de chômage (au sens du BIT) 2011-2020</p>
+    <p class="subtitle">Notes : données trimestrielles CVS. Les données du dernier trimestre affiché sont provisoires. </p>
+
+    <div id="graphique" >
     </div>
+    <p class="source"><a href="https://www.insee.fr/fr/accueil" target="_blank">Source : Insee, taux de chômage au sens du BIT et taux de chômage. </a></p>
 
-    <div title="Graphique de l'Évolution de l'emploi salarié" id="graphique" >
-    </div>
-
-    <div title="Données clés Taux de chomage" id="taux_chomage_cle">
       <div>
-        <h1>Evolution en points depuis le 2e trimestre 2020 :</h1>
+        <p class="title left">Evolution en points depuis le 2e trimestre 2020 :</p>
         <ul>
           <li>Paris : +1,8 point</li>
           <li>Ile-de-France : +2 points</li>
           <li>France : +1,8 point </li>
         </ul>
       </div>
-    </div>
-    <div title="Texte2 Taux de chomage">
-      <p>Le rebond du chômage sur le trimestre est d'une ampleur inédite mais est en partie mécanique, par contrecoup de la baisse en trompe-l'œil liée au confinement. Sa hausse par rapport à fin 2019 ou sur un an (+0,7 point) témoigne bien toutefois d'une nette dégradation du marché du travail.
+    <div>
+      <p class="quote">Le rebond du chômage sur le trimestre est d'une ampleur inédite mais est en partie mécanique, par contrecoup de la baisse en trompe-l'œil liée au confinement. Sa hausse par rapport à fin 2019 ou sur un an (+0,7 point) témoigne bien toutefois d'une nette dégradation du marché du travail.
       </p>
     </div>
-    <footer style="height:1em"></footer>
-  <!-- <script src="https://code.highcharts.com/modules/annotations.js"></script>
-  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
 
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/modules/data.js"></script>
-  <script src="https://code.highcharts.com/modules/exporting.js"></script>
-  <script type="text/javascript" src="main.js"></script> <!-- main JavaScript-->
-  <script type="text/javascript" src="https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/js/iframeResizer.contentWindow.min.js"></script>
-  <!-- <script type="text/javascript" src="https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/js/iframeResizer.contentWindow.map"></script> -->
+    <!-- Script -->
+
+    <footer style="height:1em"></footer>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/js/iframeResizer.contentWindow.min.js"></script>
 
   </body>
 </html>
