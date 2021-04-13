@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#38cae9']
+    colors: ['#9fce9c']
 });
 
 
@@ -8,31 +8,41 @@ Highcharts.chart('graphique', {
         type: 'spline'
     },
     title: {
-        text: 'Evolution du nombre d’offres durables d’emploi à Paris 2015-2020 (offres diffusées par Pôle emploi)'
+        text: null
     },
 
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_4_Offres_durables/offres_durables.csv',
         enablePolling: true
     },
-
-    caption: {
-        text: "Source :  Pôle emploi, Fichier des offres d'emploi, Données brutes"
-    },
-
     credits: {
       enabled:false
     },
 
     plotOptions: {
         series: {
+          lineWidth: 1,
             marker: {
-                lineColor: '#00c3ff'
+              enabledThreshold: 2,
+              radius: 3,
+              fillColor: '#FFFFFF',
+              lineWidth: 2,
+              lineColor: null // inherit from series,
             }
         }
     },
-
     yAxis: {
+      gridLineColor: '#efefef',
+      gridLineDashStyle: 'dash',
+      labels: {
+          format:'{value} ',
+        align: 'left',
+              x: 0,
+              y: -2,
+              style: {
+                  color: '#CFCFCF'
+              }
+          },
      title: {
         enabled: false,
       }
