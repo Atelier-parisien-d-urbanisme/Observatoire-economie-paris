@@ -6,14 +6,11 @@ Highcharts.chart('graphique1', {
     chart: {
     },
     title: {
-        text: 'Liquidations judiciaires'
+        text: null
     },
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_4_Emplois_menaces/liquidations_judiciaires.csv',
         enablePolling: true
-    },
-    caption: {
-        text: 'Source : Greffe du tribunal de commerce'
     },
     credits: {
       enabled:false
