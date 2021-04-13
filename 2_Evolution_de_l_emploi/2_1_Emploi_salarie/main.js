@@ -29,7 +29,6 @@ Highcharts.chart('graphique', {
               fillColor: '#FFFFFF',
               lineWidth: 2,
               lineColor: null // inherit from series,
-
             }
         }
     },
