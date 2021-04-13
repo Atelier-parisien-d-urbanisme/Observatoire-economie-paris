@@ -20,6 +20,8 @@ Highcharts.chart('graphique', {
      title: {
         text: 'M€'
     },
+    gridLineColor: '#efefef',
+    gridLineDashStyle: 'dash',
     labels: {
       // format: '{value} M€',
       align: 'left',
@@ -31,6 +33,8 @@ Highcharts.chart('graphique', {
         },
 }, { //--- Secondary yAxis
     className: 'highcharts-color-1',
+    gridLineColor: '#efefef',
+    gridLineDashStyle: 'dash',
     title: {
         text: null
     },

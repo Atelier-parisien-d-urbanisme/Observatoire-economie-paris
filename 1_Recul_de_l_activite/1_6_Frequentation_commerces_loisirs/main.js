@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#38cae9', '#2A8BA0','#D3BD00','#D39500']
+    colors: ['#38cae9', '#2A8BA0','#990041','#C29DAC']
 });
 
 Highcharts.stockChart('graphique1', {
@@ -8,7 +8,7 @@ Highcharts.stockChart('graphique1', {
          height: 600,
     },
     title: {
-        text: 'Commerces et loisirs'
+        text: null
     },
     scrollbar: {
       enabled: false
@@ -17,12 +17,9 @@ Highcharts.stockChart('graphique1', {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/1_Recul_de_l_activite/1_6_Frequentation_commerces_loisirs/commerce_loisirs.csv',
         enablePolling: true
     },
-    caption: {
-        text: 'Données lissées sur 7 jours. Source : https://www.google.com/covid19/mobility'
-    },
     navigator: {
       outlineWidth: 0,
-      maskFill: 'rgba(0, 0, 0, 0.2)',
+      maskFill: 'rgba(0, 0, 0, 0.1)',
       handles: {
         symbols: ['o', 'o'],
         backgroundColor: 'grey',
@@ -60,6 +57,10 @@ Highcharts.stockChart('graphique1', {
       enabled:true
     },
     yAxis: {
+    // tickInterval: 25,
+    // min: -100,
+    gridLineColor: '#efefef',
+    gridLineDashStyle: 'dash',
      title: {
         enabled: false,
       }
@@ -91,7 +92,7 @@ Highcharts.stockChart('graphique2', {
          height: 600,
     },
     title: {
-        text: 'Transports en commun'
+        text: null
     },
     scrollbar: {
       enabled: false
@@ -100,12 +101,9 @@ Highcharts.stockChart('graphique2', {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/1_Recul_de_l_activite/1_6_Frequentation_commerces_loisirs/transports_commun.csv',
         enablePolling: true
     },
-    caption: {
-        text: 'Données lissées sur 7 jours. Source : https://www.google.com/covid19/mobility'
-    },
     navigator: {
       outlineWidth: 0,
-      maskFill: 'rgba(0, 0, 0, 0.2)',
+      maskFill: 'rgba(0, 0, 0, 0.1)',
       handles: {
         symbols: ['o', 'o'],
         backgroundColor: 'grey',
@@ -143,6 +141,8 @@ Highcharts.stockChart('graphique2', {
       enabled:true
     },
     yAxis: {
+      gridLineColor: '#efefef',
+      gridLineDashStyle: 'dash',
      title: {
         enabled: false,
       }
