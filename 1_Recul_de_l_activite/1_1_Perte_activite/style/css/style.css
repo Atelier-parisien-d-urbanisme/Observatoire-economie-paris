@@ -119,7 +119,7 @@ td {
 
 .right {
   text-align: right;
-  border-bottom: 0.5px solid silver;
+  border-bottom: 0.5px dashed #efefef;
 }
 
 /*# sourceMappingURL=style.css.map */
