@@ -14,6 +14,19 @@ Highcharts.chart('graphique', {
         startColumn:0,
         endColumn:3,
     },
+    plotOptions: {
+        series: {
+          lineWidth: 1,
+            marker: {
+              symbol:'circle',
+              enabledThreshold: 2,
+              radius: 3,
+              fillColor: '#FFFFFF',
+              lineWidth: 2,
+              lineColor: null // inherit from series,
+            }
+        }
+    },
 
     yAxis: [{ //--- Primary yAxis
     className: 'highcharts-color-0',
