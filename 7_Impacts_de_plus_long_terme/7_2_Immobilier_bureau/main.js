@@ -12,7 +12,19 @@ Highcharts.chart('graphique', {
     credits: {
       enabled:false
     },
-
+    plotOptions: {
+        series: {
+          lineWidth: 1,
+            marker: {
+              symbol:'circle',
+              enabledThreshold: 2,
+              radius: 3,
+              fillColor: '#FFFFFF',
+              lineWidth: 2,
+              lineColor: null // inherit from series,
+            }
+        }
+    },
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/7_Impacts_de_plus_long_terme/7_2_Immobilier_bureau/immobilier_bureau.csv',
         enablePolling: true,
@@ -73,6 +85,14 @@ Highcharts.chart('graphique', {
     yAxis: 0,
     name:'Île-de-France',
     data: {
+    },
+    marker: {
+      symbol:'circle',
+      enabledThreshold: 2,
+      radius: 3,
+      fillColor: '#FFFFFF',
+      lineWidth: 2,
+      lineColor: null // inherit from series,
     },
     tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/>'
   },
