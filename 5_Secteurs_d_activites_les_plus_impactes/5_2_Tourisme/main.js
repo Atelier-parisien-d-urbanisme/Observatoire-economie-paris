@@ -1,28 +1,45 @@
 Highcharts.setOptions({
-    colors: ['#38cae9', '#2A8BA0','#D3BD00','#D39500']
+    colors: ['#FCECD2', '#fcc365']
 });
 
 Highcharts.chart('graphique', {
   chart: {
   },
     title: {
-        text: 'Evolution du taux d’occupation hôtelière à Paris 2019 - 2020'
-    },
-    caption: {
-        text: 'Source : OTCP'
+        text: null
     },
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_2_Tourisme/tourisme.csv',
         startColumn:0,
         endColumn:3,
     },
+    plotOptions: {
+        series: {
+          lineWidth: 1,
+            marker: {
+              enabledThreshold: 2,
+              radius: 3,
+              fillColor: '#FFFFFF',
+              lineWidth: 2,
+              lineColor: null // inherit from series,
+            }
+        }
+    },
 
     yAxis: [{
+      gridLineColor: '#efefef',
+      gridLineDashStyle: 'dash',
      title: {
         enabled:false,
     },
     labels: {
-    format: '{value}%'
+    format: '{value}%',
+    align: 'left',
+          x: 0,
+          y: -2,
+          style: {
+              color: '#CFCFCF'
+          }
   }
 }]
 ,
@@ -40,7 +57,7 @@ series: [{
                style: {
                 fontSize: '10px',
                 fontFamily: 'Roboto',
-                color:'#38cae9',
+                // color:'#38cae9',
             }
            },
 },{
