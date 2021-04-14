@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#38cae9', '#9BD6E3','#D3BD00','#D39500']
+    colors: ['#fcc365','#FCECD2']
 });
 
 Highcharts.chart('graphique', {
@@ -7,10 +7,7 @@ Highcharts.chart('graphique', {
         type: 'column'
     },
     title: {
-        text: 'Nombre et part des locaux vacants à Paris '
-    },
-    caption: {
-      text: "Source : Apur, BDCom. Note : Depuis 2014, l'enquête distingue les locaux strictement vacants des locaux en travaux."
+        text: null
     },
     credits: {
       enabled:false
@@ -21,13 +18,53 @@ Highcharts.chart('graphique', {
         enablePolling: true,
         endcolumn:2,
     },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+    },
+    plotOptions: {
+      column: {
+        stacking: 'normal',
+        minPointLength: 3,
+        dataLabels: {
+          enabled: true,
+            style: {
+            textOutline: 0,
+            fontWeight: 'light',
+            color: 'black',
+           }
+        }
+      },
+      series: {
+        lineWidth: 1,
+          marker: {
+            enabledThreshold: 2,
+            radius: 3,
+            fillColor: '#FFFFFF',
+            lineWidth: 2,
+            lineColor: null // inherit from series,
+          }
+      }
+    },
+
     yAxis: [{
       //--- Primary yAxis
-      className: 'highcharts-color-0',
+      // className: 'highcharts-color-0',
+      gridLineColor: '#efefef',
+      gridLineDashStyle: 'dash',
         min: 0,
           title: {
            enabled: false,
           },
+          labels: {
+          format: '{value}',
+          align: 'left',
+                x: 0,
+                y: -2,
+                style: {
+                    color: '#CFCFCF'
+                }
+        },
           stackLabels: {
               enabled: true,
               style: {
@@ -43,35 +80,19 @@ Highcharts.chart('graphique', {
         title: {
         enabled: false,
         style: {
-            color: '#D3BD00'
+            color: '#38cae9'
           }
         },
         labels: {
-        format: '{value}%'
-      },
+          format: '{value} %',
+                style: {
+                    color: '#38cae9'
+                }
+            },
         opposite: true
       }],
 
-    legend: {
-    },
-    tooltip: {
-        headerFormat: '<b>{point.x}</b><br/>',
-        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
-    },
-    plotOptions: {
-        column: {
-            stacking: 'normal',
-            minPointLength: 3,
-            dataLabels: {
-                enabled: true,
-                style: {
-                  textOutline: 0,
-                  fontWeight: 'light',
-                  color: 'black',
-           }
-            }
-        }
-    },
+
     series: [
       {
          yAxis: 0,
@@ -92,7 +113,7 @@ Highcharts.chart('graphique', {
         tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>'
       },
         dashStyle: 'solide',
-        color: '#D3BD00'
+        color: '#38cae9'
     },
 
   ],
