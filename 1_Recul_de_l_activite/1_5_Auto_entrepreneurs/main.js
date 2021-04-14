@@ -18,17 +18,17 @@ Highcharts.chart('graphique', {
     yAxis: [{ //--- Primary yAxis
     className: 'highcharts-color-0',
      title: {
-        text: 'M€'
+        text: null
     },
     gridLineColor: '#efefef',
     gridLineDashStyle: 'dash',
     labels: {
-      // format: '{value} M€',
+      format: '{value} €',
       align: 'left',
             x: 0,
             y: -2,
             style: {
-                color: '#00c3ff'
+                color: '#CFCFCF'
             }
         },
 }, { //--- Secondary yAxis
