@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#38cae9', '#9BD6E3','#D3BD00','#D39500','#f4a261','#e76f51']
+    colors: ['#38cae9', '#9BD6E3','#98DC87','#a4c95b','#C8DD9E']
 });
 
 Highcharts.chart('graphique', {
@@ -7,10 +7,7 @@ Highcharts.chart('graphique', {
         type: 'column'
     },
     title: {
-        text: 'Evolution de la demande placée en Île-de-France'
-    },
-    caption: {
-      text: "Source : Immostat"
+        text: null
     },
     credits: {
       enabled:false
@@ -22,6 +19,8 @@ Highcharts.chart('graphique', {
         endcolumn:2,
     },
     yAxis: {
+      gridLineColor: '#efefef',
+      gridLineDashStyle: 'dash',
         min: 0,
           title: {
            enabled: false,
