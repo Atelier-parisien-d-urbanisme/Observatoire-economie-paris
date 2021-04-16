@@ -17,6 +17,15 @@ Highcharts.stockChart('graphique', {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_3_Secteur_activite/secteur_activite.csv',
         enablePolling: true
     },
+    xAxis: {
+    labels: {
+    step: 1,
+    rotation: -45,
+    style: {
+      fontSize: '8px',
+      }
+    }
+  },
     yAxis: {
     opposite:false,
     gridLineColor: '#efefef',

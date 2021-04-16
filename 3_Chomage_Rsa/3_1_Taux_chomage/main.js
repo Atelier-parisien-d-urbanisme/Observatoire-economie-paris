@@ -18,6 +18,15 @@ Highcharts.chart('graphique', {
     credits: {
       enabled:false
     },
+    xAxis: {
+    labels: {
+    step: 1,
+    rotation: -45,
+    style: {
+      fontSize: '8px',
+      }
+    }
+  },
     yAxis: {
       gridLineColor: '#efefef',
       gridLineDashStyle: 'dash',

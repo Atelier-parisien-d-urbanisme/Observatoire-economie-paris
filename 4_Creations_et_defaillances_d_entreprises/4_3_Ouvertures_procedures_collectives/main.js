@@ -26,7 +26,7 @@ Highcharts.chart('graphique', {
             }
         }
     },
-
+    
     yAxis: [{
       gridLineColor: '#efefef',
       gridLineDashStyle: 'dash',

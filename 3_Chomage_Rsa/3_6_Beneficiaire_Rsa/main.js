@@ -1,6 +1,19 @@
-
 Highcharts.setOptions({
-    colors: ['#38cae9', '#2A8BA0','#3D71EA','#DAB464']
+    colors: ['#38cae9', '#2A8BA0','#3D71EA','#DAB464'],
+    lang: {
+      months: [
+          'Janvier', 'Février', 'Mars', 'Avril',
+          'Mai', 'Juin', 'Juillet', 'Août',
+          'Septembre', 'Octobre', 'Novembre', 'Décembre'
+      ],
+      shortMonths:['Janvier', 'Février', 'Mars', 'Avril',
+      'Mai', 'Juin', 'Juillet', 'Août',
+      'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+      weekdays: [
+          'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
+          'Jeudi', 'Vendredi', 'Samedi'
+      ]
+  }
 });
 
 Highcharts.stockChart('graphique', {
