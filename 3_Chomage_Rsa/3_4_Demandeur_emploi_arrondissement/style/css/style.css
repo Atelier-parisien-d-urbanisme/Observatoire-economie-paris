@@ -82,4 +82,8 @@ hr {
   padding: 5px;
 }
 
+.highcharts-zoom-out, .highcharts-zoom-in {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -28,6 +28,8 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             data: indice_chomage,
             keys: ['c_ar', 'value','className'],
             joinBy: 'c_ar',
+            borderColor: 'white',
+            borderWidth: 0.5,
             name: "Evolution du chiffre d'affaires moyen<br> par entreprise (du 1er au 3e trimestre 2020 <br>par rapport à la meme période en 2019)	",
             tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_DEP}</span>: <b>{point.value} %</b><br/>'
           },
@@ -97,6 +99,8 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             data: evo_nombre_demandeur_emploi_cat_A,
             keys: ['c_ar', 'value','className'],
             joinBy: 'c_ar',
+            borderColor: 'white',
+            borderWidth: 0.5,
             name: "Evolution du chiffre d'affaires moyen<br> par entreprise (du 1er au 3e trimestre 2020 <br>par rapport à la meme période en 2019)	",
             tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_DEP}</span>: <b>{point.value} %</b><br/>'
           },

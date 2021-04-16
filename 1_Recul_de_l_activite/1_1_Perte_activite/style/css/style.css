@@ -122,4 +122,8 @@ td {
   border-bottom: 0.5px dashed #efefef;
 }
 
+.highcharts-zoom-out, .highcharts-zoom-in {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

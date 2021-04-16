@@ -29,6 +29,8 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             keys: ['EPT_NUM', 'value','className'],
             joinBy: 'EPT_NUM',
             name: "Perte d'activité",
+            borderColor: 'white',
+            borderWidth: 0.5,
             tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_EPT}</span>: <b>{point.value} %</b><br/>'
           },
             states: {
@@ -97,6 +99,8 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             keys: ['EPT_NUM', 'value','className'],
             joinBy: 'EPT_NUM',
             name: "Perte d'activité",
+            borderColor: 'white',
+            borderWidth: 0.5,
             tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_EPT}</span>: <b>{point.value} %</b><br/>'
           },
             states: {

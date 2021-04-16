@@ -58,4 +58,8 @@ hr {
   cursor: pointer;
 }
 
+.highcharts-zoom-out, .highcharts-zoom-in {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

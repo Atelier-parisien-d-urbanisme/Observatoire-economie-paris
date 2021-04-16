@@ -29,6 +29,8 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             keys: ['C_DEP', 'value','className'],
             joinBy: 'C_DEP',
             name: "Evolution du chiffre d'affaires moyen par entreprise",
+            borderColor: 'white',
+            borderWidth: 0.5,
             tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_DEP}</span>: <b>{point.value} %</b><br/>'
           },
             states: {
