@@ -1,7 +1,9 @@
 Highcharts.setOptions({
-    colors: ['#f0836d']
+    colors: ['#f0836d','#FADFD9'],
+    style: {
+     fontFamily: 'Roboto'
+   }
 });
-
 
 Highcharts.chart('graphique', {
     chart: {
@@ -12,49 +14,102 @@ Highcharts.chart('graphique', {
     },
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_1_Creations_entreprises/creations_entreprises.csv',
-        enablePolling: true
+        // startColumn:0,
+        // endColumn:2,
     },
-
     credits: {
       enabled:false
     },
-    plotOptions: {
-        series: {
-          lineWidth: 1,
-            marker: {
-              enabledThreshold: 2,
-              radius: 3,
-              fillColor: '#FFFFFF',
-              lineWidth: 2,
-              lineColor: null // inherit from series,
-            }
-        }
-    },
-    xAxis: {
-    labels: {
-    step: 1,
-    rotation: -45,
-    style: {
-      fontSize: '8px',
-      }
-    }
+  //   xAxis: {
+  //   labels: {
+  //   step: 1,
+  //   rotation: -45,
+  //   style: {
+  //     fontSize: '8px',
+  //     }
+  //   }
+  // },
+  yAxis: [{ //--- Primary yAxis
+  className: 'highcharts-color-0',
+   title: {
+      text: null
   },
-    yAxis: {
-      gridLineColor: '#efefef',
-      gridLineDashStyle: 'dash',
-      labels: {
-        format:'{value}',
-        // align: 'left',
-        //       x: 0,
-        //       y: -2,
-              style: {
-                  color: '#CFCFCF'
-              }
-          },
-     title: {
-        enabled: false,
-      }
-     },
+  gridLineColor: '#efefef',
+  gridLineDashStyle: 'dash',
+  labels: {
+     format: '{value}',
+          style: {
+              color: '#f0836d'
+          }
+      },
+}, { //--- Secondary yAxis
+  className: 'highcharts-color-1',
+  gridLineColor: '#efefef',
+  gridLineDashStyle: 'dash',
+  title: {
+      text: null
+  },
+  labels: {
+    format: '{value} %',
+          style: {
+              color: '#F3D9D4'
+          }
+      },
+  opposite: true
+}],
+series: [
+  {
+      yAxis: 0,
+      type: 'spline',
+      data: {
+      },
+      lineWidth: 1,
+        marker: {
+          symbol:'circle',
+          enabledThreshold: 2,
+          radius: 3,
+          fillColor: '#FFFFFF',
+          lineWidth: 2,
+          lineColor: null // inherit from series,
+        }
+    ,
+      tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
+      valueDecimals: 2,
+      color: '#F3D9D4'
+    },
+  },{
+    yAxis: 1,
+    type: 'areaspline',
+    lineWidth:0,
+    marker: {
+      enabled:false,
+
+    },
+    data: {
+    },
+    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>',
+    valueDecimals: 0,
+    color:'#f0836d'
+   }
+}],
+
+    //
+    // yAxis: {
+    //   gridLineColor: '#efefef',
+    //   gridLineDashStyle: 'dash',
+    //   labels: {
+    //     format:'{value}',
+    //     // align: 'left',
+    //     //       x: 0,
+    //     //       y: -2,
+    //           style: {
+    //               color: '#CFCFCF'
+    //           }
+    //       },
+    //  title: {
+    //     enabled: false,
+    //   }
+    //  },
     legend: {
      enabled: false
     },

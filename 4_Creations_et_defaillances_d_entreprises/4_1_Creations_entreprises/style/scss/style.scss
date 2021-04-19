@@ -71,3 +71,21 @@ hr {
 #creations_entreprises_cle {
   display :inline-flex;
 }
+
+.highcharts-axis.highcharts-color-1 {
+  fill: #F3D9D4;
+	stroke: #F3D9D4;
+}
+
+.highcharts-axis.highcharts-color-0 {
+  fill: #f0836d;
+	stroke: #f0836d;
+}
+
+.highcharts-yaxis .highcharts-axis-line {
+	stroke-width: 2px;
+}
+
+.highcharts-root {
+    margin-top:2em;
+}
