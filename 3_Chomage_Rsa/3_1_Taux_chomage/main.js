@@ -21,6 +21,9 @@ Highcharts.chart('graphique', {
     credits: {
       enabled:false
     },
+    tooltip: {
+       shared: true,
+   },
     xAxis: {
     labels: {
     step: 1,
