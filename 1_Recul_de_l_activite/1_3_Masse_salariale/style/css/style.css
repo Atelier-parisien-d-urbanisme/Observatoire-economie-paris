@@ -79,20 +79,15 @@ hr {
 #tableau {
   margin: 0 auto;
   border-collapse: collapse;
-}
-@media (max-width: 576px) {
-  #tableau {
-    display: grid;
-  }
-}
-@media (min-width: 576px) {
-  #tableau {
-    display: inline-flex;
-  }
+  text-align-last: center;
+  display: grid;
 }
 
 td, th {
   padding: 3px;
+}
+td.invisible, th.invisible {
+  display: none;
 }
 
 thead th.title {
@@ -116,6 +111,7 @@ th {
 td {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
+  font-weight: lighter;
 }
 @media (min-width: 576px) {
   td.subtitle_left {

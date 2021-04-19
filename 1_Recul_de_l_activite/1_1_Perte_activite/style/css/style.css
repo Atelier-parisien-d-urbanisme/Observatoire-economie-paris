@@ -125,7 +125,7 @@ td {
 
 .right {
   text-align: right;
-  border-bottom: 0.5px dashed #efefef;
+  border-bottom: 0.5px dashed silver;
 }
 
 .highcharts-zoom-out, .highcharts-zoom-in {
