@@ -46,6 +46,9 @@ hr {
 .subtitle.left {
   text-align: left;
 }
+.subtitle.bottom {
+  margin-bottom: 3em;
+}
 
 .subtitle_table {
   font-size: 12px;
