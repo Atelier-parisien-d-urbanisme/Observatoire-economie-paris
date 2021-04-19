@@ -36,10 +36,13 @@ Highcharts.chart('graphique', {
     gridLineColor: '#efefef',
     gridLineDashStyle: 'dash',
     labels: {
-      format: '{value} €',
-      align: 'left',
-            x: 0,
-            y: -2,
+      formatter: function () {
+            return this.value / 1000000 + ' M€';
+        },
+      // format: '{value} €',
+      // align: 'left',
+      //       x: 0,
+      //       y: -2,
             style: {
                 color: '#CFCFCF'
             }
