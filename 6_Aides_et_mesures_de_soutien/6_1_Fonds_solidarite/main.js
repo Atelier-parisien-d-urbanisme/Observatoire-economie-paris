@@ -2,7 +2,8 @@ Highcharts.setOptions({
     colors: ['#b0a8d3'],
     style: {
      fontFamily: 'Roboto'
-   }
+   },
+   height:500
 });
 
 Highcharts.chart('graphique', {
@@ -22,6 +23,14 @@ Highcharts.chart('graphique', {
     },
     xAxis: {
       reversed: false,
+      labels: {
+      useHTML: true,
+      allowOverlap: true,
+      style: {
+        wordBreak: 'break-all',
+        textOverflow: 'allow'
+      }
+    }
     },
     yAxis: [{
       gridLineColor: '#efefef',

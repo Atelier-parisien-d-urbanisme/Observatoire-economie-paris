@@ -24,6 +24,21 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
         //     [0.95, '#c4463a']
         // ]
         },
+        plotOptions: {
+           series: {
+             dataLabels: {
+               allowOverlap: true,
+               useHTML: true,
+               style: {
+                 width: 70,
+                 fontSize:'12px',
+                 textAlign: 'center',
+                  color:'white'
+               }
+             }
+           }
+         },
+
         series: [{
             data: data_T4_2020,
             keys: ['EPT_NUM', 'value','className'],
@@ -94,6 +109,20 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
         //     [0.95, '#c4463a']
         // ]
         },
+        plotOptions: {
+           series: {
+             dataLabels: {
+               allowOverlap: true,
+               useHTML: true,
+               style: {
+                 width: 70,
+                 fontSize:'12px',
+                 textAlign: 'center',
+
+               }
+             }
+           }
+         },
         series: [{
             data: data_T1_2021,
             keys: ['EPT_NUM', 'value','className'],
@@ -109,6 +138,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
                 }
             },
             dataLabels: {
+              overflowValue: "justify",
                 enabled: true,
                 format: '{point.properties.L_EPT}',
                 style: {
