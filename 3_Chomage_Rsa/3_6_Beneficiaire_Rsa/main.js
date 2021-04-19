@@ -1,5 +1,8 @@
 Highcharts.setOptions({
     colors: ['#38cae9', '#2A8BA0','#3D71EA','#DAB464'],
+    style: {
+     fontFamily: 'Roboto'
+   },
     lang: {
       months: [
           'Janvier', 'Février', 'Mars', 'Avril',

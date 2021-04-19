@@ -7,7 +7,7 @@ Highcharts.chart('graphique', {
     chart: {
         type: 'spline',
         style: {
-           fontFamily: 'Roboto'
+         fontFamily: 'Roboto'
        }
     },
     title: {

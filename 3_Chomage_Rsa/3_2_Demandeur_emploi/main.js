@@ -5,7 +5,10 @@ Highcharts.setOptions({
 Highcharts.chart('graphique', {
     chart: {
         type: 'spline',
-        height:400
+        height:400,
+        style: {
+         fontFamily: 'Roboto'
+       }
     },
     title: {
         text: null

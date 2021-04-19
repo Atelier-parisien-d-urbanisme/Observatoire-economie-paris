@@ -6,6 +6,9 @@ Highcharts.stockChart('graphique', {
     chart: {
         type: 'spline',
          height: 600,
+         style: {
+          fontFamily: 'Roboto'
+        }
     },
     title: {
         text: null
