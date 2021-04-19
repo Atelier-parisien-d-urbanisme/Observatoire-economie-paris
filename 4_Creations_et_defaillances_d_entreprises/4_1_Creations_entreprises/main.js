@@ -1,34 +1,26 @@
 Highcharts.setOptions({
-    colors: ['#f0836d','#FADFD9'],
+    colors: ['#FADFD9','#f0836d'],
     style: {
      fontFamily: 'Roboto'
    }
 });
 
 Highcharts.chart('graphique', {
-    chart: {
-        type: 'spline'
-    },
+  chart: {
+    height:400
+  },
     title: {
         text: null
     },
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_1_Creations_entreprises/creations_entreprises.csv',
-        // startColumn:0,
-        // endColumn:2,
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_1_Creations_entreprises/creations_entreprises.csv'
     },
     credits: {
       enabled:false
     },
-  //   xAxis: {
-  //   labels: {
-  //   step: 1,
-  //   rotation: -45,
-  //   style: {
-  //     fontSize: '8px',
-  //     }
-  //   }
-  // },
+    tooltip: {
+       shared: true,
+   },
   yAxis: [{ //--- Primary yAxis
   className: 'highcharts-color-0',
    title: {
@@ -36,13 +28,16 @@ Highcharts.chart('graphique', {
   },
   gridLineColor: '#efefef',
   gridLineDashStyle: 'dash',
+  max:100,
+  min:0,
   labels: {
-     format: '{value}',
+     format: '{value} %',
           style: {
-              color: '#f0836d'
+          color: '#F3D9D4'
           }
       },
 }, { //--- Secondary yAxis
+  min:0,
   className: 'highcharts-color-1',
   gridLineColor: '#efefef',
   gridLineDashStyle: 'dash',
@@ -50,16 +45,31 @@ Highcharts.chart('graphique', {
       text: null
   },
   labels: {
-    format: '{value} %',
+    format: '{value}',
           style: {
-              color: '#F3D9D4'
+            color: '#f0836d'
           }
       },
   opposite: true
 }],
 series: [
   {
-      yAxis: 0,
+    yAxis: 0,
+    type: 'areaspline',
+    lineWidth:0,
+    marker: {
+      enabled:false,
+
+    },
+    data: {
+    },
+    tooltip: {pointFormat: '<span style="color: grey">{series.name}</span>: <b>{point.y} %</b><br/>',
+    valueDecimals: 0,
+    color:'#f0836d'
+   }
+},
+  {
+      yAxis: 1,
       type: 'spline',
       data: {
       },
@@ -74,25 +84,20 @@ series: [
         }
     ,
       tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
-      valueDecimals: 2,
+      valueDecimals: 0,
       color: '#F3D9D4'
     },
-  },{
-    yAxis: 1,
-    type: 'areaspline',
-    lineWidth:0,
-    marker: {
-      enabled:false,
+  }],
 
-    },
-    data: {
-    },
-    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>',
-    valueDecimals: 0,
-    color:'#f0836d'
-   }
-}],
-
+  //   xAxis: {
+  //   labels: {
+  //   step: 1,
+  //   rotation: -45,
+  //   style: {
+  //     fontSize: '8px',
+  //     }
+  //   }
+  // },
     //
     // yAxis: {
     //   gridLineColor: '#efefef',
