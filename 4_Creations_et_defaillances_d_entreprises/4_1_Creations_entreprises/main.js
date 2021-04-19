@@ -33,7 +33,7 @@ Highcharts.chart('graphique', {
   labels: {
      format: '{value} %',
           style: {
-          color: '#F3D9D4'
+          color: 'grey'
           }
       },
 }, { //--- Secondary yAxis
