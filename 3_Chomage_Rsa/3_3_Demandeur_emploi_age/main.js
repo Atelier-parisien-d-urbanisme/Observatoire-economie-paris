@@ -29,6 +29,12 @@ Highcharts.stockChart('graphique', {
       }
     }
   },
+  series: [
+    {visible: false},
+    {},
+    {},
+  ],
+
     yAxis: {
     opposite:false,
     gridLineColor: '#efefef',
@@ -47,22 +53,7 @@ Highcharts.stockChart('graphique', {
           },
      },
     navigator: {
-      outlineWidth: 0,
-      maskFill: 'rgba(0, 0, 0, 0.1)',
-      handles: {
-        symbols: ['o', 'o'],
-        backgroundColor: 'grey',
-        borderColor: 'grey',
-      },
-      xAxis: {
-        labels: {
-          enabled: false
-        }
-      },
-      series: {
-        // type: 'areaspline',
-        color: '#bbb'
-      }
+      enabled:false
     },
     plotOptions: {
         series: {
