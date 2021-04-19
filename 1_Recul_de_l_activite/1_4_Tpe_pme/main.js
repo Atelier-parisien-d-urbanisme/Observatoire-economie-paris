@@ -38,6 +38,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             },
             dataLabels: {
                 enabled: true,
+                allowOverlap: true,
                 format: '{point.properties.L_DEP}',
                 style: {
                  // fontSize: '9px',
