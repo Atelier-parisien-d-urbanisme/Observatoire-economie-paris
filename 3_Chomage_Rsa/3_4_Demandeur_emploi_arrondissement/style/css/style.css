@@ -65,15 +65,8 @@ hr {
   cursor: pointer;
 }
 
-@media (max-width: 576px) {
-  #graphique {
-    display: grid;
-  }
-}
-@media (min-width: 576px) {
-  #graphique {
-    display: inline-flex;
-  }
+#graphique {
+  display: grid;
 }
 
 .map_title {

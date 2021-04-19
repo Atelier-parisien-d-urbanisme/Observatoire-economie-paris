@@ -67,12 +67,13 @@ hr {
   }
 }
 #graphique {
-  @media (max-width: 576px) {
-    display: grid;
-  }
-  @media (min-width: 576px) {
-    display: inline-flex;
-  }
+  display: grid;
+  // @media (max-width: 576px) {
+  //   display: grid;
+  // }
+  // @media (min-width: 576px) {
+  //   display: inline-flex;
+  // }
 }
 
 .map_title {
