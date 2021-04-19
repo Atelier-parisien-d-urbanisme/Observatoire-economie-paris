@@ -34,7 +34,7 @@ Highcharts.stockChart('graphique', {
         enabled: false,
       },
       labels: {
-        format: '{value} %',
+        format: '{value}',
         // align: 'left',
         //       x: 0,
         //       y: -2,
@@ -80,7 +80,7 @@ Highcharts.stockChart('graphique', {
       enabled:true
     },
      tooltip: {
-         pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
+         pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
          valueDecimals: 0
      },
      exporting: {
