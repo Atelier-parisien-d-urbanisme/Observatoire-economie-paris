@@ -80,7 +80,6 @@ hr {
   margin: 0 auto;
   border-collapse: collapse;
   text-align-last: center;
-  display: grid;
 }
 
 td, th {
