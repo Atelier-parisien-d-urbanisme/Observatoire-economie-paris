@@ -31,21 +31,25 @@ hr {
 }
 
 .title {
-  margin: 4px;
+  margin-bottom: 4px;
+  margin-top: 3em;
   margin-left: 10px;
   margin-right: 10px;
   text-align: center;
   font-weight: bolder;
   color: #990041;
 }
+.title .margin-top {
+  margin-top: 3em;
+}
 
 .subtitle {
-  margin: 4px;
-  text-align: center;
+  margin: 0;
+  margin-bottom: 4px;
   font-style: italic;
-  color: #990041;
   font-size: 12px;
   line-height: 12px;
+  color: black;
 }
 
 .subtitle_table {
@@ -53,11 +57,16 @@ hr {
   line-height: 12px;
 }
 
+.source {
+  margin: 0;
+  margin-top: 1em;
+}
+
 .source a {
   font-size: 12px;
   line-height: 27px;
   font-style: italic;
-  color: #990041;
+  color: black;
   text-decoration: overline dotted;
 }
 .source a:hover {
