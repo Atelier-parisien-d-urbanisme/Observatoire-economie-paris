@@ -115,9 +115,6 @@ series: [
     //     enabled: false,
     //   }
     //  },
-    legend: {
-     enabled: false
-    },
     exporting: {
             buttons: {
                 contextButton: {
