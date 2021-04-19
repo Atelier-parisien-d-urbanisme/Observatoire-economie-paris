@@ -91,12 +91,14 @@ hr {
 #tableau {
     margin: 0 auto;
     border-collapse: collapse;
-    @media (max-width: 576px) {
-      display: grid;
-    }
-    @media (min-width: 576px) {
-      display: inline-flex;
-    }
+    text-align-last: center;
+    display: grid;
+    // @media (max-width: 576px) {
+    //
+    // }
+    // @media (min-width: 576px) {
+    //   display: inline-flex;
+    // }
 }
 
 td, th {
@@ -124,6 +126,7 @@ th {
 td {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
+  font-weight:lighter;
   &.subtitle_left {
     @media (min-width: 576px) {
       visibility: hidden;
