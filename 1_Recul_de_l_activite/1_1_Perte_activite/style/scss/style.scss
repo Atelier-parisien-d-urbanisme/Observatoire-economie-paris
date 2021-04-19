@@ -103,6 +103,9 @@ hr {
 
 td, th {
     padding: 3px;
+    &.invisible {
+      display: none;
+    }
 }
 
 thead th {

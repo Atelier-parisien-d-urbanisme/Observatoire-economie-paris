@@ -81,6 +81,9 @@ hr {
 td, th {
   padding: 3px;
 }
+td.invisible, th.invisible {
+  display: none;
+}
 
 thead th.title {
   border-bottom: 1px dotted silver;
