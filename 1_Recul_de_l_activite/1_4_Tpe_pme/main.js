@@ -14,12 +14,12 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             }
         },
         colorAxis: {
-            tickPixelInterval: 40,
+            tickPixelInterval: 100,
             reversed: true,
             stops: [
               [0, '#990041'],
-              [0.8, '#C75E8B'],
-              [1, '#E1BFC8']
+              [0.7, '#C75E8B'],
+              [0.9, '#F1DCE2']
         ]
         },
         series: [{
