@@ -74,10 +74,16 @@ Highcharts.stockChart('graphique1', {
     yAxis: {
     // tickInterval: 25,
     // min: -100,
+    opposite: false,
     gridLineColor: '#efefef',
     gridLineDashStyle: 'dash',
      title: {
         enabled: false,
+      },
+      labels: {
+        style:{
+          color: '#CFCFCF'
+        }
       }
      },
      tooltip: {
@@ -159,8 +165,14 @@ Highcharts.stockChart('graphique2', {
     yAxis: {
       gridLineColor: '#efefef',
       gridLineDashStyle: 'dash',
+      opposite:false,
      title: {
         enabled: false,
+      },
+      labels: {
+        style:{
+          color: '#CFCFCF'
+        }
       }
      },
      tooltip: {

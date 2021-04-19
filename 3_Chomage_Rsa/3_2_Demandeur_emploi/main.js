@@ -33,9 +33,9 @@ Highcharts.chart('graphique', {
       gridLineDashStyle: 'dash',
       labels: {
           format:'{value}',
-        align: 'left',
-              x: 0,
-              y: -2,
+        // align: 'left',
+        //       x: 0,
+        //       y: -2,
               style: {
                   color: '#CFCFCF'
               }
