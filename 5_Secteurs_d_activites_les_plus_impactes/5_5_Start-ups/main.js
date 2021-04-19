@@ -5,7 +5,8 @@ Highcharts.setOptions({
 
 Highcharts.chart('graphique', {
     chart: {
-        type: 'pie'
+        type: 'pie',
+        height: 250
     },
     title: {
         text: null
