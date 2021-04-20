@@ -55,7 +55,7 @@ Highcharts.chart('graphique', {
 series: [
   {
     yAxis: 0,
-    type: 'areaspline',
+    type: 'column',
     lineWidth:0,
     marker: {
       enabled:false,
