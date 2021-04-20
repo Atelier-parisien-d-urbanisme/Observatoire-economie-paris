@@ -59,7 +59,7 @@ hr {
   font-size: 12px;
   line-height: 27px;
   font-style: italic;
-  color: $Theme2;
+  color: black;
   text-decoration: overline dotted;
   &:hover {
     color: $Apur;
@@ -84,52 +84,81 @@ hr {
     color: gray;
     min-height: 2em;
 }
-#table-sparkline {
+
+
+#tableau {
     margin: 0 auto;
     border-collapse: collapse;
+    // @media (max-width: 576px) {
+    //   display: grid;
+    // }
+    // @media (min-width: 576px) {
+    //   display: inline-flex;
+    // }
 }
 
 td, th {
-    padding: 2px;
-    border-bottom: 0.5px dashed #CFCFCF;
+    padding: 3px;
+    &.invisible {
+      display: none;
+    }
 }
 
+
 thead th {
-    // border-top: 1px solid black;
-  border-bottom: 2px solid $Theme2;
+   &.title {
+     border-bottom: 1px dotted silver;}
+   &.subtitle {
+     border-bottom: 2px solid black;
+     &.subtitle_left {
+       border-right: 1px dotted silver;
+     }
+   }
 }
 
 th {
-  margin: 4px;
-  text-align: center;
-  color:$Theme2;
-  font-size: 12px;
-  line-height: 12px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight:bold;
+    font-size: 14px;
 }
+
 td {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
+  font-weight:lighter;
+  &.subtitle_left {
+    @media (min-width: 576px) {
+      visibility: hidden;
+    }
+  }
 }
-
 .right {
-  text-align: right;
+  text-align: left;
+  border-bottom: 0.5px solid silver;
 }
-.sparkline {
- text-align: center;
- text-align: -webkit-center;
- padding-left: 1em;
-}
-.arrow {
-  color: black;
-  font-weight:bold;
-  font-size: 22px;
-}
-
-
-.highcharts-tooltip>span {
-    background: white;
-    border: 1px solid silver;
-    border-radius: 3px;
-    box-shadow: 1px 1px 2px #888;
-    padding: 8px;
-}
+//
+// #table-sparkline {
+//     margin: 0 auto;
+//     border-collapse: collapse;
+// }
+// .sparkline {
+//  text-align: center;
+//  text-align: -webkit-center;
+//  padding-left: 1em;
+// }
+// .arrow {
+//   color: black;
+//   font-weight:bold;
+//   font-size: 22px;
+// }
+//
+//
+// .highcharts-tooltip>span {
+//     background: white;
+//     border: 1px solid silver;
+//     border-radius: 3px;
+//     box-shadow: 1px 1px 2px #888;
+//     padding: 8px;
+// }
