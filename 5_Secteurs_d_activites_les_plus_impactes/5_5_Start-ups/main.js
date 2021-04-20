@@ -6,10 +6,17 @@ Highcharts.setOptions({
 Highcharts.chart('graphique', {
     chart: {
         type: 'pie',
-        height: 250
+        height: 250,
+        style: {
+         fontFamily: 'Roboto'
+       }
     },
     title: {
         text: null
+    },
+    tooltip: {
+      pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
+      valueDecimals: 0
     },
 
     data: {
