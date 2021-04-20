@@ -14,6 +14,9 @@ Highcharts.chart('graphique', {
         startColumn:0,
         endColumn:3,
     },
+    tooltip: {
+       shared: true,
+   },
     plotOptions: {
         series: {
           lineWidth: 1,
@@ -68,14 +71,14 @@ series: [{
     data: {
     },
     tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} €</b><br/>',
-    valueDecimals: 2
+    valueDecimals: 0
    }
 },{
     yAxis: 0,
     data: {
     },
     tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} €</b><br/>',
-    valueDecimals: 2
+    valueDecimals: 0
    }
 },{
     yAxis: 1,
@@ -84,7 +87,7 @@ series: [{
     data: {
     },
     tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
-    valueDecimals: 2
+    valueDecimals: 1
   },
   color: '#990041',
   negativeColor: '#D5ADBE',

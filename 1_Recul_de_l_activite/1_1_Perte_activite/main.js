@@ -14,7 +14,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             }
         },
         colorAxis: {
-            tickPixelInterval: 40,
+            tickPixelInterval: 50,
             reversed: true,
             minColor: '#990041',
            maxColor: '#E7C7D4',
@@ -99,7 +99,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             }
         },
         colorAxis: {
-            tickPixelInterval: 40,
+            tickPixelInterval: 50,
             reversed: true,
             minColor: '#990041',
            maxColor: '#E7C7D4',
