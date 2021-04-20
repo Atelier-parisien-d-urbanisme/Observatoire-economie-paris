@@ -48,9 +48,6 @@ Highcharts.chart('graphique', {
       gridLineColor: '#efefef',
       gridLineDashStyle: 'dash',
       labels: {
-        // align: 'left',
-              // x: 0,
-              // y: -2,
               style: {
                   color: '#CFCFCF'
               }
@@ -61,6 +58,10 @@ Highcharts.chart('graphique', {
      },
     legend: {
      enabled: false
+    },
+    tooltip: {
+        pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
+        valueDecimals: 0
     },
     exporting: {
             buttons: {

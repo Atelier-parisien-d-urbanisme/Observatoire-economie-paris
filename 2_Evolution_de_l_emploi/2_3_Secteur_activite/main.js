@@ -37,7 +37,7 @@ Highcharts.stockChart('graphique', {
         enabled: false,
       },
       labels: {
-        format: '{value} %',
+        format: '{value}',
         // align: 'left',
         //       x: 0,
         //       y: -2,
@@ -47,21 +47,7 @@ Highcharts.stockChart('graphique', {
           },
      },
     navigator: {
-      outlineWidth: 0,
-      maskFill: 'rgba(0, 0, 0, 0.1)',
-      handles: {
-        symbols: ['o', 'o'],
-        backgroundColor: 'grey',
-        borderColor: 'grey',
-      },
-      xAxis: {
-        labels: {
-          enabled: false
-        }
-      },
-      series: {
-        color: '#bbb'
-      }
+      enabled : false,
     },
     plotOptions: {
       series: {
@@ -83,7 +69,7 @@ Highcharts.stockChart('graphique', {
     },
 
      tooltip: {
-         pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
+         pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
          valueDecimals: 0
      },
      exporting: {
