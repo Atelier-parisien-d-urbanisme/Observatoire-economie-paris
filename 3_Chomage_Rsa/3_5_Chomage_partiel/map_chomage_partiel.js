@@ -1,4 +1,4 @@
-// Données pour la carte des demandeurs d'emploi par arrondissement, indice de chomage.
+// Données pour les cartes du chomage partiel.
 
 const map1_data = [
     ['75101', 11,7],
