@@ -30,7 +30,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             joinBy: 'c_ar',
             borderColor: 'white',
             borderWidth: 0.5,
-            name: "Evolution du chiffre d'affaires moyen<br> par entreprise (du 1er au 3e trimestre 2020 <br>par rapport à la meme période en 2019)	",
+            name: "Evolution du chiffre d'affaires moyen par entreprise",
             tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_DEP}</span>: <b>{point.value} %</b><br/>'
           },
             states: {
@@ -101,7 +101,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             joinBy: 'c_ar',
             borderColor: 'white',
             borderWidth: 0.5,
-            name: "Evolution du chiffre d'affaires moyen<br> par entreprise (du 1er au 3e trimestre 2020 <br>par rapport à la meme période en 2019)	",
+            name: "Evolution du chiffre d'affaires moyen<br> par entreprise",
             tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_DEP}</span>: <b>{point.value} %</b><br/>'
           },
             states: {
