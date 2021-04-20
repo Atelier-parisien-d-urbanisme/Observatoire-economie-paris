@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#f0836d','#FADFD9'],
+    colors: ['#FADFD9','#CA4226','#f0836d'],
     style: {
      fontFamily: 'Roboto'
    }
@@ -48,7 +48,7 @@ Highcharts.chart('graphique', {
       }]
 ,
 series: [{
-    type:'line',
+    type:'column',
     yAxis: 0,
     data: {
     },
@@ -56,7 +56,7 @@ series: [{
     valueDecimals: 0
    }
 },{
-  type:'column',
+  type:'spline',
     yAxis: 0,
     data: {
     },
