@@ -22,6 +22,7 @@ Highcharts.chart('graphique', {
       enabled:false
     },
     tooltip: {
+      pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
        shared: true,
    },
     xAxis: {
@@ -58,6 +59,12 @@ Highcharts.chart('graphique', {
           lineWidth: 1,
           marker: {
             enabled: false,
+            // symbol: 'circle',
+            enabledThreshold: 2,
+            radius: 3,
+            fillColor: '#FFFFFF',
+            lineWidth: 2,
+            lineColor: null // inherit from series,
           },
         }
     },
