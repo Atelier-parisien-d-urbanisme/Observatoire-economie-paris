@@ -81,14 +81,15 @@ Highcharts.stockChart('graphique1', {
         enabled: false,
       },
       labels: {
+        format: '{value} %',
         style:{
           color: '#CFCFCF'
         }
       }
      },
      tooltip: {
-         // pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
-         valueDecimals: 2
+         pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
+         valueDecimals: 1
      },
      exporting: {
          buttons: {
@@ -170,14 +171,15 @@ Highcharts.stockChart('graphique2', {
         enabled: false,
       },
       labels: {
+        format: '{value} %',
         style:{
           color: '#CFCFCF'
         }
       }
      },
      tooltip: {
-         // pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
-         valueDecimals: 2
+       pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
+         valueDecimals: 1
      },
      exporting: {
          buttons: {
