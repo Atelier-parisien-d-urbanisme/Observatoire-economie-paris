@@ -201,6 +201,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
                 allowOverlap: true,
                 format: '{point.properties.l_cab}',
                 style: {
+                
                  // fontSize: '9px',
                  fontFamily: 'Roboto',
                  fontWeight: 'light',

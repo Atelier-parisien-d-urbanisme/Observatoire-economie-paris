@@ -43,6 +43,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
                 enabled: true,
                 format: '{point.properties.l_cab}',
                 style: {
+                    width: 50,
                  // fontSize: '9px',
                  fontFamily: 'Roboto',
                  fontWeight: 'light',
