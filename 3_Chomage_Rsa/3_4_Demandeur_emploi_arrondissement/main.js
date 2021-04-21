@@ -13,6 +13,9 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
         title: {
               text: undefined
           },
+          tooltip: {
+             shared: true,
+         },
         colorAxis: {
             tickPixelInterval: 80,
             reversed: false,
