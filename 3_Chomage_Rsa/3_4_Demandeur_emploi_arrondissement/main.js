@@ -26,8 +26,8 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
         },
         series: [{
             data: map1,
-            keys: ['c_ar', 'value','className'],
-            joinBy: 'c_ar',
+            keys: ['c_cainsee', 'value','className'],
+            joinBy: 'c_cainsee',
             borderColor: 'white',
             borderWidth: 0.5,
             name: "Evolution du chiffre d'affaires moyen par entreprise",
@@ -97,8 +97,8 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
         },
         series: [{
             data: map2,
-            keys: ['c_ar', 'value','className'],
-            joinBy: 'c_ar',
+            keys: ['c_cainsee', 'value','className'],
+            joinBy: 'c_cainsee',
             borderColor: 'white',
             borderWidth: 0.5,
             name: "Evolution du chiffre d'affaires moyen<br> par entreprise",
