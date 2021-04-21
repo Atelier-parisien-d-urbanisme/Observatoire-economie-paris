@@ -39,28 +39,27 @@ hr {
   }
 }
 .subtitle {
-  margin: 4px;
-  text-align: center;
+  margin:0;
+  margin-bottom:4px;
   font-style: italic;
-  color:$Theme4;
   font-size: 12px;
   line-height: 12px;
-  &.left {
-    text-align: left;
-  }
+  color: black;
 }
 
 .subtitle_table {
   font-size: 12px;
   line-height: 12px;
 }
-
-.source, .source a {
+.source {
+  margin:0;
+  margin-top:1em;
+}
+.source a {
   font-size: 12px;
   line-height: 27px;
-  margin: 4px;
   font-style: italic;
-  color: $Theme4;
+  color: black;
   text-decoration: overline dotted;
   &:hover {
     color: $Apur;
