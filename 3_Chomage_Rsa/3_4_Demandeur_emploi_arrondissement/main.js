@@ -1,4 +1,4 @@
-Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/3_Chomage_Rsa/3_4_Demandeur_emploi_arrondissement/arr.json', function (geojson) {
+Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/3_Chomage_Rsa/3_4_Demandeur_emploi_arrondissement/1234_arr.geojson', function (geojson) {
     Highcharts.mapChart('graphique1', {
         chart: {
             map: geojson,
@@ -25,7 +25,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
         // ]
         },
         series: [{
-            data: indice_chomage,
+            data: map1,
             keys: ['c_ar', 'value','className'],
             joinBy: 'c_ar',
             borderColor: 'white',
@@ -96,7 +96,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
         // ]
         },
         series: [{
-            data: evo_nombre_demandeur_emploi_cat_A,
+            data: map2,
             keys: ['c_ar', 'value','className'],
             joinBy: 'c_ar',
             borderColor: 'white',

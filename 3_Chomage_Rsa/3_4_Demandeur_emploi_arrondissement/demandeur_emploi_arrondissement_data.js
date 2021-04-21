@@ -1,6 +1,6 @@
 // Données pour la carte des demandeurs d'emploi par arrondissement, indice de chomage.
 
-const indice_chomage = [
+const map1 = [
     ['1', 11,7],
     ['5', 9,0],
     ['6', 9,6],
@@ -22,7 +22,7 @@ const indice_chomage = [
 
 // Données pour la carte des demandeurs d'emploi par arrondissement, Evolution du nombre de demandeurs d'emploi de catégorie A .
 
-const evo_nombre_demandeur_emploi_cat_A = [
+const map2 = [
     ['1', 16,1],
     ['5', 14,0],
     ['6', 14,4],
