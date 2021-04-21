@@ -16,6 +16,14 @@ Highcharts.chart('graphique', {
     },
   xAxis: {
     reversed: false,
+    labels: {
+    // useHTML: true,
+    // allowOverlap: true,
+    style: {
+      wordBreak: 'break-all',
+      textOverflow: 'allow'
+    }
+  }
 
   },
     yAxis: [{
