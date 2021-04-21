@@ -218,7 +218,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
            style: {
                fontStyle: 'italic'
            }
-       },
+       }},
         exporting: {
             buttons: {
                 contextButton: {
