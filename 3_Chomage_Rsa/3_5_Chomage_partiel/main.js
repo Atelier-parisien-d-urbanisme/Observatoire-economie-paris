@@ -55,7 +55,7 @@ Highcharts.chart('graphique', {
       }
      },
     legend: {
-     enabled: false
+     enabled: false,
     },
     exporting: {
             buttons: {
@@ -105,7 +105,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             joinBy: 'c_cainsee',
             borderColor: 'white',
             borderWidth: 0.5,
-            name: "Evolution du chiffre d'affaires moyen par entreprise",
+            name: "Salariés concernés par une demande d'indemnisation",
             tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.l_cab}</span>: <b>{point.value} %</b><br/>'
           },
             states: {
@@ -127,6 +127,17 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
              }
             },
         }],
+        legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        title: {
+           text: '%',
+           style: {
+               fontStyle: 'italic'
+           }
+       },
+    },
         exporting: {
             buttons: {
                 contextButton: {
@@ -177,7 +188,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             joinBy: 'c_cainsee',
             borderColor: 'white',
             borderWidth: 0.5,
-            name: "Evolution du chiffre d'affaires moyen<br> par entreprise",
+            name: "Salariés concernés par une demande d'indemnisation",
             tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.l_cab}</span>: <b>{point.value} %</b><br/>'
           },
             states: {
@@ -198,6 +209,16 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
              }
             },
         }],
+        legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        title: {
+           text: '%',
+           style: {
+               fontStyle: 'italic'
+           }
+       },
         exporting: {
             buttons: {
                 contextButton: {

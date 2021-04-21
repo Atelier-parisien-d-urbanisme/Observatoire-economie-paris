@@ -1,5 +1,5 @@
 Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/3_Chomage_Rsa/3_4_Demandeur_emploi_arrondissement/1234_arr.geojson', function (geojson) {
-    Highcharts.mapChart('graphique1', {
+    Highcharts.mapChart('map1', {
         chart: {
             map: geojson,
             height:300
@@ -51,6 +51,16 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
              }
             },
         }],
+        legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        title: {
+           text: '%',
+           style: {
+               fontStyle: 'italic'
+           }
+       },
         exporting: {
             buttons: {
                 contextButton: {
@@ -70,7 +80,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
           },
     });
 
-    Highcharts.mapChart('graphique2', {
+    Highcharts.mapChart('map2', {
         chart: {
             map: geojson,
             height:300
@@ -121,6 +131,16 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
              }
             },
         }],
+        legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        title: {
+           text: '%',
+           style: {
+               fontStyle: 'italic'
+           }
+       },
         exporting: {
             buttons: {
                 contextButton: {
