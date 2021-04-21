@@ -116,7 +116,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
 
             dataLabels: {
                 enabled: true,
-                format: '{point.properties.l_ar}',
+                format: '{point.properties.l_cab}',
                 style: {
                  // fontSize: '9px',
                  fontFamily: 'Roboto',
@@ -160,7 +160,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
               text: undefined
           },
         colorAxis: {
-            tickPixelInterval: 40,
+            tickPixelInterval: 60,
             reversed: false,
             minColor: '#D3D3EA',
            maxColor: '#3660C0',
@@ -186,7 +186,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             },
             dataLabels: {
                 enabled: true,
-                format: '{point.properties.l_ar}',
+                format: '{point.properties.l_cab}',
                 style: {
                  // fontSize: '9px',
                  fontFamily: 'Roboto',

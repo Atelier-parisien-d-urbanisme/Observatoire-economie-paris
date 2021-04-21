@@ -25,13 +25,13 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
         // ]
         },
         series: [{
-            data: map1,
+            data: map1_data,
             keys: ['c_cainsee', 'value','className'],
             joinBy: 'c_cainsee',
             borderColor: 'white',
             borderWidth: 0.5,
             name: "Evolution du chiffre d'affaires moyen par entreprise",
-            tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_DEP}</span>: <b>{point.value} %</b><br/>'
+            tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.l_cab}</span>: <b>{point.value} %</b><br/>'
           },
             states: {
                 hover: {
@@ -41,7 +41,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
 
             dataLabels: {
                 enabled: true,
-                format: '{point.properties.l_ar}',
+                format: '{point.properties.l_cab}',
                 style: {
                  // fontSize: '9px',
                  fontFamily: 'Roboto',
@@ -96,13 +96,13 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
         // ]
         },
         series: [{
-            data: map2,
+            data: map2_data,
             keys: ['c_cainsee', 'value','className'],
             joinBy: 'c_cainsee',
             borderColor: 'white',
             borderWidth: 0.5,
             name: "Evolution du chiffre d'affaires moyen<br> par entreprise",
-            tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_DEP}</span>: <b>{point.value} %</b><br/>'
+            tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.l_cab}</span>: <b>{point.value} %</b><br/>'
           },
             states: {
                 hover: {
@@ -111,7 +111,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             },
             dataLabels: {
                 enabled: true,
-                format: '{point.properties.l_ar}',
+                format: '{point.properties.l_cab}',
                 style: {
                  // fontSize: '9px',
                  fontFamily: 'Roboto',
