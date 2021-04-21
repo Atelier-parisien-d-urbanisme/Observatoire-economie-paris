@@ -38,6 +38,7 @@ hr {
     text-align: left;
   }
 }
+
 .subtitle {
   margin:0;
   margin-bottom:4px;
@@ -45,6 +46,10 @@ hr {
   font-size: 12px;
   line-height: 12px;
   color: black;
+  &.map {
+    color: $Theme3;
+    text-align: center;
+  }
 }
 
 .subtitle_table {

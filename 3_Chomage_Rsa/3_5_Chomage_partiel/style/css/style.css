@@ -44,6 +44,10 @@ hr {
   line-height: 12px;
   color: black;
 }
+.subtitle.map {
+  color: #3D71EA;
+  text-align: center;
+}
 
 .subtitle_table {
   font-size: 12px;
