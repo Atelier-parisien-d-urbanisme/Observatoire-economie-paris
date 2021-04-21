@@ -45,12 +45,13 @@ Highcharts.chart('graphique', {
       gridLineDashStyle: 'dash',
       labels: {
         format: '{value}',
-        // align: 'left',
-        //       x: 0,
-        //       y: -2,
-              style: {
-                  color: '#CFCFCF'
-              }
+        formatter: function() {
+          return Highcharts.numberFormat(this.value, 0, '.', ' ');
+        },
+        style: {
+          color: '#CFCFCF'
+        }
+
           },
      title: {
         enabled: false,

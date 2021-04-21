@@ -34,10 +34,10 @@ Highcharts.chart('graphique1', {
       gridLineColor: '#efefef',
       gridLineDashStyle: 'dash',
       labels: {
-          format:'{value}',
-        // align: 'left',
-        //       x: 0,
-        //       y: -2,
+        format: '{value}',
+        formatter: function() {
+          return Highcharts.numberFormat(this.value, 0, '.', ' ');
+        },
               style: {
                   color: '#CFCFCF'
               }
@@ -92,16 +92,27 @@ Highcharts.chart('graphique2', {
         startColumn:0,
         endColumn:3,
     },
-
+    plotOptions: {
+        series: {
+          lineWidth: 1,
+            marker: {
+              enabledThreshold: 2,
+              radius: 3,
+              fillColor: '#FFFFFF',
+              lineWidth: 2,
+              lineColor: null // inherit from series,
+            }
+        }
+    },
     yAxis: [{ //--- Primary yAxis
     className: 'highcharts-color-0',
     gridLineColor: '#efefef',
     gridLineDashStyle: 'dash',
     labels: {
-      format:'{value}',
-      align: 'left',
-            x: 0,
-            y: -2,
+      format: '{value}',
+      formatter: function() {
+        return Highcharts.numberFormat(this.value, 0, '.', ' ');
+      },
             style: {
                 color: '#CFCFCF'
             }
@@ -111,6 +122,8 @@ Highcharts.chart('graphique2', {
      }
 }, { //--- Secondary yAxis
     className: 'highcharts-color-1',
+    gridLineColor: '#efefef',
+    gridLineDashStyle: 'dash',
     plotOptions: {
         series: {
           lineWidth: 1,
@@ -168,7 +181,7 @@ series: [{
     valueDecimals: 0
   },
     dashStyle: 'Dot',
-    color: '#f0836d'
+    color: '#f0836d',
 }],
      exporting: {
          buttons: {

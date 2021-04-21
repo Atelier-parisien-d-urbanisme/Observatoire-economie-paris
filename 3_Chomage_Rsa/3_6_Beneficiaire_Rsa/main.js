@@ -66,10 +66,10 @@ Highcharts.stockChart('graphique', {
       gridLineColor: '#efefef',
       gridLineDashStyle: 'dash',
       labels: {
-        format:'{value}',
-        // align: 'left',
-        //       x: 0,
-        //       y: -2,
+        format: '{value}',
+        formatter: function() {
+          return Highcharts.numberFormat(this.value, 0, '.', ' ');
+        },
               style: {
                   color: '#CFCFCF'
               }

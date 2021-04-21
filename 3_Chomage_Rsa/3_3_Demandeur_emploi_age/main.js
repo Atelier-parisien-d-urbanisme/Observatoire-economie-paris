@@ -43,9 +43,9 @@ Highcharts.stockChart('graphique', {
       },
       labels: {
         format: '{value}',
-        // align: 'left',
-        //       x: 0,
-        //       y: -2,
+        formatter: function() {
+          return Highcharts.numberFormat(this.value, 0, '.', ' ');
+        },
               style: {
                   color: '#CFCFCF'
               }
@@ -60,6 +60,10 @@ Highcharts.stockChart('graphique', {
           showInNavigator: true,
           marker: {
             enabled: false,
+            radius: 3,
+            fillColor: '#FFFFFF',
+            lineWidth: 2,
+            lineColor: null // inherit from series,
           },
         }
     },

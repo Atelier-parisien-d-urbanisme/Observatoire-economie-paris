@@ -1,7 +1,10 @@
 Highcharts.setOptions({
-    colors: ['#9fce9c']
+    colors: ['#9fce9c'],
+    // lang: {
+    //         numericSymbols: null,
+    //         thousandsSep: ' '
+    //     }
 });
-
 
 Highcharts.chart('graphique', {
     chart: {
@@ -50,11 +53,14 @@ Highcharts.chart('graphique', {
       labels: {
               style: {
                   color: '#CFCFCF'
+              },
+              formatter: function() {
+                  return Highcharts.numberFormat(this.value, 0, '.', ' ');
               }
           },
      title: {
         enabled: false,
-      }
+      },
      },
     legend: {
      enabled: false

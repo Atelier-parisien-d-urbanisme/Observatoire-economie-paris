@@ -50,7 +50,9 @@ Highcharts.chart('graphique', {
            enabled: false,
           },
           labels: {
-          format: '{value} m²'
+            formatter: function() {
+              return Highcharts.numberFormat(this.value, 0, '.', ' ')
+            },
         },
       },
 

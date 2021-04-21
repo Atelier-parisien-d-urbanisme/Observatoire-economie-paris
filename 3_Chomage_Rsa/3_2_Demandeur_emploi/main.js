@@ -38,13 +38,13 @@ Highcharts.chart('graphique', {
       gridLineColor: '#efefef',
       gridLineDashStyle: 'dash',
       labels: {
-          format:'{value}',
-        // align: 'left',
-        //       x: 0,
-        //       y: -2,
-              style: {
-                  color: '#CFCFCF'
-              }
+        format: '{value}',
+        formatter: function() {
+          return Highcharts.numberFormat(this.value, 0, '.', ' ');
+        },
+          style: {
+            color: '#CFCFCF'
+            }
           },
      title: {
         enabled: false,
@@ -58,6 +58,10 @@ Highcharts.chart('graphique', {
           lineWidth: 1,
           marker: {
             enabled: false,
+            radius: 3,
+            fillColor: '#FFFFFF',
+            lineWidth: 2,
+            lineColor: null // inherit from series,
           },
         }
     },
