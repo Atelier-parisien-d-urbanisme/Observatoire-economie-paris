@@ -1,134 +1,17 @@
-@font-face {
-  font-family: Roboto;
-  src: url("../Roboto/Roboto-Light.ttf") format("truetype");
-}
-@font-face {
-  font-family: Roboto-bold;
-  src: url("../Roboto/Roboto-Bold.ttf") format("truetype");
-}
-@font-face {
-  font-family: Roboto-black;
-  src: url("../Roboto/Roboto-Black.ttf") format("truetype");
-}
-body {
-  font-family: Roboto, sans-serif;
-  font-size: 14px;
-}
+/* Error: unmatched "}".
+ *     ,
+ * 138 | }
+ *     | ^
+ *     '
+ *   scss\style.scss 138:1  root stylesheet */
 
-hr {
-  border: 0;
-  height: 1px;
-  background-image: -webkit-linear-gradient(left, #f0f0f0, #9fce9c, #f0f0f0);
-  background-image: -moz-linear-gradient(left, #f0f0f0, #9fce9c, #f0f0f0);
-  background-image: -ms-linear-gradient(left, #f0f0f0, #9fce9c, #f0f0f0);
-  background-image: -o-linear-gradient(left, #f0f0f0, #9fce9c, #f0f0f0);
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: unmatched "}".\a     \2577 \a 138 \2502  }\d\a     \2502  ^\a     \2575 \a   scss\\style.scss 138:1  root stylesheet';
 }
-
-.maintext {
-  margin: 0 auto;
-  width: 70%;
-  margin-top: 30px;
-  height: 1px;
-  border-top: 1px solid black;
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.subtext {
-  width: auto;
-  height: auto;
-  text-align: center;
-  position: absolute;
-  top: -10px;
-  right: 0;
-  left: 0;
-}
-
-.subtext h2 {
-  padding: 7px 12px;
-  background: #ffffff;
-  display: inline;
-  color: #000000;
-  font-family: Roboto-black;
-  font-size: 14px;
-  color: black;
-}
-
-.txtCle {
-  margin: 0;
-  text-align: center;
-}
-
-.cle {
-  text-align: center;
-  font-size: 18px;
-  color: #9fce9c;
-  font-family: Roboto-black;
-}
-
-.quote {
-  font-size: 16px;
-  line-height: 27px;
-}
-
-.quote_mark {
-  height: 20px;
-  margin-right: 20px;
-  margin-left: 10px;
-}
-
-.title {
-  margin: 4px;
-  margin-left: 10px;
-  margin-right: 10px;
-  text-align: center;
-  font-weight: bolder;
-  color: #9fce9c;
-}
-
-.subtitle {
-  margin: 0;
-  margin-bottom: 4px;
-  font-style: italic;
-  font-size: 12px;
-  line-height: 12px;
-  color: black;
-}
-
-.subtitle_table {
-  font-size: 12px;
-  line-height: 12px;
-}
-
-.source {
-  margin: 0;
-  margin-top: 1em;
-}
-
-.source a {
-  font-size: 12px;
-  line-height: 27px;
-  font-style: italic;
-  color: black;
-  text-decoration: overline dotted;
-}
-.source a:hover {
-  color: #00c3ff;
-  cursor: pointer;
-}
-
-#graphique {
-  min-width: 310px;
-  height: 400px;
-  margin: 0 auto;
-}
-
-#emploi_salarie_cle {
-  margin: 10px;
-  display: inline-flex;
-}
-#emploi_salarie_cle div {
-  margin: 10px;
-}
-
-/*# sourceMappingURL=style.css.map */
