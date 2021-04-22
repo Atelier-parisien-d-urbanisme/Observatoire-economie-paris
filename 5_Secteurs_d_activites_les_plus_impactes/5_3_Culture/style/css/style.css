@@ -52,6 +52,9 @@ hr {
   font-family: Roboto-black;
   font-size: 14px;
   color: black;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  line-height: 20px;
 }
 
 .boxCle {
@@ -76,6 +79,60 @@ hr {
 }
 .duoCle div {
   margin: 10px;
+}
+
+.quote {
+  font-size: 16px;
+  line-height: 27px;
+}
+
+.quote_mark {
+  height: 20px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.title {
+  margin: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  font-weight: bolder;
+  color: #fcc365;
+}
+.title.left {
+  text-align: left;
+}
+
+.subtitle {
+  margin: 0;
+  margin-bottom: 4px;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 12px;
+  color: black;
+}
+
+.subtitle_table {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.source {
+  margin: 0;
+  margin-top: 1em;
+}
+
+.source a {
+  font-size: 12px;
+  line-height: 27px;
+  font-style: italic;
+  color: black;
+  text-decoration: overline dotted;
+}
+.source a:hover {
+  color: #00c3ff;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
