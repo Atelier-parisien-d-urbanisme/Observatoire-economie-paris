@@ -85,6 +85,9 @@ hr {
   margin:10px;
   display:inline-flex;
   align-items: center;
+  &.large {
+    min-width: 300px;
+  }
   div {
     margin:10px;
     }

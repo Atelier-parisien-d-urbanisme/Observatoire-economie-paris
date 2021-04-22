@@ -83,6 +83,9 @@ hr {
   display: inline-flex;
   align-items: center;
 }
+.duoCle.large {
+  min-width: 300px;
+}
 .duoCle div {
   margin: 10px;
 }
