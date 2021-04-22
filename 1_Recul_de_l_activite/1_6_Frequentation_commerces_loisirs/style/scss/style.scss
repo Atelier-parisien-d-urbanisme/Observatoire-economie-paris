@@ -2,6 +2,7 @@ body {
   font-family: "Roboto";
   font-size: 14px;
   font-weight: lighter;
+  margin-left: 20px;
 }
 
 $Theme1: #990041;
@@ -15,6 +16,7 @@ hr {
     background-image: -ms-linear-gradient(left, #f0f0f0, $Theme1, #f0f0f0);
     background-image: -o-linear-gradient(left, #f0f0f0, $Theme1, #f0f0f0);
 }
+
 .maintext{
   margin-top:30px;
 	width:100%;
@@ -42,7 +44,6 @@ hr {
   color: black;
 	}
 
-
 .txtCle {
   text-align: center;
 }
@@ -52,7 +53,6 @@ hr {
       color: $Theme1;
       font-weight: bold;
     }
-
 
 .quote {
   font-size: 16px;
