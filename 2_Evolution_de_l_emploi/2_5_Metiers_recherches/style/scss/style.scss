@@ -57,6 +57,8 @@ hr {
   -webkit-box-decoration-break: clone;
   box-decoration-break:clone;
   line-height: 20px;
+  padding-top:0;
+  padding-bottom:0;
   &.color {
     color:$Theme2;
   }
