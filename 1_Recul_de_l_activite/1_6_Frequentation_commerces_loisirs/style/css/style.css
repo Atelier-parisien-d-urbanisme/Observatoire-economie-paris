@@ -1,7 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap");
+@font-face {
+  font-family: Roboto;
+  src: url("../Roboto/Roboto-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: Roboto-bold;
+  src: url("../Roboto/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: Roboto-black;
+  src: url("../Roboto/Roboto-Black.ttf") format("truetype");
+}
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 14px;
 }
 
@@ -38,7 +48,7 @@ hr {
   background: #ffffff;
   display: inline;
   color: #000000;
-  font-family: "Roboto";
+  font-family: Roboto-black;
   font-size: 14px;
   color: black;
 }
@@ -59,7 +69,7 @@ hr {
   text-align: center;
   font-size: 18px;
   color: #990041;
-  font-weight: bold;
+  font-family: Roboto-black;
 }
 
 .quote {
@@ -78,7 +88,7 @@ hr {
   margin-left: 10px;
   margin-right: 10px;
   text-align: center;
-  font-weight: bolder;
+  font-family: Roboto-bold;
   color: #990041;
 }
 .title.titleCle {
