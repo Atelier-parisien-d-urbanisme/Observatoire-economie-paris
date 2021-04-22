@@ -17,9 +17,9 @@ hr {
   margin-top: 6vh;
   width: 100%;
   height: 1px;
-  border-top: 1px solid #990041;
+  border-top: 1px solid black;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 6vh;
 }
 
 .subtext {
@@ -39,17 +39,15 @@ hr {
   color: #000000;
   font-family: "Roboto";
   font-size: 14px;
-  color: #990041;
+  color: black;
 }
 
 .txtCle {
-  margin-left: 10px;
+  text-align: center;
 }
 
-ul li {
-  list-style: none;
-}
-ul li span {
+.cle {
+  text-align: center;
   font-size: 18px;
   color: #990041;
   font-weight: bold;

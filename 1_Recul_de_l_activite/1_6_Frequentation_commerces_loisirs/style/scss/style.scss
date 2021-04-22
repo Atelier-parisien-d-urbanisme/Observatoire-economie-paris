@@ -19,9 +19,9 @@ hr {
   margin-top:6vh;
 	width:100%;
 	height:1px;
-	border-top:1px solid $Theme1;
+	border-top:1px solid black;
 	position:relative;
-	margin-bottom:20px;
+	margin-bottom:6vh;
 	}
 .subtext{
 	width:auto;
@@ -39,23 +39,19 @@ hr {
 	color:#000000;
 	font-family: 'Roboto';
 	font-size:14px;
-  color:$Theme1;
+  color: black;
 	}
 
 
 .txtCle {
-  margin-left:10px;
+  text-align: center;
 }
-ul {
-  li {
-    list-style : none;
-    span {
+.cle {
+  text-align: center;
       font-size: 18px;
       color: $Theme1;
       font-weight: bold;
     }
-  }
-}
 
 
 .quote {
