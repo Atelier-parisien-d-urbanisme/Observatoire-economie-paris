@@ -1,8 +1,7 @@
 body {
   font-family: "Roboto";
   font-size: 14px;
-  font-weight: lighter;
-  margin-left: 20px;
+  font-weight: light;
 }
 
 hr {
@@ -43,7 +42,15 @@ hr {
   color: black;
 }
 
+@media (min-width: 576px) {
+  .boxCle {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
 .txtCle {
+  margin: 0;
   text-align: center;
 }
 
