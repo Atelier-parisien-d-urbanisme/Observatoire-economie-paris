@@ -63,6 +63,7 @@ hr {
 
 .boxCle {
   margin: 0 auto;
+  text-align: center;
 }
 
 .txtCle {
@@ -80,6 +81,7 @@ hr {
 .duoCle {
   margin: 10px;
   display: inline-flex;
+  align-items: center;
 }
 .duoCle div {
   margin: 10px;
@@ -115,28 +117,9 @@ hr {
   color: black;
 }
 
-.boxCle {
-  margin: 0 auto;
-}
-
 .txtCle {
   margin: 0;
   text-align: center;
-}
-
-.cle {
-  text-align: center;
-  font-size: 18px;
-  color: #fcc365;
-  font-family: Roboto-black;
-}
-
-.duoCle {
-  margin: 10px;
-  display: inline-flex;
-}
-.duoCle div {
-  margin: 10px;
 }
 
 .quote {

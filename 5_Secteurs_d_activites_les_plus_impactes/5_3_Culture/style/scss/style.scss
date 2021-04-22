@@ -65,6 +65,7 @@ hr {
 
 .boxCle {
   margin: 0 auto;
+  text-align: center;
   // @media (min-width: 576px) {
   //   margin-left: 20%;
   //   margin-right: 20%;
@@ -83,6 +84,7 @@ hr {
 .duoCle {
   margin:10px;
   display:inline-flex;
+  align-items: center;
   div {
     margin:10px;
     }
@@ -117,30 +119,11 @@ hr {
   color: black;
 	}
 
-.boxCle {
-  margin: 0 auto;
-  // @media (min-width: 576px) {
-  //   margin-left: 20%;
-  //   margin-right: 20%;
-  // }
-}
 .txtCle {
   margin:0;
   text-align: center;
 }
-.cle {
-  text-align: center;
-  font-size: 18px;
-  color: $Theme5;
-  font-family: Roboto-black;
-    }
-.duoCle {
-  margin:10px;
-  display:inline-flex;
-  div {
-    margin:10px;
-    }
-  }
+
 
 .quote {
   font-size: 16px;
