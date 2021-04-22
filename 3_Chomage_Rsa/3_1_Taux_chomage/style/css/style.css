@@ -55,6 +55,7 @@ hr {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   line-height: 20px;
+  padding-top: 0;
 }
 .subtext h2.color {
   color: #3D71EA;
