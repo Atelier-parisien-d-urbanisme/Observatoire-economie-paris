@@ -48,10 +48,15 @@ hr {
   padding: 7px 12px;
   background: #ffffff;
   display: inline;
-  color: #000000;
   font-family: Roboto-black;
   font-size: 14px;
   color: black;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  line-height: 20px;
+}
+.subtext h2.color {
+  color: #9fce9c;
 }
 
 .txtCle {
