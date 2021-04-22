@@ -196,6 +196,14 @@ hr {
   cursor: pointer;
 }
 
+.key_illustration {
+  display: inline-flex;
+}
+
+.illustration {
+  max-height: 90px;
+}
+
 /* Link the series colors to axis colors */
 .highcharts-axis.highcharts-color-0 {
   stroke: #fcc365;
