@@ -88,6 +88,60 @@ hr {
     }
   }
 
+
+.maintext{
+  margin: 0 auto;
+  width: 70%;
+  margin-top:30px;
+	height:1px;
+	border-top:1px solid black;
+	position:relative;
+	margin-bottom:30px;
+	}
+.subtext{
+	width:auto;
+	height:auto;
+	text-align:center;
+	position:absolute;
+  top:-10px;
+	right:0;
+	left:0;
+	}
+.subtext h2{
+	padding:7px 12px;
+	background:#ffffff;
+	display:inline;
+	color:#000000;
+	font-family: Roboto-black;
+	font-size:14px;
+  color: black;
+	}
+
+.boxCle {
+  margin: 0 auto;
+  // @media (min-width: 576px) {
+  //   margin-left: 20%;
+  //   margin-right: 20%;
+  // }
+}
+.txtCle {
+  margin:0;
+  text-align: center;
+}
+.cle {
+  text-align: center;
+  font-size: 18px;
+  color: $Theme5;
+  font-family: Roboto-black;
+    }
+.duoCle {
+  margin:10px;
+  display:inline-flex;
+  div {
+    margin:10px;
+    }
+  }
+
 .quote {
   font-size: 16px;
   line-height: 27px;
@@ -126,6 +180,9 @@ hr {
 .source {
   margin:0;
   margin-top:1em;
+  &.middle {
+    text-align: center;
+  }
 }
 .source a {
   font-size: 12px;
@@ -137,4 +194,19 @@ hr {
     color: $Apur;
     cursor: pointer;
   }
+}
+
+
+/* Link the series colors to axis colors */
+
+.highcharts-axis.highcharts-color-0 {
+	stroke: $Theme5;
+}
+.highcharts-axis.highcharts-color-1 {
+  fill: #38cae9;
+	stroke: #38cae9;
+}
+
+.highcharts-yaxis .highcharts-axis-line {
+	stroke-width: 2px;
 }

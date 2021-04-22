@@ -200,5 +200,8 @@ td.subtitle_left {
   text-align: center;
   border-bottom: 0.5px solid silver;
 }
+.right.align {
+  text-align: right;
+}
 
 /*# sourceMappingURL=style.css.map */

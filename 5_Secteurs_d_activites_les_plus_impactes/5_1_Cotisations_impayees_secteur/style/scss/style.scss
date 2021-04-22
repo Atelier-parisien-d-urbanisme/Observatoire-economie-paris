@@ -208,6 +208,9 @@ td {
 .right {
   text-align: center;
   border-bottom: 0.5px solid silver;
+  &.align {
+    text-align: right;
+  }
 }
 //
 // #table-sparkline {
