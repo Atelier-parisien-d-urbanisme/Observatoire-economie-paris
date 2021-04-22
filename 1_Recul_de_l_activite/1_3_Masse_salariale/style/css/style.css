@@ -1,22 +1,3 @@
-#container {
-  height: 500px;
-  min-width: 310px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.loading {
-  margin-top: 10em;
-  text-align: center;
-  color: gray;
-}
-
-#result {
-  text-align: right;
-  color: gray;
-  min-height: 2em;
-}
-
 @font-face {
   font-family: Roboto;
   src: url("../Roboto/Roboto-Light.ttf") format("truetype");
