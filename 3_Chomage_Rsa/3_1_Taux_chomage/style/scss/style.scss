@@ -54,6 +54,12 @@ hr {
 	font-family: Roboto-black;
 	font-size:14px;
   color: black;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break:clone;
+  line-height: 20px;
+  &.color {
+    color:$Theme3;
+  }
 	}
 
 .boxCle {
