@@ -54,6 +54,10 @@ hr {
   color: black;
 }
 
+.boxCle {
+  margin: 0 auto;
+}
+
 .txtCle {
   margin: 0;
   text-align: center;
