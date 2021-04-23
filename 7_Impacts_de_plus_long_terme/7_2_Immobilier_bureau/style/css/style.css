@@ -48,7 +48,8 @@ hr {
   padding: 7px 12px;
   background: #ffffff;
   display: inline;
-  font-family: Roboto-black;
+  font-family: "Roboto";
+  font-weight: bold;
   font-size: 14px;
   color: black;
   -webkit-box-decoration-break: clone;
