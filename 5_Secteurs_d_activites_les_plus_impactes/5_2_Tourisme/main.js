@@ -111,6 +111,7 @@ Highcharts.chart('graphique2', {
 
     plotOptions: {
         series: {
+          color:'#CE8C34',
           lineWidth: 1,
             marker: {
               enabledThreshold: 2,
