@@ -18,10 +18,10 @@ body {
 hr {
   border: 0;
   height: 1px;
-  background-image: -webkit-linear-gradient(left, #f0f0f0, #fcc365, #f0f0f0);
-  background-image: -moz-linear-gradient(left, #f0f0f0, #fcc365, #f0f0f0);
-  background-image: -ms-linear-gradient(left, #f0f0f0, #fcc365, #f0f0f0);
-  background-image: -o-linear-gradient(left, #f0f0f0, #fcc365, #f0f0f0);
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #CE8C34, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #CE8C34, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #CE8C34, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #CE8C34, #f0f0f0);
 }
 
 .maintext {
@@ -58,7 +58,7 @@ hr {
   padding-bottom: 0;
 }
 .subtext h2.color {
-  color: #fcc365;
+  color: #CE8C34;
 }
 
 .boxCle {
@@ -73,7 +73,7 @@ hr {
 .cle {
   text-align: center;
   font-size: 18px;
-  color: #fcc365;
+  color: #CE8C34;
   font-family: Roboto-black;
 }
 
@@ -102,7 +102,7 @@ hr {
   margin-right: 10px;
   text-align: center;
   font-weight: bolder;
-  color: #fcc365;
+  color: #CE8C34;
 }
 .title.left {
   text-align: left;
