@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#38cae9', '#2A8BA0','#9fce9c','#4D9F46']
+    colors: ['#38cae9', '#2A8BA0','#009A93','#4D9F46']
 });
 
 Highcharts.stockChart('graphique', {
