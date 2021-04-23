@@ -115,7 +115,7 @@ Highcharts.chart('graphique1', {
         },
         tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>'
       },
-        dashStyle: 'dotted',
+        dashStyle: 'dot',
         color: 'black'
     },
 
