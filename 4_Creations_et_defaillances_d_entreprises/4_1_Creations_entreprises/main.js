@@ -46,6 +46,9 @@ Highcharts.chart('graphique', {
   },
   labels: {
     format: '{value}',
+    formatter: function() {
+      return Highcharts.numberFormat(this.value, 0, '.', ' ');
+    },
           style: {
             color: '#f0836d'
           }
