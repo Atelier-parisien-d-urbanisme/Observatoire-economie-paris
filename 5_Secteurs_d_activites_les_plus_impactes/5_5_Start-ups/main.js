@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#FCECD2', '#CE8C34','#E69818']
+    colors: ['#FDDDA8', '#F1BB63','#E69818']
 });
 
 

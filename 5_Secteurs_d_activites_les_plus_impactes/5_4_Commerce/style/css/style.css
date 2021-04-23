@@ -199,8 +199,8 @@ hr {
 }
 
 .highcharts-axis.highcharts-color-1 {
-  fill: #38cae9;
-  stroke: #38cae9;
+  fill: black;
+  stroke: black;
 }
 
 .highcharts-yaxis .highcharts-axis-line {

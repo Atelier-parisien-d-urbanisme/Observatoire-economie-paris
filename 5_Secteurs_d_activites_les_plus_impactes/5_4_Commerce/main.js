@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#CE8C34','#FCECD2'],
+    colors: ['#CE8C34','#FDDDA8'],
     style: {
      fontFamily: 'Roboto'
    }
@@ -89,7 +89,7 @@ Highcharts.chart('graphique1', {
         labels: {
           format: '{value} %',
                 style: {
-                    color: '#38cae9'
+                    color: 'black'
                 }
             },
         opposite: true
@@ -115,8 +115,8 @@ Highcharts.chart('graphique1', {
         },
         tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>'
       },
-        dashStyle: 'solide',
-        color: '#38cae9'
+        dashStyle: 'dotted',
+        color: 'black'
     },
 
   ],
