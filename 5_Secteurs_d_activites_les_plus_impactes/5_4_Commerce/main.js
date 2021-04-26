@@ -50,13 +50,13 @@ Highcharts.chart('graphique1', {
           }
       }
     },
-  //   xAxis: {
-  //   labels: {
-  //     formatter: function() {
-  //         return this.value.replace("a", "")
-  //     },
-  //   },
-  // },
+      xAxis: {
+      labels: {
+        formatter: function() {
+            return this.value.replace("a", "")
+        },
+      },
+    },
 
     yAxis: [{
       //--- Primary yAxis
