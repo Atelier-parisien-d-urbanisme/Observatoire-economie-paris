@@ -169,13 +169,13 @@ td.invisible, th.invisible {
 }
 
 thead th.title {
-  border-bottom: 1px dotted silver;
+  border-bottom: 1px dotted #E1E0E0;
 }
 thead th.subtitle {
   border-bottom: 2px solid black;
 }
 thead th.subtitle.subtitle_left {
-  border-right: 1px dotted silver;
+  border-right: 1px dotted #E1E0E0;
 }
 
 th {
@@ -193,12 +193,12 @@ td {
 }
 td.subtitle_left {
   text-align: left;
-  border-bottom: 0.5px solid silver;
+  border-bottom: 0.5px dashed #E1E0E0;
 }
 
 .right {
   text-align: center;
-  border-bottom: 0.5px solid silver;
+  border-bottom: 0.5px dashed #E1E0E0;
 }
 .right.align {
   text-align: right;
