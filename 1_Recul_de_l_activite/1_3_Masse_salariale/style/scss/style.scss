@@ -159,11 +159,11 @@ td, th {
 
 thead th {
    &.title {
-     border-bottom: 1px dotted silver;}
+     border-bottom: 1px dotted #E1E0E0;}
    &.subtitle {
      border-bottom: 2px solid black;
      &.subtitle_left {
-       border-right: 1px dotted silver;
+       border-right: 1px dotted #E1E0E0;
      }
    }
 }
@@ -187,5 +187,5 @@ td {
 }
 .right {
   text-align: right;
-      border-bottom: 0.5px solid silver;
+      border-bottom: 0.5px dashed #E1E0E0;
 }
