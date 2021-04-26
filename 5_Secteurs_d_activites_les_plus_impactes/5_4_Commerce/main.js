@@ -38,6 +38,7 @@ Highcharts.chart('graphique1', {
            }
         }
       },
+
       series: {
         lineWidth: 1,
           marker: {
