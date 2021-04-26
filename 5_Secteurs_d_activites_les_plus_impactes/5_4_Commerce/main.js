@@ -50,13 +50,7 @@ Highcharts.chart('graphique1', {
           }
       }
     },
-    xAxis: {
-    labels: {
-      formatter: function() {
-          return this.value.replace("A", "")
-      },
-    },
-  },
+
 
     yAxis: [{
       //--- Primary yAxis
@@ -108,7 +102,14 @@ Highcharts.chart('graphique1', {
       {
          yAxis: 0,
          name: 'locaux en travaux',
-         tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>Total: {point.stackTotal}'
+         tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>Total: {point.stackTotal}',
+         xAxis: {
+         labels: {
+           formatter: function() {
+               return this.value.replace("a", "")
+           },
+         },
+       },
        },
      },{
         yAxis: 0,
