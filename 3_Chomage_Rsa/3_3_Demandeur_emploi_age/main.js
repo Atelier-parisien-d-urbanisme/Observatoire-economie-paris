@@ -29,9 +29,9 @@ Highcharts.stockChart('graphique', {
     }
   },
   series: [
+    {},
     {visible: false},
-    {},
-    {},
+    {visible: false},
   ],
 
     yAxis: {
