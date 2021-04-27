@@ -92,6 +92,8 @@ series: [{
   color: '#990041',
   negativeColor: '#D5ADBE',
 }],
+
+
      exporting: {
          buttons: {
              contextButton: {
@@ -104,9 +106,20 @@ series: [{
                      'downloadSVG'
                  ]
              }
-         }
+         },
+         chartOptions:{
+           title: {
+             text: 'Evolution du chiffre d’affaires déclaré des auto-entrepreneurs en Ile-de-France'},
+             chart:{
+              events:{
+                  load:function(){
+                      this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 70, 50).add();
+                  }
+              }
+          }
+      }
      },
      credits: {
        enabled:false
-       },
+      },
 });
