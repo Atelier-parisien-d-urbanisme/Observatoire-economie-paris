@@ -109,7 +109,11 @@ series: [{
          },
          chartOptions:{
            title: {
-             text: 'Evolution du chiffre d’affaires déclaré des auto-entrepreneurs en Ile-de-France'},
+             text: 'Evolution du chiffre d’affaires déclaré des auto-entrepreneurs en Ile-de-France'
+           },
+           caption: {
+             text: 'Source : Ursaaf'
+           },
              chart:{
               events:{
                   load:function(){
