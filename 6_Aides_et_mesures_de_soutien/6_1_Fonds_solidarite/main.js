@@ -63,6 +63,32 @@ series: [{
            },
 }],
      exporting: {
+       chartOptions:{
+         // add logo, titles, and sources updated in in the html page
+         title: {
+           text: "."
+         },
+         caption: {
+           text: "Source : aides-entreprises.data.gouv.fr. Depuis le début de la crise sanitaire du Coronavirus COVID-19, l'État et les Régions ont mis en place un fonds de solidarité pour prévenir la cessation d’activité des petites entreprises, micro-entrepreneurs, indépendants et professions libérales, particulièrement touchés par les conséquences économiques du Covid-19. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
+         },
+           chart:{
+            events:{
+                load:function(){
+                    this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
+
+                    title = document.getElementById('title1').innerHTML;
+                    this.renderer.text(title, 70, 20)
+                     .css({
+                       color: 'black',
+                       fontFamily: 'Roboto',
+                       fontSize: 14,
+                       fontWeight: 'bold',
+                       width: 400
+                     }).add().toFront();
+                }
+            }
+        }
+      },
          buttons: {
              contextButton: {
                  menuItems: [
