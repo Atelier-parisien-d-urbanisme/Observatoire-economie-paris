@@ -59,6 +59,7 @@ Highcharts.stockChart('graphique', {
           lineWidth: 1,
           showInNavigator: true,
           marker: {
+            symbol:'circle',
             enabled: true,   //only enabled when there are a single spline. Here, only one is pre-selected so it is set to "true"
             radius: 3,
             fillColor: '#FFFFFF',
