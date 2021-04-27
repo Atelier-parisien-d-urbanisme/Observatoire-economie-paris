@@ -58,6 +58,32 @@ series: [{
            },
 }],
      exporting: {
+       chartOptions:{
+         // add logo, titles, and sources updated in in the html page
+         title: {
+           text: "."
+         },
+         caption: {
+           text: "Source : economie.gouv.fr. Le report d’échéances fiscales auprès services des impôts des entreprises s’adresse aux entreprises concernées par une interruption ou une restriction de leur activité liée à une mesure de fermeture ou lorsque leur situation financière le justifie. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
+         },
+           chart:{
+            events:{
+                load:function(){
+                    this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
+
+                    title = document.getElementById('title1').innerHTML;
+                    this.renderer.text(title, 70, 20)
+                     .css({
+                       color: 'black',
+                       fontFamily: 'Roboto',
+                       fontSize: 14,
+                       fontWeight: 'bold',
+                       width: 400
+                     }).add().toFront();
+                }
+            }
+        }
+      },
          buttons: {
              contextButton: {
                  menuItems: [
