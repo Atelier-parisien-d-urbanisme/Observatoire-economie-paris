@@ -61,7 +61,23 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
                         'downloadSVG'
                     ]
                 }
-            }
+            },
+            chartOptions:{
+              title: {
+                text: "Evolution du chiffre d'affaires des TPE/PME"
+              },
+              caption: {
+                text: "Source : Ordre des Experts-Comptables de Paris Ile-de-France, CROCIS. Evolution du chiffre d'affaires moyen par entreprise (du 1er au 4e trimestre 2020 par rapport à la meme période en 2019). "
+              },
+                chart:{
+                 events:{
+                     load:function(){
+                         this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 70, 50).add();
+                     }
+                 }
+             }
+         }
+
         },
         credits: {
           enabled:false

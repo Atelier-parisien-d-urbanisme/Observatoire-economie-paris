@@ -77,7 +77,22 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
                         'downloadSVG'
                     ]
                 }
-            }
+            },
+            chartOptions:{
+              title: {
+                text: "Perte d'activité (en %)"
+              },
+              caption: {
+                text: "Source : Insee - Point de conjoncture (voir https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles ), recensement 2017, traitements Apur. Prévision de la perte d'activité en écart au niveau d'avant crise (quatrième trimeste 2019)"
+              },
+                chart:{
+                 events:{
+                     load:function(){
+                         this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 70, 50).add();
+                     }
+                 }
+             }
+         }
         },
         credits: {
           enabled:false
@@ -162,7 +177,23 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
                         'downloadSVG'
                     ]
                 }
-            }
+            },
+            chartOptions:{
+              title: {
+                text: "Perte d'activité (en %)"
+              },
+              caption: {
+                text: "Source : Insee - Point de conjoncture (voir https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles ), recensement 2017, traitements Apur. Prévision de la perte d'activité en écart au niveau d'avant crise (quatrième trimeste 2019)"
+              },
+                chart:{
+                 events:{
+                     load:function(){
+                         this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 70, 50).add();
+                     }
+                 }
+             }
+         }
+
         },
         credits: {
           enabled:false
