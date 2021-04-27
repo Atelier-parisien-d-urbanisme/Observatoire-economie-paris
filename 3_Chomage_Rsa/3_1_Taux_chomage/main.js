@@ -69,6 +69,32 @@ Highcharts.chart('graphique', {
         }
     },
     exporting: {
+      chartOptions:{
+        title: {
+          text: "."
+        },
+        caption: {
+          text: "Source : Insee, taux de chômage au sens du BIT et taux de chômage. Données trimestrielles CVS. Les données du dernier trimestre affiché sont provisoires. Un chômeur au sens du BIT est une personne âgée de 15 ans ou plus qui répond simultanément à trois conditions : être sans emploi durant une semaine donnée ; être disponible pour prendre un emploi dans les deux semaines ; avoir cherché activement un emploi au cours des quatre dernières semaines ou en avoir trouvé un qui commence dans moins de trois mois. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
+        },
+          chart:{
+           events:{
+               load:function(){
+                  // add logo, titles, and sources update in in the html page
+                   this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
+
+                   title = document.getElementById('title1').innerHTML;
+                   this.renderer.text(title, 70, 20)
+                    .css({
+                      color: 'black',
+                      fontFamily: 'Roboto',
+                      fontSize: 14,
+                      fontWeight: 'bold',
+                      width: 400
+                    }).add().toFront();
+               }
+           }
+       }
+     },
             buttons: {
                 contextButton: {
                     menuItems: [
