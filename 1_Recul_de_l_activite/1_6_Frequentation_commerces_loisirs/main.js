@@ -103,7 +103,33 @@ Highcharts.stockChart('graphique1', {
                      'downloadSVG'
                  ]
              }
-         }
+         },
+         chartOptions:{
+           title: {
+             text: "."
+           },
+           caption: {
+             text: "Source : Données lissées sur 7 jours. Source : https://www.google.com/covid19/mobility. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
+           },
+             chart:{
+              events:{
+                  load:function(){
+                     // add logo, titles, and sources update in in the html page
+                      this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
+
+                      title = document.getElementById('title1').innerHTML;
+                      this.renderer.text(title, 70, 20)
+                       .css({
+                         color: 'black',
+                         fontFamily: 'Roboto',
+                         fontSize: 14,
+                         fontWeight: 'bold',
+                         width: 400
+                       }).add().toFront();
+                  }
+              }
+          }
+        }
      },
 });
 
@@ -182,6 +208,32 @@ Highcharts.stockChart('graphique2', {
        valueDecimals: 1
      },
      exporting: {
+       chartOptions:{
+         title: {
+           text: "."
+         },
+         caption: {
+           text: "Source : Données lissées sur 7 jours. Source : https://www.google.com/covid19/mobility. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
+         },
+           chart:{
+            events:{
+                load:function(){
+                   // add logo, titles, and sources update in in the html page
+                    this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
+
+                    title = document.getElementById('title2').innerHTML;
+                    this.renderer.text(title, 70, 20)
+                     .css({
+                       color: 'black',
+                       fontFamily: 'Roboto',
+                       fontSize: 14,
+                       fontWeight: 'bold',
+                       width: 400
+                     }).add().toFront();
+                }
+            }
+        }
+      },
          buttons: {
              contextButton: {
                  menuItems: [
