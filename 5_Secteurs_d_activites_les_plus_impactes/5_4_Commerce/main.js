@@ -188,6 +188,8 @@ Highcharts.chart('graphique2', {
     yAxis: {
       gridLineColor: '#efefef',
       gridLineDashStyle: 'dash',
+      min:150000,
+      max:185000,
       labels: {
         format: '{value}',
         formatter: function() {
