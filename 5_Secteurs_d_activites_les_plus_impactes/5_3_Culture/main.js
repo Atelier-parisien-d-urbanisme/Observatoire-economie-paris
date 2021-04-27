@@ -5,7 +5,7 @@ Highcharts.setOptions({
    }
 });
 
-Highcharts.chart('graphique', {
+Highcharts.chart('graphique1', {
   chart: {
     type:'line',
   },
@@ -71,7 +71,7 @@ series: [{
            text: "."
          },
          caption: {
-           text: "Source : Greffe du tribunal de commerce. La procédure collective est une procédure de redressement ou de liquidation judiciaire organisant le règlement du paiement des créances d'une entreprise en cessation de paiement. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
+           text: "Source : DRFIP, Données des déclarations mensuelles et trimestrielles de TVA (régime réel normal) des sociétés dont le siège social est situé à Paris. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
          },
            chart:{
             events:{
