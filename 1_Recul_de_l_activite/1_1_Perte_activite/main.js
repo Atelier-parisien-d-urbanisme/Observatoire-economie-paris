@@ -200,6 +200,9 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
                 }
             },
             chartOptions:{
+              title: {
+                text: "."
+              },
               caption: {
                 text: "Source : Insee, recensement 2017, traitements Apur. Prévision de la perte d'activité en écart au niveau d'avant crise (quatrième trimeste 2019)"
               },
