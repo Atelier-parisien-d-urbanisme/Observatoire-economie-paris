@@ -85,6 +85,32 @@ Highcharts.stockChart('graphique', {
          valueDecimals: 0
      },
      exporting: {
+       chartOptions:{
+         // add logo, titles, and sources updated in in the html page
+         title: {
+           text: "."
+         },
+         caption: {
+           text: "Source : Caf de Paris – données mensuelles semi-définitives. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
+         },
+           chart:{
+            events:{
+                load:function(){
+                    this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
+
+                    title = document.getElementById('title1').innerHTML;
+                    this.renderer.text(title, 70, 20)
+                     .css({
+                       color: 'black',
+                       fontFamily: 'Roboto',
+                       fontSize: 14,
+                       fontWeight: 'bold',
+                       width: 400
+                     }).add().toFront();
+                }
+            }
+        }
+      },
          buttons: {
              contextButton: {
                  menuItems: [
