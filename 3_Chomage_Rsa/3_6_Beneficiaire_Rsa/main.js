@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#38cae9', '#2A8BA0','#3D71EA','#DAB464'],
+    colors: ['#38cae9', '#2A8BA0','#3D71EA','#DAB464','#CA8F13'],
     style: {
      fontFamily: 'Roboto'
    },
@@ -41,7 +41,9 @@ Highcharts.stockChart('graphique', {
         series: {
           lineWidth: 1,
             marker: {
+              enabled:true,
               enabledThreshold: 2,
+              symbol:'circle',
               radius: 3,
               fillColor: '#FFFFFF',
               lineWidth: 2,
