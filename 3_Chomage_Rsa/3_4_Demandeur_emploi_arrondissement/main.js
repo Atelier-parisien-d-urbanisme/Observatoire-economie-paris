@@ -66,6 +66,32 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
            }
        }},
         exporting: {
+          chartOptions:{
+            // add logo, titles, and sources updated in in the html page
+            title: {
+              text: "."
+            },
+            caption: {
+              text: "Source : Recensement de la population (Insee) - 2017, Pôle Emploi. L’indice de chômage est le rapport entre le nombre de demandeurs d’emploi (catégorie A) inscrits à Pôle emploi et la population active âgée de 15 à 64 ans du recensement de la population. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
+            },
+              chart:{
+               events:{
+                   load:function(){
+                       this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
+
+                       title = document.getElementById('title1').innerHTML;
+                       this.renderer.text(title, 70, 20)
+                        .css({
+                          color: 'black',
+                          fontFamily: 'Roboto',
+                          fontSize: 14,
+                          fontWeight: 'bold',
+                          width: 400
+                        }).add().toFront();
+                   }
+               }
+           }
+         },
             buttons: {
                 contextButton: {
                     menuItems: [
@@ -147,6 +173,32 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
            }
        }},
         exporting: {
+          chartOptions:{
+            // add logo, titles, and sources updated in in the html page
+            title: {
+              text: "."
+            },
+            caption: {
+              text: "Source : Pôle Emploi. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
+            },
+              chart:{
+               events:{
+                   load:function(){
+                       this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
+
+                       title = document.getElementById('title1').innerHTML;
+                       this.renderer.text(title, 70, 20)
+                        .css({
+                          color: 'black',
+                          fontFamily: 'Roboto',
+                          fontSize: 14,
+                          fontWeight: 'bold',
+                          width: 400
+                        }).add().toFront();
+                   }
+               }
+           }
+         },
             buttons: {
                 contextButton: {
                     menuItems: [
