@@ -133,6 +133,8 @@ series: [{
               }
           }
         }
+
+
      },
      credits: {
        enabled:false
