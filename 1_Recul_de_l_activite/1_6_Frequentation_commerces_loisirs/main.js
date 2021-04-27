@@ -179,7 +179,7 @@ Highcharts.stockChart('graphique2', {
      },
      tooltip: {
        pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
-         valueDecimals: 1
+       valueDecimals: 1
      },
      exporting: {
          buttons: {

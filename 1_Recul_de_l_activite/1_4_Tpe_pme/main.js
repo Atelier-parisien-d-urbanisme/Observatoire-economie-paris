@@ -63,16 +63,37 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
                 }
             },
             chartOptions:{
-              title: {
-                text: "Evolution du chiffre d'affaires des TPE/PME"
-              },
+              // title: {
+              //   text: "Evolution du chiffre d'affaires des TPE/PME"
+              // },
               caption: {
-                text: "Source : Ordre des Experts-Comptables de Paris Ile-de-France, CROCIS. Evolution du chiffre d'affaires moyen par entreprise (du 1er au 4e trimestre 2020 par rapport à la meme période en 2019). "
+                text: "Source : Ordre des Experts-Comptables de Paris Ile-de-France, CROCIS. Evolution du chiffre d'affaires moyen par entreprise (par rapport à la meme période en 2019). https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
               },
                 chart:{
                  events:{
                      load:function(){
-                         this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 70, 50).add();
+                        // add logo, titles, and sources update in in the html page
+                         this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
+
+                         title = document.getElementById('title1').innerHTML;
+                         this.renderer.text(title, 70, 20)
+                          .css({
+                            color: 'black',
+                            fontFamily: 'Roboto',
+                            fontSize: 14,
+                            fontWeight: 'bold',
+                            width: 400
+                          }).add().toFront();
+
+                          // ref = document.getElementById('ref1').innerHTML;
+                          // this.renderer.text(ref, 10, 600)
+                          //  .css({
+                          //    color: 'black',
+                          //    fontFamily: 'Roboto',
+                          //    fontSize: 14,
+                          //    fontWeight: 'light',
+                          //    width: 400
+                          //  }).add().toFront();
                      }
                  }
              }
