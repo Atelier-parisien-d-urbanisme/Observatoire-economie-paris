@@ -108,6 +108,7 @@ series: [{
              }
          },
          chartOptions:{
+           // add logo, titles, and sources updated in in the html page
            title: {
              text: "."
            },
@@ -117,7 +118,6 @@ series: [{
              chart:{
               events:{
                   load:function(){
-                     // add logo, titles, and sources update in in the html page
                       this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
 
                       title = document.getElementById('title1').innerHTML;
