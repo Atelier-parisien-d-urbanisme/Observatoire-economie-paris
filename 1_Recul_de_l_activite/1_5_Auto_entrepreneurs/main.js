@@ -40,7 +40,7 @@ Highcharts.chart('graphique', {
     gridLineDashStyle: 'dash',
     labels: {
       formatter: function () {
-            return this.value / 1000000 + ' M€';
+            return Highcharts.numberFormat(this.value / 1000000, 0, '.', ' ') + ' M€';
         },
       // format: '{value} €',
       // align: 'left',

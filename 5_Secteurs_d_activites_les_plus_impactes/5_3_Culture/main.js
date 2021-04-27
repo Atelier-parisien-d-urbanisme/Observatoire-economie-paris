@@ -33,8 +33,11 @@ Highcharts.chart('graphique1', {
     yAxis: [{
       gridLineColor: '#efefef',
       gridLineDashStyle: 'dash',
+
       labels: {
-        format:'{value}',
+        formatter: function () {
+              return Highcharts.numberFormat(this.value / 1000000, 0, '.', ' ') + ' M€';
+          },
         // align: 'left',
         //       x: 0,
         //       y: -2,
