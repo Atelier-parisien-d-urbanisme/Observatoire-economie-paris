@@ -13,7 +13,7 @@ Highcharts.chart('graphique', {
         text: null
     },
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_3_Ouvertures_procedures_collectives/ouverture_procedures_collectives.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_3_Culture/culture.csv',
         startColumn:0,
         endColumn:3,
     },
