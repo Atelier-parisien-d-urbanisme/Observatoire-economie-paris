@@ -42,10 +42,6 @@ Highcharts.chart('graphique', {
       formatter: function () {
             return Highcharts.numberFormat(this.value / 1000000, 0, '.', ' ') + ' M€';
         },
-      // format: '{value} €',
-      // align: 'left',
-      //       x: 0,
-      //       y: -2,
             style: {
                 color: '#CFCFCF'
             }

@@ -17,10 +17,14 @@ Highcharts.chart('graphique1', {
         startColumn:0,
         endColumn:3,
     },
+    tooltip: {
+       shared: true,
+   },
     plotOptions: {
         series: {
           lineWidth: 1,
             marker: {
+              symbol:'circle',
               enabledThreshold: 2,
               radius: 3,
               fillColor: '#FFFFFF',
@@ -38,9 +42,6 @@ Highcharts.chart('graphique1', {
         formatter: function () {
               return Highcharts.numberFormat(this.value / 1000000, 0, '.', ' ') + ' M€';
           },
-        // align: 'left',
-        //       x: 0,
-        //       y: -2,
               style: {
                   color: '#CFCFCF'
               }
@@ -55,7 +56,7 @@ series: [{
     yAxis: 0,
     data: {
     },
-    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
+    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} €</b><br/>',
     valueDecimals: 0
    }
 },{
@@ -63,10 +64,20 @@ series: [{
     yAxis: 0,
     data: {
     },
-    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
+    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} €</b><br/>',
     valueDecimals: 0
    }
-}],
+},
+{
+  type:'spline',
+    yAxis: 0,
+    data: {
+    },
+    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} €</b><br/>',
+    valueDecimals: 0
+   }
+},
+],
      exporting: {
        chartOptions:{
          // add logo, titles, and sources updated in in the html page
@@ -94,9 +105,8 @@ series: [{
             }
         }
       },
-
-         buttons: {
-             contextButton: {
+       buttons: {
+         contextButton: {
                  menuItems: [
                      'printChart',
                      'separator',
