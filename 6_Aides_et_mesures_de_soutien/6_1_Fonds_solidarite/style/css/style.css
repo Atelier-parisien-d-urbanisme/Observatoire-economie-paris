@@ -18,10 +18,10 @@ body {
 hr {
   border: 0;
   height: 1px;
-  background-image: -webkit-linear-gradient(left, #f0f0f0, #b0a8d3, #f0f0f0);
-  background-image: -moz-linear-gradient(left, #f0f0f0, #b0a8d3, #f0f0f0);
-  background-image: -ms-linear-gradient(left, #f0f0f0, #b0a8d3, #f0f0f0);
-  background-image: -o-linear-gradient(left, #f0f0f0, #b0a8d3, #f0f0f0);
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #A09CFF, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #A09CFF, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #A09CFF, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #A09CFF, #f0f0f0);
 }
 
 .boxTitle {
@@ -63,7 +63,7 @@ hr {
   padding-bottom: 0;
 }
 .subtext h2.color {
-  color: #b0a8d3;
+  color: #A09CFF;
 }
 
 .boxCle {
@@ -78,7 +78,7 @@ hr {
 .cle {
   text-align: center;
   font-size: 18px;
-  color: #b0a8d3;
+  color: #A09CFF;
   font-family: Roboto-black;
 }
 
@@ -107,7 +107,7 @@ hr {
   margin-right: 10px;
   text-align: center;
   font-weight: bolder;
-  color: #b0a8d3;
+  color: #A09CFF;
 }
 .title.left {
   text-align: left;
@@ -146,7 +146,7 @@ hr {
 
 /* Link the series colors to axis colors */
 .highcharts-axis.highcharts-color-0 {
-  stroke: #b0a8d3;
+  stroke: #A09CFF;
 }
 
 .highcharts-axis.highcharts-color-1 {
