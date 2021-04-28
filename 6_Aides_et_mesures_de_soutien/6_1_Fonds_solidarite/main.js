@@ -7,7 +7,8 @@ Highcharts.setOptions({
 
 Highcharts.chart('graphique', {
     chart: {
-      inverted: true
+      inverted: true,
+      height:600
     },
     title: {
         text: null
