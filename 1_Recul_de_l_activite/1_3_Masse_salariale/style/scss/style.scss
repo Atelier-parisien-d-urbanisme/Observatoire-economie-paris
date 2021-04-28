@@ -35,6 +35,10 @@ hr {
     background-image: -o-linear-gradient(left, #f0f0f0, $Theme1, #f0f0f0);
 }
 
+.boxTitle{
+  display: inline-block;
+  width: 100%;
+}
 .maintext{
   margin: 0 auto;
   width: 70%;
@@ -48,7 +52,7 @@ hr {
 	width:auto;
 	height:auto;
 	text-align:center;
-	position:absolute;
+	position:relative;
   top:-15px;
 	right:0;
 	left:0;
