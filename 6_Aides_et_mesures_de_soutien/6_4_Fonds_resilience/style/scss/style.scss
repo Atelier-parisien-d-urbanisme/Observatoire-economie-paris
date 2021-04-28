@@ -65,8 +65,17 @@ hr {
   &.color {
     color:$Theme6;
   }
-	}
-
+}
+  .txtCle {
+    margin:0;
+    text-align: center;
+  }
+  .cle {
+    text-align: center;
+    font-size: 18px;
+    color: $Theme6;
+    font-family: Roboto-black;
+    }
 .boxCle {
   margin: 0 auto;
   // @media (min-width: 576px) {

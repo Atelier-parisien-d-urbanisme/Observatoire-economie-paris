@@ -66,6 +66,18 @@ hr {
   color: #b0a8d3;
 }
 
+.txtCle {
+  margin: 0;
+  text-align: center;
+}
+
+.cle {
+  text-align: center;
+  font-size: 18px;
+  color: #b0a8d3;
+  font-family: Roboto-black;
+}
+
 .boxCle {
   margin: 0 auto;
 }
