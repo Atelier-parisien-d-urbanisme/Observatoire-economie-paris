@@ -12,6 +12,9 @@ Highcharts.setOptions({
       weekdays: [
           'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
           'Jeudi', 'Vendredi', 'Samedi'
+      ],
+      years: [
+          '2020','2021'
       ]
   }
 });
@@ -29,7 +32,8 @@ Highcharts.stockChart('graphique1', {
     },
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/1_Recul_de_l_activite/1_6_Frequentation_commerces_loisirs/commerce_loisirs.csv',
-        enablePolling: true
+        enablePolling: true,
+        // dateFormat: 'mm/dd/YYYY'
     },
     navigator: {
       outlineWidth: 0,
@@ -56,6 +60,12 @@ Highcharts.stockChart('graphique1', {
           showInNavigator: true,
           marker: {
             enabled: false,
+            symbol:'circle',
+            enabledThreshold: 2,
+            radius: 3,
+            fillColor: '#FFFFFF',
+            lineWidth: 2,
+            lineColor: null // inherit from series,
           },
         }
     },
@@ -66,7 +76,15 @@ Highcharts.stockChart('graphique1', {
       enabled:false
     },
     xAxis: {
-      gapGridLineWidth: 0
+      gapGridLineWidth: 0,
+      labels: {
+        style: {
+                  color:  '#CFCFCF'
+              },
+        formatter: function() {
+          return Highcharts.dateFormat('%b %Y', this.value);
+        }
+      }
     },
     legend: {
       enabled:true

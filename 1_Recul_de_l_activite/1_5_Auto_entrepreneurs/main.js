@@ -55,7 +55,7 @@ Highcharts.chart('graphique', {
     },
     labels: {
       format: '{value} %',
-            style: {
+      style: {
                 color: '#990041'
             }
         },
