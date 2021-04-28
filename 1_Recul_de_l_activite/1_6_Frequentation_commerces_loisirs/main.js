@@ -44,9 +44,12 @@ Highcharts.stockChart('graphique1', {
         borderColor: 'grey',
       },
       xAxis: {
-        gridLineWidth: 0,
+        gridLineWidth: 1,
         labels: {
-          enabled: false
+          step:1,
+          formatter: function() {
+            return Highcharts.dateFormat('%b %Y', this.value);
+          }
         }
       },
       series: {
@@ -79,8 +82,9 @@ Highcharts.stockChart('graphique1', {
       gapGridLineWidth: 0,
       labels: {
         style: {
-                  color:  '#CFCFCF'
-              },
+          fontSize: '8px',
+          color:  '#CFCFCF'
+        },
         formatter: function() {
           return Highcharts.dateFormat('%b %Y', this.value);
         }
@@ -176,9 +180,12 @@ Highcharts.stockChart('graphique2', {
         borderColor: 'grey',
       },
       xAxis: {
-        gridLineWidth: 0,
+        gridLineWidth: 1,
         labels: {
-          enabled: false
+          step:1,
+          formatter: function() {
+            return Highcharts.dateFormat('%b %Y', this.value);
+          }
         }
       },
       series: {
@@ -192,6 +199,12 @@ Highcharts.stockChart('graphique2', {
           showInNavigator: true,
           marker: {
             enabled: false,
+            symbol:'circle',
+            enabledThreshold: 2,
+            radius: 3,
+            fillColor: '#FFFFFF',
+            lineWidth: 2,
+            lineColor: null // inherit from series,
           },
         }
     },
@@ -202,7 +215,16 @@ Highcharts.stockChart('graphique2', {
       enabled:false
     },
     xAxis: {
-          gapGridLineWidth: 0
+      gapGridLineWidth: 0,
+      labels: {
+        style: {
+          fontSize: '8px',
+          color:  '#CFCFCF'
+        },
+        formatter: function() {
+          return Highcharts.dateFormat('%b %Y', this.value);
+        }
+      }
     },
     legend: {
       enabled:true
