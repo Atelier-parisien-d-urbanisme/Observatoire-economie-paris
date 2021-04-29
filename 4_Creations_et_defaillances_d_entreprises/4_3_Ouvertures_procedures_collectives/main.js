@@ -23,6 +23,7 @@ Highcharts.chart('graphique', {
             marker: {
               enabledThreshold: 2,
               radius: 3,
+              sumbols:'circle',
               fillColor: '#FFFFFF',
               lineWidth: 2,
               lineColor: null // inherit from series,
