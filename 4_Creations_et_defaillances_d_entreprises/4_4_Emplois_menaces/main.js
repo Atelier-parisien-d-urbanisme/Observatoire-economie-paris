@@ -207,7 +207,7 @@ series: [{
     valueDecimals: 0
   },
     dashStyle: 'Dot',
-    color: '#C92806',
+    color: '#7E1500',
 }],
      exporting: {
        chartOptions:{
