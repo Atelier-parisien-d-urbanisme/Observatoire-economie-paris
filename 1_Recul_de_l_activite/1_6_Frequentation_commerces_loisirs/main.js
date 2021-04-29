@@ -33,7 +33,6 @@ Highcharts.stockChart('graphique1', {
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/1_Recul_de_l_activite/1_6_Frequentation_commerces_loisirs/commerce_loisirs.csv',
         enablePolling: true,
-        // dateFormat: 'mm/dd/YYYY'
     },
     navigator: {
       outlineWidth: 0,
