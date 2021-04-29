@@ -58,6 +58,14 @@ $Apur: #00c3ff;
   }
 }
 
+a {
+  text-decoration: none;
+  &:hover {
+    color:$Apur;
+    font-size: 18px;
+  }
+}
+
 
 hr {
   border: 0;
