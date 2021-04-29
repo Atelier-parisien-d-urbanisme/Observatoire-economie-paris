@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#f0836d','#CD3C1E',],
+    colors: ['#f0836d','#C92806',],
     style: {
      fontFamily: 'Roboto'
    }
@@ -207,7 +207,7 @@ series: [{
     valueDecimals: 0
   },
     dashStyle: 'Dot',
-    color: '#f0836d',
+    color: '#C92806',
 }],
      exporting: {
        chartOptions:{
