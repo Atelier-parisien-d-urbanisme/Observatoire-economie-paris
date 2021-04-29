@@ -59,7 +59,7 @@ series: [{
                 fontSize: '10px',
                 fontFamily: 'Roboto',
                 textOutline: 0,
-                color:'#b0a8d3',
+                color:'#009FE3',
             }
            },
 }],
