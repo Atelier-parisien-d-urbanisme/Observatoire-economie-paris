@@ -52,23 +52,27 @@ $Apur: #00c3ff;
   font-weight:bold;
   font-size: 16px;
   line-height: 27px;
-  :hover {
-    color:$Apur;
-    font-size: 18px;
-  }
 }
 
 li {
   list-style: none;
-}
+  a {
+    color:black;
+    &:hover {
+      font-size: 16px;
+    }
+
+    }
+  }
+
 
 a {
   text-decoration: none;
   &:hover {
     color:$Apur;
-    &.subtitle {
-      font-size: 14px;
-    }
+  }
+  &:visited {
+    text-decoration: none;
   }
 }
 

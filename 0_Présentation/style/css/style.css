@@ -48,13 +48,15 @@ body {
   font-size: 16px;
   line-height: 27px;
 }
-.theme1 :hover, .theme2 :hover, .theme3 :hover, .theme4 :hover, .theme5 :hover, .theme6 :hover, .theme7 :hover {
-  color: #00c3ff;
-  font-size: 18px;
-}
 
 li {
   list-style: none;
+}
+li a {
+  color: black;
+}
+li a:hover {
+  font-size: 16px;
 }
 
 a {
@@ -63,8 +65,8 @@ a {
 a:hover {
   color: #00c3ff;
 }
-a:hover.subtitle {
-  font-size: 14px;
+a:visited {
+  text-decoration: none;
 }
 
 h1 {
