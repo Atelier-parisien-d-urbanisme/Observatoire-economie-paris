@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#38cae9', '#000DC9','#990041','#D26FB7'],
+    colors: ['#38cae9', '#000DC9','#990041','#D9A7E8'],
     lang: {
       months: [
           'Janvier', 'Février', 'Mars', 'Avril',
