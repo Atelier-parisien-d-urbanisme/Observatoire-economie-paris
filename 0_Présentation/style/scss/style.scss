@@ -52,7 +52,12 @@ $Apur: #00c3ff;
   font-weight:bold;
   font-size: 16px;
   line-height: 27px;
+  :hover {
+    color:$Apur
+    font-size:18px;
+  }
 }
+
 
 hr {
   border: 0;
