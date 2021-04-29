@@ -78,7 +78,12 @@ h1 {
   font-size: 24px ;
 }
 
-
+.summary {
+  display:inline-flex;
+  @media (max-width: 576px) {
+    display: block;
+  }
+}
 hr {
   border: 0;
   position: relative;
