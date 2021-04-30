@@ -47,7 +47,6 @@ $Apur: #00c3ff;
   color:$Theme7;
 }
 
-
 .theme1,.theme2,.theme3,.theme4,.theme5,.theme6,.theme7 {
   font-weight:bold;
   font-size: 16px;
@@ -282,12 +281,32 @@ h1 {
   font-size: 24px ;
 }
 
-.summary {
-  display:inline-flex;
-  @media (max-width: 576px) {
-    display: block;
-  }
+.summary-flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
 }
+.flex-item {
+  // background: tomato;
+  padding: 5px;
+  width: 20em;
+  // height: 150px;
+  margin-top: 10px;
+  // line-height: 150px;
+  color: white;
+  font-weight: bold;
+  // font-size: 3em;
+  // text-align: center;
+}
+
+// .summary {
+//   display:inline-flex;
+//   @media (max-width: 576px) {
+//     display: block;
+//   }
+// }
 hr {
   border: 0;
   position: relative;
