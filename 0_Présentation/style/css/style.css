@@ -297,6 +297,7 @@ h1 {
   justify-content: space-around;
   padding: 0;
   margin: 0;
+  padding-bottom: 20px;
 }
 
 .flex-item {
