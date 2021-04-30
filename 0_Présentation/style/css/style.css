@@ -75,7 +75,11 @@ a.link {
   font-weight: bold;
   text-decoration: overline;
   text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
   color: #00c3ff;
+}
+a.link:hover {
+  color: black;
 }
 
 .overline-from-left-1 {

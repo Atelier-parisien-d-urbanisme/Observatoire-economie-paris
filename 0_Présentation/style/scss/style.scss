@@ -76,7 +76,11 @@ a {
     font-weight: bold;
     text-decoration: overline;
     text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
     color:$Apur;
+    &:hover {
+      color:black;
+    }
   }
 }
 
