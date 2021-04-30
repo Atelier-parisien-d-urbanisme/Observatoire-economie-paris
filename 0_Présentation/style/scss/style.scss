@@ -52,7 +52,10 @@ $Apur: #00c3ff;
   font-size: 16px;
   line-height: 27px;
 }
-
+ul {
+  margin: 0;
+  padding-top:5px;
+}
 li {
   list-style: none;
   a {
@@ -273,8 +276,6 @@ a {
     right: 0;
   }
 }
-
-
 
 
 h1 {
