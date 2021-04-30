@@ -72,6 +72,12 @@ a {
   &:visited {
     text-decoration: none;
   }
+  &.link {
+    font-weight: bold;
+    text-decoration: overline;
+    text-decoration-style: dotted;
+    color:$Apur;
+  }
 }
 
 .overline-from-left-1 {
@@ -295,7 +301,7 @@ h1 {
   padding: 5px;
   width: 26em;
   @media (max-width: 800px) {
-    width: 20em;
+    width: 18em;
   }
   margin-top: 5px;
 }

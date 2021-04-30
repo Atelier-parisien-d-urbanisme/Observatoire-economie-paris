@@ -71,6 +71,12 @@ a {
 a:visited {
   text-decoration: none;
 }
+a.link {
+  font-weight: bold;
+  text-decoration: overline;
+  text-decoration-style: dotted;
+  color: #00c3ff;
+}
 
 .overline-from-left-1 {
   -webkit-transform: translateZ(0);
@@ -296,7 +302,7 @@ h1 {
 }
 @media (max-width: 800px) {
   .flex-item {
-    width: 20em;
+    width: 18em;
   }
 }
 
