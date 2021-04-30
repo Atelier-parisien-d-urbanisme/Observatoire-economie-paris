@@ -76,6 +76,9 @@ hr {
   margin: 0;
   text-align: center;
 }
+.txtCle.border {
+  margin: 5px;
+}
 
 .cle {
   text-align: center;
