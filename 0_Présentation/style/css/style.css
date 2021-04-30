@@ -272,6 +272,8 @@ a:visited {
 
 h1 {
   font-size: 24px;
+  margin: 0;
+  padding: 0;
 }
 
 .summary-flex {
@@ -284,9 +286,13 @@ h1 {
 
 .flex-item {
   padding: 5px;
-  width: 20em;
-  margin-top: 10px;
-  color: white;
+  width: 26em;
+  margin-top: 5px;
+}
+@media (max-width: 800px) {
+  .flex-item {
+    width: 20em;
+  }
 }
 
 hr {

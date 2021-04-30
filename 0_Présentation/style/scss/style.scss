@@ -279,6 +279,8 @@ a {
 
 h1 {
   font-size: 24px ;
+  margin: 0;
+  padding: 0;
 }
 
 .summary-flex {
@@ -289,23 +291,14 @@ h1 {
   margin: 0;
 }
 .flex-item {
-  // background: tomato;
   padding: 5px;
-  width: 20em;
-  // height: 150px;
-  margin-top: 10px;
-  // line-height: 150px;
-  color: white;
-  // font-size: 3em;
-  // text-align: center;
+  width: 26em;
+  @media (max-width: 800px) {
+    width: 20em;
+  }
+  margin-top: 5px;
 }
 
-// .summary {
-//   display:inline-flex;
-//   @media (max-width: 576px) {
-//     display: block;
-//   }
-// }
 hr {
   border: 0;
   position: relative;
