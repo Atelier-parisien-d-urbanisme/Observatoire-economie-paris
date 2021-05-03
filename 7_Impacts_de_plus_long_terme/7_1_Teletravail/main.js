@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#38cae9', '#000DC9','#990041','#DAB464'],
+    colors: ['#00A75D', '#6FBC85','#98DC87','#a4c95b','#C8DD9E'],
     lang: {
       months: [
           'Janvier', 'Février', 'Mars', 'Avril',
@@ -31,7 +31,7 @@ Highcharts.stockChart('graphique', {
       enabled: false
     },
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/1_Recul_de_l_activite/1_6_Frequentation_commerces_loisirs/commerce_loisirs.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/7_Impacts_de_plus_long_terme/7_1_Immobilier_bureau/teletravail.csv',
         enablePolling: true,
     },
     navigator: {
