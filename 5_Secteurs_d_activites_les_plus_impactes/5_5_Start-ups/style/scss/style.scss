@@ -35,18 +35,36 @@ hr {
 .maintext{
   margin: 0 auto;
   width: 70%;
-  margin-top:30px;
-	height:1px;
-	border-top:1px solid black;
-	position:relative;
-	margin-bottom:30px;
+  margin-top: 30px;
+  height: 1px;
+  border-top: 1px solid black;
+  position: relative;
+  margin-bottom: 30px;
+  &.borderCle {
+    margin-top: 0px;
+    height: 1px;
+    border-top: 0px;
+    }
+  &.transitionChapter {
+    width: 100%;
+    margin-top: 90px;
+    border-top: 1px solid black;
+    margin-bottom:60px;
+  }
 	}
+  .transitionImg {
+    height:40px;
+    background:#ffffff;
+  }
 .subtext{
 	width:auto;
 	height:auto;
 	text-align:center;
 	position:relative;
   top:-10px;
+  &.transitionChapter {
+    top:-20px;
+  }
 	right:0;
 	left:0;
 	}
