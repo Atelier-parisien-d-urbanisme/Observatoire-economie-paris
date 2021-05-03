@@ -40,8 +40,9 @@ hr {
 }
 .maintext.transitionChapter {
   width: 100%;
-  margin-top: 70px;
+  margin-top: 90px;
   border-top: 1px solid black;
+  margin-bottom: 60px;
 }
 
 .subtext {
