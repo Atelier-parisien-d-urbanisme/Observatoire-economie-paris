@@ -1,3 +1,28 @@
+Highcharts.setOptions({
+    style: {
+     fontFamily: 'Roboto'
+   },
+    lang: {
+      downloadPNG: "Télécharger  en image PNG",
+      downloadJPEG: "Télécharger en image JPEG",
+      downloadPDF: "Télécharger  en document PDF",
+      downloadSVG: "Télécharger  en document Vectoriel SVG",
+      printChart: "Imprimer le graphique",
+      months: [
+          'Janvier', 'Février', 'Mars', 'Avril',
+          'Mai', 'Juin', 'Juillet', 'Août',
+          'Septembre', 'Octobre', 'Novembre', 'Décembre'
+      ],
+      shortMonths:['Janvier', 'Février', 'Mars', 'Avril',
+      'Mai', 'Juin', 'Juillet', 'Août',
+      'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+      weekdays: [
+          'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
+          'Jeudi', 'Vendredi', 'Samedi'
+      ]
+  }
+});
+
 Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/1_Recul_de_l_activite/1_4_Tpe_pme/dep_idf.geojson', function (geojson) {
     Highcharts.mapChart('graphique1', {
         chart: {

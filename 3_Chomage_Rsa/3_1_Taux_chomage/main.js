@@ -1,6 +1,29 @@
 Highcharts.setOptions({
-    colors: ['#38cae9', '#3D71EA','#DAB464','#CA8F13']
+      colors: ['#38cae9', '#3D71EA','#DAB464','#CA8F13'],
+    style: {
+     fontFamily: 'Roboto'
+   },
+    lang: {
+      downloadPNG: "Télécharger  en image PNG",
+      downloadJPEG: "Télécharger en image JPEG",
+      downloadPDF: "Télécharger  en document PDF",
+      downloadSVG: "Télécharger  en document Vectoriel SVG",
+      printChart: "Imprimer le graphique",
+      months: [
+          'Janvier', 'Février', 'Mars', 'Avril',
+          'Mai', 'Juin', 'Juillet', 'Août',
+          'Septembre', 'Octobre', 'Novembre', 'Décembre'
+      ],
+      shortMonths:['Janvier', 'Février', 'Mars', 'Avril',
+      'Mai', 'Juin', 'Juillet', 'Août',
+      'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+      weekdays: [
+          'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
+          'Jeudi', 'Vendredi', 'Samedi'
+      ]
+  }
 });
+
 
 Highcharts.chart('graphique', {
     chart: {

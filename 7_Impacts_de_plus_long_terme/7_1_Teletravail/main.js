@@ -1,6 +1,11 @@
 Highcharts.setOptions({
-    colors: ['#00c3ff','#a4c95b','#DAB464', '#3D71EA'],   
+    colors: ['#00c3ff','#a4c95b','#DAB464', '#3D71EA'],
     lang: {
+      downloadPNG: "Télécharger  en image PNG",
+      downloadJPEG: "Télécharger en image JPEG",
+      downloadPDF: "Télécharger  en document PDF",
+      downloadSVG: "Télécharger  en document Vectoriel SVG",
+      printChart: "Imprimer le graphique",
       months: [
           'Janvier', 'Février', 'Mars', 'Avril',
           'Mai', 'Juin', 'Juillet', 'Août',

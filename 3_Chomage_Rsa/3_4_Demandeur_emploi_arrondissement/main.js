@@ -1,3 +1,29 @@
+Highcharts.setOptions({
+    style: {
+     fontFamily: 'Roboto'
+   },
+    lang: {
+      downloadPNG: "Télécharger  en image PNG",
+      downloadJPEG: "Télécharger en image JPEG",
+      downloadPDF: "Télécharger  en document PDF",
+      downloadSVG: "Télécharger  en document Vectoriel SVG",
+      printChart: "Imprimer le graphique",
+      months: [
+          'Janvier', 'Février', 'Mars', 'Avril',
+          'Mai', 'Juin', 'Juillet', 'Août',
+          'Septembre', 'Octobre', 'Novembre', 'Décembre'
+      ],
+      shortMonths:['Janvier', 'Février', 'Mars', 'Avril',
+      'Mai', 'Juin', 'Juillet', 'Août',
+      'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+      weekdays: [
+          'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
+          'Jeudi', 'Vendredi', 'Samedi'
+      ]
+  }
+});
+
+
 Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/3_Chomage_Rsa/3_4_Demandeur_emploi_arrondissement/1234_arr.geojson', function (geojson) {
     Highcharts.mapChart('map1', {
         chart: {
