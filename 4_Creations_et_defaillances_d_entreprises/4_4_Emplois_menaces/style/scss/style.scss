@@ -41,6 +41,12 @@ hr {
     height: 1px;
     border-top: 0px;
     }
+    &.transitionChapter {
+      width: 100%;
+      margin-top: 90px;
+      border-top: 1px solid black;
+      margin-bottom:60px;
+    }
 	}
 .subtext{
 	width:auto;
@@ -48,6 +54,9 @@ hr {
 	text-align:center;
 	position:absolute;
   top:-10px;
+  &.transitionChapter {
+    top:-20px;
+  }
 	right:0;
 	left:0;
 	}
@@ -67,6 +76,10 @@ hr {
     color:$Theme4;
   }
 	}
+  .transitionImg {
+    height:40px;
+    background:#ffffff;
+  }
 
   .boxCle {
     margin: 50px;
