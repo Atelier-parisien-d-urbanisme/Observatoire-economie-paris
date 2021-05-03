@@ -107,6 +107,9 @@ hr {
 .title.left {
   text-align: left;
 }
+.title.span {
+  margin: 0px;
+}
 
 .subtitle {
   margin: 0;
