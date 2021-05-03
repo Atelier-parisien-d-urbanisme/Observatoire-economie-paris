@@ -35,11 +35,16 @@ hr {
 .maintext{
   margin: 0 auto;
   width: 70%;
-  margin-top:30px;
-	height:1px;
-	border-top:1px solid black;
-	position:relative;
-	margin-bottom:30px;
+  margin-top: 30px;
+  height: 1px;
+  border-top: 1px solid black;
+  position: relative;
+  margin-bottom: 30px;
+  &.borderCle {
+    margin-top: 0px;
+    height: 1px;
+    border-top: 0px;
+    }
 	}
 .subtext{
 	width:auto;
@@ -67,12 +72,13 @@ hr {
   }
 	}
 
-.boxCle {
-  // @media (min-width: 576px) {
-  //   margin-left: 20%;
-  //   margin-right: 20%;
-  // }
-}
+  .boxCle {
+    margin: 50px;
+    border: solid;
+    border-width: 1px;
+    -webkit-box-shadow: 11px 11px 0px -3px rgba(0,0,0,0.06);
+    box-shadow: 11px 11px 0px -3px rgba(0,0,0,0.06);
+  }
 .txtCle {
   margin:0;
   text-align: center;
@@ -83,14 +89,19 @@ hr {
   color: $Theme3;
   font-family: Roboto-black;
     }
-.duoCle {
-  margin:10px;
-  display:inline-flex;
-  div {
-    margin:10px;
+    .duoCle {
+      margin:10px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      div {
+        margin:10px;
+        min-width:10em;
+        }
+      }
+    .oneCle {
+      margin:10px;
     }
-  }
-
 .quote {
   font-size: 16px;
   line-height: 27px;
