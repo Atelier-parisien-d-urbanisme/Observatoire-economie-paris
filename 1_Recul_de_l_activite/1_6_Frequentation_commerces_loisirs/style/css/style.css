@@ -38,6 +38,11 @@ hr {
   height: 1px;
   border-top: 0px;
 }
+.maintext.transitionChapter {
+  width: 100%;
+  margin-top: 70px;
+  border-top: 1px solid black;
+}
 
 .subtext {
   width: auto;
@@ -47,6 +52,9 @@ hr {
   top: -10px;
   right: 0;
   left: 0;
+}
+.subtext.transitionChapter {
+  top: -20px;
 }
 
 .subtext h2 {
@@ -62,6 +70,11 @@ hr {
 }
 .subtext h2.color {
   color: #990041;
+}
+
+.transitionImg {
+  height: 40px;
+  background: #ffffff;
 }
 
 .boxCle {
