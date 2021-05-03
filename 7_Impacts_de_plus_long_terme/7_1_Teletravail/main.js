@@ -31,7 +31,7 @@ Highcharts.stockChart('graphique', {
       enabled: false
     },
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/7_Impacts_de_plus_long_terme/7_1_Immobilier_bureau/teletravail.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/7_Impacts_de_plus_long_terme/7_1_Teletravail/teletravail.csv',
         enablePolling: true,
     },
     navigator: {
@@ -130,7 +130,7 @@ Highcharts.stockChart('graphique', {
              text: "."
            },
            caption: {
-             text: "Source : Données lissées sur 7 jours. Source : https://www.google.com/covid19/mobility. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
+             text: "Source : https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
            },
              chart:{
               events:{
