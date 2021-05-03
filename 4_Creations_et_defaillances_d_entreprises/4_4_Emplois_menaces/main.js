@@ -20,6 +20,7 @@ Highcharts.chart('graphique1', {
     },
     plotOptions: {
         series: {
+          pointWidth: 35,
           lineWidth: 1,
             marker: {
               enabledThreshold: 2,
@@ -120,7 +121,8 @@ Highcharts.chart('graphique2', {
     },
     plotOptions: {
         series: {
-          lineWidth: 1,
+          pointWidth: 35,
+          lineWidth: 2,
             marker: {
               enabledThreshold: 2,
               radius: 3,
@@ -140,7 +142,7 @@ Highcharts.chart('graphique2', {
         return Highcharts.numberFormat(this.value, 0, '.', ' ');
       },
             style: {
-                color: '#CFCFCF'
+                color: '#7E1500'
             }
         },
     title: {
@@ -150,6 +152,11 @@ Highcharts.chart('graphique2', {
     className: 'highcharts-color-1',
     gridLineColor: '#efefef',
     gridLineDashStyle: 'dash',
+    labels: {
+      style: {
+        color: '#f0836d',
+      }
+    },
     plotOptions: {
         series: {
           lineWidth: 1,
@@ -178,7 +185,7 @@ Highcharts.chart('graphique2', {
      title: {
         enabled: false,
       }
-      }]
+    }]
 ,
     title: {
       enabled: false,
