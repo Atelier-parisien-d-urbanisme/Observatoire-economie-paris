@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#FCECD2', '#CE8C34','#E69818']
+    colors: ['#FCECD2','#E69818', '#5A3800']
 });
 
 Highcharts.chart('graphique1', {
@@ -17,6 +17,7 @@ Highcharts.chart('graphique1', {
         series: {
           lineWidth: 1,
             marker: {
+              symbol: 'circle',
               enabledThreshold: 2,
               radius: 3,
               fillColor: '#FFFFFF',
