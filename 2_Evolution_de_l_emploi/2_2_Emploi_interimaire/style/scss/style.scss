@@ -89,8 +89,11 @@ hr {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-around;
+      @media (max-width: 576px) {
+        display:block;
+      }
       div {
-        margin:10px;
+        margin:10px auto;
         min-width:10em;
         }
       }
@@ -145,16 +148,10 @@ hr {
   }
 }
 
-#emploi_salarie_text {
-}
-
-#graphique {
-  min-width: 310px;
-  height: 400px;
-  margin: 0 auto;
-}
-
-#emploi_salarie_cle{
-  margin:10px;
+.key_illustration {
   display:inline-flex;
+
+}
+.illustration {
+  max-height: 90px;
 }

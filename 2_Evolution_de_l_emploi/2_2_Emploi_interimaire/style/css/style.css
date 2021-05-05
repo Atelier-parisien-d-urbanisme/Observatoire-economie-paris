@@ -90,9 +90,14 @@ hr {
   flex-flow: row wrap;
   justify-content: space-around;
 }
+@media (max-width: 576px) {
+  .duoCle {
+    display: block;
+  }
+}
 .duoCle div {
-  margin: 10px;
-  width: 10em;
+  margin: 10px auto;
+  min-width: 10em;
 }
 
 .quote {
@@ -149,15 +154,12 @@ hr {
   cursor: pointer;
 }
 
-#graphique {
-  min-width: 310px;
-  height: 400px;
-  margin: 0 auto;
+.key_illustration {
+  display: inline-flex;
 }
 
-#emploi_salarie_cle {
-  margin: 10px;
-  display: inline-flex;
+.illustration {
+  max-height: 90px;
 }
 
 /*# sourceMappingURL=style.css.map */
