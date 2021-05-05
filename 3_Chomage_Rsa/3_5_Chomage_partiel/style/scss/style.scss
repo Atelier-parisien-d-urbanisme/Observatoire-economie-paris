@@ -90,8 +90,12 @@ hr {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-around;
+      align-items: center;
+      @media (max-width: 576px) {
+        display:block;
+      }
       div {
-        margin:10px;
+        margin:10px auto;
         min-width:10em;
         }
       }
@@ -154,6 +158,15 @@ hr {
     cursor: pointer;
   }
 }
+
+.key_illustration {
+  display:inline-flex;
+
+}
+.illustration {
+  max-height: 90px;
+}
+
 #chomage_partiel_cle{
   display:inline-flex;
 }
