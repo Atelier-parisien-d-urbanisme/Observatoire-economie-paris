@@ -4,6 +4,7 @@
 	 viewBox="0 0 318.1 330.1" style="enable-background:new 0 0 318.1 330.1;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;stroke:#1D1D1B;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}
+	.st1{fill:#FFFFFF;stroke:#1D1D1B;stroke-width:5;stroke-miterlimit:10;}
 </style>
 <path class="st0" d="M109.1,154.7v-12.6H96.2v12.6H56.4v-34.9c0-5.1,4.2-9.3,9.3-9.3h69l-12,19.5l19.1,24.7H109.1z"/>
 <rect x="96.2" y="142.1" class="st0" width="12.9" height="12.6"/>
@@ -18,4 +19,7 @@
 <rect x="96.2" y="142.1" class="st0" width="12.9" height="25.2"/>
 <rect x="211.9" y="142.1" class="st0" width="12.9" height="25.2"/>
 <line class="st0" x1="251.4" y1="198.9" x2="251.4" y2="216.5"/>
+<line class="st1" x1="35.3" y1="48.2" x2="77.5" y2="48.2"/>
+<line class="st1" x1="243.5" y1="51.3" x2="285.7" y2="51.3"/>
+<line class="st1" x1="264.6" y1="30.2" x2="264.6" y2="72.4"/>
 </svg>

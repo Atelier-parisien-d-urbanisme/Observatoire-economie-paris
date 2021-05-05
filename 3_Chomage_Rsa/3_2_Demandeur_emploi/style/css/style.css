@@ -92,14 +92,16 @@ hr {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 576px) {
+  .duoCle {
+    display: block;
+  }
 }
 .duoCle div {
-  margin: 10px;
+  margin: 10px auto;
   min-width: 10em;
-}
-
-.oneCle {
-  margin: 10px;
 }
 
 .quote {
@@ -154,6 +156,14 @@ hr {
 .source a:hover {
   color: #00c3ff;
   cursor: pointer;
+}
+
+.key_illustration {
+  display: inline-flex;
+}
+
+.illustration {
+  max-height: 90px;
 }
 
 #taux_chomage_cle {
