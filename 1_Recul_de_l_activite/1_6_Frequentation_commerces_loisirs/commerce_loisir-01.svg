@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 318.1 330.1" style="enable-background:new 0 0 318.1 330.1;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#1D1D1B;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<g>
+	<rect x="96.3" y="190.5" class="st0" width="135.7" height="17.2"/>
+	<line class="st0" x1="164.2" y1="207.7" x2="164.2" y2="285.5"/>
+	<line class="st0" x1="164.2" y1="123.4" x2="164.2" y2="190.5"/>
+	<polyline class="st0" points="142.1,285.5 164.2,285.5 186.2,285.5 	"/>
+	<path class="st0" d="M139.9,99.2c0,13.4,10.8,24.2,24.2,24.2c13.4,0,24.2-10.8,24.2-24.2H139.9z"/>
+	<path class="st0" d="M91.5,99.2c0,13.4,10.8,24.2,24.2,24.2c13.4,0,24.2-10.8,24.2-24.2H91.5z"/>
+	<path class="st0" d="M43,99.2c0,13.4,10.8,24.2,24.2,24.2c13.4,0,24.2-10.8,24.2-24.2H43z"/>
+	<path class="st0" d="M236.9,99.2c0,13.4,10.8,24.2,24.2,24.2c13.4,0,24.2-10.8,24.2-24.2H236.9z"/>
+	<path class="st0" d="M188.4,99.2c0,13.4,10.8,24.2,24.2,24.2c13.4,0,24.2-10.8,24.2-24.2H188.4z"/>
+	<path class="st0" d="M164.2,43.3C112.6,43.3,66,62,43,99.2h242.3C262.3,62,215.8,43.3,164.2,43.3z"/>
+	<path class="st0" d="M91.5,99.2c6.7-28.8,42.2-56.7,72.7-55.9"/>
+	<path class="st0" d="M236.9,99.2c-6.7-28.8-42.2-56.7-72.7-55.9"/>
+	<path class="st0" d="M139.9,99.2c-0.2-14.8,4.5-48,24.2-55.9"/>
+	<path class="st0" d="M188.4,99.2c0.2-14.8-4.5-48-24.2-55.9"/>
+	<g>
+		<line class="st0" x1="124.5" y1="234.2" x2="60.6" y2="234.2"/>
+		<path class="st0" d="M43,164.5c0,0,18.4,52.5,17.6,69.8s-6.3,51.3-6.3,51.3"/>
+		<path class="st0" d="M107.6,234.2c0,0,11,27.5,11,51.3"/>
+	</g>
+	<g>
+		<line class="st0" x1="203.9" y1="234.2" x2="267.8" y2="234.2"/>
+		<path class="st0" d="M285.3,164.5c0,0-18.4,52.5-17.6,69.8s6.3,51.3,6.3,51.3"/>
+		<path class="st0" d="M220.8,234.2c0,0-11,27.5-11,51.3"/>
+	</g>
+</g>
+</svg>
