@@ -91,13 +91,11 @@ hr {
 .duoCle.large {
   min-width: 300px;
 }
+.duoCle.nospace {
+  margin: 0;
+}
 .duoCle div {
   margin: 10px;
-}
-@media (min-width: 560px) {
-  .duoCle div {
-    white-space: nowrap;
-  }
 }
 
 .maintext {
@@ -138,6 +136,12 @@ hr {
 .quote {
   font-size: 16px;
   line-height: 27px;
+  margin: 0;
+}
+@media (min-width: 560px) {
+  .quote.nowrap {
+    white-space: nowrap;
+  }
 }
 
 .quote_mark {

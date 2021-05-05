@@ -92,11 +92,11 @@ hr {
   &.large {
     min-width: 300px;
   }
+  &.nospace {
+    margin: 0;
+  }
   div {
     margin:10px;
-    @media (min-width: 560px) {
-      white-space : nowrap;
-    }
     }
   }
 
@@ -138,7 +138,12 @@ hr {
 .quote {
   font-size: 16px;
   line-height: 27px;
-
+  margin:0;
+  &.nowrap {
+    @media (min-width: 560px) {
+      white-space : nowrap;
+    }
+  }
 }
 .quote_mark {
   height:20px;
