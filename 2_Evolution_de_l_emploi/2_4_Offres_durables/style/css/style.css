@@ -81,6 +81,11 @@ hr {
   margin: 0;
   text-align: center;
 }
+@media (min-width: 576px) {
+  .txtCle.left {
+    text-align: left;
+  }
+}
 
 .cle {
   text-align: center;
@@ -172,8 +177,8 @@ hr {
   max-height: 90px;
 }
 @media (min-width: 576px) {
-  .illustration.margin-right {
-    margin-right: 5em;
+  .illustration.margin-left {
+    margin-left: 5em;
   }
 }
 
