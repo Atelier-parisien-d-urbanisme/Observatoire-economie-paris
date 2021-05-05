@@ -97,7 +97,7 @@ hr {
 }
 .duoCle div {
   margin: 10px auto;
-  width: 10em;
+  min-width: 10em;
 }
 
 .quote {
