@@ -166,6 +166,14 @@ hr {
   cursor: pointer;
 }
 
+.key_illustration {
+  display: inline-flex;
+}
+
+.illustration {
+  max-height: 90px;
+}
+
 #graphique {
   min-width: 310px;
   min-height: 400px;
