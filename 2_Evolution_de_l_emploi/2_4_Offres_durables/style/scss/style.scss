@@ -92,9 +92,13 @@ hr {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-around;
+      align-items: center;
+      @media (max-width: 576px) {
+        display:block;
+      }
       div {
-        margin:10px;
-        width:10em;
+        margin:10px auto;
+        min-width:10em;
         }
       }
 .oneCle {
@@ -150,14 +154,15 @@ hr {
     cursor: pointer;
   }
 }
-
-#graphique {
-  min-width: 310px;
-  height: 400px;
-  margin: 0 auto;
-}
-
-#emploi_salarie_cle{
-  margin:10px;
+.key_illustration {
   display:inline-flex;
+
+}
+.illustration {
+  max-height: 90px;
+  &.margin-right {
+    @media (min-width: 576px) {
+      margin-right: 5em;
+    }
+  }
 }
