@@ -94,6 +94,11 @@ hr {
 .duoCle div {
   margin: 10px;
 }
+@media (min-width: 560px) {
+  .duoCle div {
+    white-space: nowrap;
+  }
+}
 
 .maintext {
   margin: 0 auto;
