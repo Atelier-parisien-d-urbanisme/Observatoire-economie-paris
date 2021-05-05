@@ -85,16 +85,20 @@ hr {
   color: $Theme3;
   font-family: Roboto-black;
     }
-.duoCle {
-  margin:10px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  div {
-    margin:10px;
-    min-width:10em;
-    }
-  }
+    .duoCle {
+      margin:10px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: center;
+      @media (max-width: 576px) {
+        display:block;
+      }
+      div {
+        margin:10px auto;
+        min-width:10em;
+        }
+      }
 .oneCle {
   margin:10px;
 }
@@ -147,4 +151,11 @@ hr {
     color: $Apur;
     cursor: pointer;
   }
+}
+.key_illustration {
+  display:inline-flex;
+
+}
+.illustration {
+  max-height: 90px;
 }
