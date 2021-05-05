@@ -44,7 +44,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             stops: [
               [0, '#990041'],
               [0.65, '#C75E8B'],
-              [0.9, '#F1DCE2']
+              [0.85, '#F1DCE2']
         ]
         },
         series: [{
