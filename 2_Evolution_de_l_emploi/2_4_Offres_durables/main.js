@@ -54,12 +54,10 @@ Highcharts.chart('graphique', {
                enabled: true,
                align: 'left',
                crop: false,
-               style : {
-                 fontFamily: 'Roboto'
-               },
+               useHTML: false,
                formatter: function() {
                    if (this.point.x == this.series.data.length - 1) {
-                     return Highcharts.numberFormat(this.y,0);
+                     return '<span style="color: '+ this.color + '">' + Highcharts.numberFormat(this.y,0) + '</span>';
                    } else {
                        return null;
                    }
