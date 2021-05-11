@@ -58,7 +58,9 @@ Highcharts.chart('graphique', {
              align: 'left',
              crop: false,
              style : {
-               fontFamily: 'Roboto'
+               fontFamily: 'Roboto',
+               color: '#BCBCBC',
+               textOutline: 'white'
              },
              formatter: function() {
                  if (this.point.x == this.series.data.length - 1) {
