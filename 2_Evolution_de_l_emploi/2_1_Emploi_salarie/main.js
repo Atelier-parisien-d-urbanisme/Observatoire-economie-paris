@@ -58,6 +58,9 @@ Highcharts.chart('graphique', {
                enabled: true,
                align: 'left',
                crop: false,
+               style : {
+                 fontFamily: 'Roboto'
+               },
                formatter: function() {
                    if (this.point.x == this.series.data.length - 1) {
                      return Highcharts.numberFormat(this.y,0);
@@ -65,7 +68,6 @@ Highcharts.chart('graphique', {
                        return null;
                    }
                },
-
            }
         }
     },
