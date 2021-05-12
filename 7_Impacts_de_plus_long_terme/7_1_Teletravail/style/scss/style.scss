@@ -83,7 +83,6 @@ hr {
       @media (min-width: 576px) {
         text-align: left;
       }
-
     }
   }
   .cle {
@@ -98,9 +97,9 @@ hr {
       flex-flow: row wrap;
       justify-content: space-around;
       align-items: center;
-      @media (max-width: 576px) {
-        display:block;
-      }
+      // @media (max-width: 576px) {
+      //   display:block;
+      // }
       div {
         margin:10px auto;
         min-width:10em;
@@ -166,6 +165,7 @@ hr {
 .illustration {
   max-height: 90px;
   &.margin-left {
+    margin-left: 2em;
     @media (min-width: 576px) {
       margin-left: 6em;
     }
