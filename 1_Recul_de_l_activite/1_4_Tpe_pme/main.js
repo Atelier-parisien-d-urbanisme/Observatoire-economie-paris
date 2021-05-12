@@ -75,6 +75,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             },
         }],
         exporting: {
+          filename: 'chiffre-d-affaires-TPE-PME__Observatoire-economie-parisienne__Apur',
             buttons: {
                 contextButton: {
                     menuItems: [

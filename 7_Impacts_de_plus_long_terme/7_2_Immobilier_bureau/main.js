@@ -143,6 +143,7 @@ Highcharts.chart('graphique', {
 
   ],
   exporting: {
+    filename: 'Immobilier-bureau__Observatoire-economie-parisienne__Apur',
     chartOptions:{
       // add logo, titles, and sources updated in in the html page
       title: {

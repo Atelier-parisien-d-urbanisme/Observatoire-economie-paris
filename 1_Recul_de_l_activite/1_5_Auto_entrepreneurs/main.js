@@ -113,6 +113,7 @@ series: [{
 
 
      exporting: {
+       filename: 'chiffre-d-affaires-Auto-entrepreneurs__Observatoire-economie-parisienne__Apur',
          buttons: {
              contextButton: {
                  menuItems: [

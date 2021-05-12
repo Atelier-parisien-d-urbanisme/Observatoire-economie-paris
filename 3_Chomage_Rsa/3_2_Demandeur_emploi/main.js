@@ -118,6 +118,7 @@ Highcharts.chart('graphique', {
       }]
   },
     exporting: {
+      filename: 'Demandeur-d-emploi__Observatoire-economie-parisienne__Apur',
       chartOptions:{
         title: {
           text: "."

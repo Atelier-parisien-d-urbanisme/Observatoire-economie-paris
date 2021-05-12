@@ -110,6 +110,7 @@ Highcharts.chart('graphique', {
     },
 
     exporting: {
+        filename: 'Offres-durables__Observatoire-economie-parisienne__Apur',
       chartOptions:{
         title: {
           text: "."

@@ -95,6 +95,7 @@ Highcharts.chart('graphique', {
      enabled: false,
     },
     exporting: {
+      filename: 'Chomage-partiel__Observatoire-economie-parisienne__Apur',
       chartOptions:{
         // add logo, titles, and sources updated in in the html page
         title: {
@@ -202,6 +203,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
        },
     },
         exporting: {
+          filename: 'Chomage-partiel-carte1__Observatoire-economie-parisienne__Apur',
           chartOptions:{
             // add logo, titles, and sources updated in in the html page
             title: {
@@ -310,6 +312,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
            }
        }},
         exporting: {
+          filename: 'Chomage-partiel-carte2__Observatoire-economie-parisienne__Apur',
           chartOptions:{
             // add logo, titles, and sources updated in in the html page
             title: {

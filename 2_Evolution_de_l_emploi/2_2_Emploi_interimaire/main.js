@@ -114,6 +114,7 @@ Highcharts.chart('graphique', {
     },
 
     exporting: {
+      filename: 'Emploi-interimaire__Observatoire-economie-parisienne__Apur',
       chartOptions:{
         title: {
           text: "."

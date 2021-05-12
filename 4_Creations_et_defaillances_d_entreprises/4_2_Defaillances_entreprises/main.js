@@ -109,6 +109,7 @@ Highcharts.chart('graphique', {
      enabled: false
     },
     exporting: {
+      filename: 'Defaillances_entreprises__Observatoire-economie-parisienne__Apur',
       chartOptions:{
         // add logo, titles, and sources updated in in the html page
         title: {

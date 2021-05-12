@@ -84,6 +84,7 @@ Highcharts.chart('graphique1', {
        }
     }],
     exporting: {
+      filename: 'Liquidations_judiciaires__Observatoire-economie-parisienne__Apur',
       chartOptions:{
         // add logo, titles, and sources updated in in the html page
         title: {
@@ -236,6 +237,7 @@ series: [{
     color: '#7E1500',
 }],
      exporting: {
+       filename: 'Procedures_observations__Observatoire-economie-parisienne__Apur',
        chartOptions:{
          // add logo, titles, and sources updated in in the html page
          title: {

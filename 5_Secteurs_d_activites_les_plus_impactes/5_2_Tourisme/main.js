@@ -93,6 +93,7 @@ series: [{
    }
 }],
      exporting: {
+       filename: 'Occupation-Hotel__Observatoire-economie-parisienne__Apur',
        chartOptions:{
          // add logo, titles, and sources updated in in the html page
          title: {
@@ -234,6 +235,7 @@ Highcharts.chart('graphique2', {
         valueDecimals: 0
     },
     exporting: {
+      filename: 'Hotel-emploi-salarie__Observatoire-economie-parisienne__Apur',
       chartOptions:{
         // add logo, titles, and sources updated in in the html page
         title: {

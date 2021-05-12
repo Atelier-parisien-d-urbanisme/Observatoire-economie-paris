@@ -119,6 +119,7 @@ Highcharts.stockChart('graphique1', {
          valueDecimals: 1
      },
      exporting: {
+          filename: 'Commerces-loisirs__Observatoire-economie-parisienne__Apur',
          buttons: {
              contextButton: {
                  menuItems: [
@@ -253,6 +254,7 @@ Highcharts.stockChart('graphique2', {
        valueDecimals: 1
      },
      exporting: {
+       filename: 'Transports-en-commun__Observatoire-economie-parisienne__Apur',
        chartOptions:{
          title: {
            text: "."

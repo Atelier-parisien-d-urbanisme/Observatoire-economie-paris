@@ -132,6 +132,7 @@ Highcharts.stockChart('graphique', {
          valueDecimals: 0
      },
      exporting: {
+       filename: 'Demandeur-d-emploi-par-age__Observatoire-economie-parisienne__Apur',
        chartOptions:{
          // add logo, titles, and sources updated in in the html page
          title: {

@@ -121,6 +121,7 @@ Highcharts.chart('graphique', {
     },
 
     exporting: {
+      filename: 'Taux-chomage__Observatoire-economie-parisienne__Apur',
       chartOptions:{
         title: {
           text: "."

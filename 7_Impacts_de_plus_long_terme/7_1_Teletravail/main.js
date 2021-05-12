@@ -118,6 +118,7 @@ Highcharts.stockChart('graphique', {
          valueDecimals: 1
      },
      exporting: {
+       filename: 'Teletravail__Observatoire-economie-parisienne__Apur',
          buttons: {
              contextButton: {
                  menuItems: [

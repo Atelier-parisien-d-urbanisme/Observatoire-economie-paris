@@ -117,6 +117,7 @@ Highcharts.chart('graphique', {
         valueDecimals: 0
     },
     exporting: {
+      filename: 'Emploi-salarie__Observatoire-economie-parisienne__Apur',
       chartOptions:{
         title: {
           text: "."

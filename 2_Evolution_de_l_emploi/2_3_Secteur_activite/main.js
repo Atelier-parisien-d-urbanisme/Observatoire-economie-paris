@@ -124,6 +124,7 @@ Highcharts.stockChart('graphique', {
          valueDecimals: 0
      },
      exporting: {
+      filename: 'Secteur-d-activite__Observatoire-economie-parisienne__Apur',
        chartOptions:{
          title: {
            text: "."

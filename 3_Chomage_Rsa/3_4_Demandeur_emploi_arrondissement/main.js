@@ -92,6 +92,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
            }
        }},
         exporting: {
+          filename: 'Demandeur-d-emploi-par-arrondissement__Observatoire-economie-parisienne__Apur',
           chartOptions:{
             // add logo, titles, and sources updated in in the html page
             title: {
@@ -199,6 +200,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
            }
        }},
         exporting: {
+          filename: 'Demandeur-d-emploi-par-arrondissement__Observatoire-economie-parisienne__Apur',
           chartOptions:{
             // add logo, titles, and sources updated in in the html page
             title: {

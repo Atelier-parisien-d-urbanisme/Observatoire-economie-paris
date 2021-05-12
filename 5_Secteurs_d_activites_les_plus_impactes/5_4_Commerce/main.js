@@ -148,6 +148,7 @@ Highcharts.chart('graphique1', {
 
   ],
   exporting: {
+    filename: 'Commerces-locaux-vacants__Observatoire-economie-parisienne__Apur',
     chartOptions:{
       // add logo, titles, and sources updated in in the html page
       title: {
@@ -248,7 +249,7 @@ Highcharts.chart('graphique2', {
                 },
             }
           }]
-          },            
+          },
 
     xAxis: {
     labels: {
@@ -285,6 +286,7 @@ Highcharts.chart('graphique2', {
         valueDecimals: 0
     },
     exporting: {
+      filename: 'Commerce-emploi_salarie__Observatoire-economie-parisienne__Apur',
       chartOptions:{
         // add logo, titles, and sources updated in in the html page
         title: {
