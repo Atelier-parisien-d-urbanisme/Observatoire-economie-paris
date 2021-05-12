@@ -2,21 +2,23 @@
 <!-- Generator: Adobe Illustrator 25.2.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 318.1 330.1" style="enable-background:new 0 0 318.1 330.1;" xml:space="preserve">
-<g>
-	<path d="M126.9,140.4H80.4V171H63v36.8h12.6v24.4h-5.5V269h101v-30.6h5.5v-36.8H164v-24.4h17.4v-30.6h46.6v-36.8h-101V140.4z
-		 M164.9,262.8H76.3v-24.4h88.6V262.8z M170.4,207.8v24.4H81.8v-24.4H170.4z M157.8,201.6H69.2v-24.4h88.6L157.8,201.6L157.8,201.6z
-		 M175.2,171H86.6v-24.4h88.6L175.2,171L175.2,171z M133.1,116h88.6v24.4h-88.6V116z"/>
-	<path d="M171.2,93.1l97.1,27.7l10.1-35.4l-97.1-27.7L171.2,93.1z M270.8,89.7l-6.7,23.4l-85.2-24.3l6.7-23.4L270.8,89.7z"/>
-	<rect x="253.6" y="57.3" transform="matrix(0.2747 -0.9615 0.9615 0.2747 118.967 297.4742)" width="6.2" height="25.1"/>
-	<rect x="265.6" y="49" transform="matrix(0.2749 -0.9615 0.9615 0.2749 135.7073 302.9799)" width="6.2" height="25.1"/>
-	<rect x="144.9" y="63.5" width="6.2" height="10.2"/>
-	<rect x="144.9" y="88.4" width="6.2" height="10.2"/>
-	<rect x="155.3" y="78" width="10.2" height="6.2"/>
-	<rect x="130.5" y="78" width="10.2" height="6.2"/>
-	<rect x="97.7" y="130.1" width="14" height="6.2"/>
-	<rect x="83.5" y="118" width="28.2" height="6.2"/>
-	<rect x="167.2" y="185.4" width="6.2" height="10.6"/>
-	<rect x="180.9" y="229.1" width="6.2" height="7.8"/>
-	<rect x="174.3" y="250.6" width="6.2" height="12.9"/>
-</g>
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#1D1D1B;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<circle class="st0" cx="98.8" cy="66.6" r="9.1"/>
+<circle class="st0" cx="297.9" cy="87.8" r="10.7"/>
+<circle class="st0" cx="212.5" cy="186.5" r="3.9"/>
+<circle class="st0" cx="25.4" cy="112.4" r="5.7"/>
+<circle class="st0" cx="191.3" cy="263" r="5.4"/>
+<rect x="36.8" y="257.8" class="st0" width="127" height="34.4"/>
+<rect x="48.1" y="221.7" class="st0" width="127" height="34.4"/>
+<rect x="11.6" y="185.5" class="st0" width="127" height="34.4"/>
+<rect x="53.7" y="149.4" class="st0" width="127" height="34.4"/>
+<rect x="75.1" y="113.2" class="st0" width="127" height="34.4"/>
+<rect x="133.1" y="72" transform="matrix(0.9516 0.3074 -0.3074 0.9516 36.9531 -56.1292)" class="st0" width="127" height="34.4"/>
+<line class="st0" x1="219.3" y1="65.1" x2="251" y2="75"/>
+<line class="st0" x1="235.2" y1="60.1" x2="266.9" y2="70"/>
+<line class="st0" x1="23.8" y1="170.1" x2="36.8" y2="170.1"/>
+<line class="st0" x1="148.1" y1="196.2" x2="148.1" y2="209.3"/>
+<line class="st0" x1="14" y1="159.5" x2="36.8" y2="159.5"/>
 </svg>
