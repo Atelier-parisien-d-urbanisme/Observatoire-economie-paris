@@ -92,10 +92,16 @@ hr {
     -webkit-box-shadow: 11px 11px 0px -3px rgba(0,0,0,0.06);
     box-shadow: 11px 11px 0px -3px rgba(0,0,0,0.06);
   }
-.txtCle {
-  margin:0;
-  text-align: center;
-}
+  .txtCle {
+    margin:0;
+    text-align: center;
+    &.left {
+      @media (min-width: 576px) {
+        text-align: left;
+      }
+
+    }
+  }
 .cle {
   text-align: center;
   font-size: 18px;
@@ -107,14 +113,18 @@ hr {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-around;
+      align-items: center;
+      @media (max-width: 576px) {
+        display:block;
+      }
       div {
-        margin:10px;
+        margin:10px auto;
         min-width:10em;
         }
       }
-    .oneCle {
-      margin:10px;
-    }
+.oneCle {
+  margin:10px;
+}
 .quote {
   font-size: 16px;
   line-height: 27px;
@@ -163,5 +173,17 @@ hr {
   &:hover {
     color: $Apur;
     cursor: pointer;
+  }
+}
+.key_illustration {
+  display:inline-flex;
+
+}
+.illustration {
+  max-height: 90px;
+  &.margin-left {
+    @media (min-width: 576px) {
+      margin-left: 10em;
+    }
   }
 }
