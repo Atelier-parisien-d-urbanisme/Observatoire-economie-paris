@@ -78,8 +78,10 @@ hr {
   margin: 0;
   text-align: center;
 }
-.txtCle.border {
-  margin: 5px;
+@media (min-width: 576px) {
+  .txtCle.left {
+    text-align: left;
+  }
 }
 
 .cle {
@@ -94,10 +96,16 @@ hr {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 576px) {
+  .duoCle {
+    display: block;
+  }
 }
 .duoCle div {
-  margin: 10px;
-  width: 10em;
+  margin: 10px auto;
+  min-width: 10em;
 }
 
 .oneCle {
@@ -165,9 +173,10 @@ hr {
 .illustration {
   max-height: 90px;
 }
-
-img {
-  width: inherit;
+@media (min-width: 576px) {
+  .illustration.margin-left {
+    margin-left: 6em;
+  }
 }
 
 /* Link the series colors to axis colors */

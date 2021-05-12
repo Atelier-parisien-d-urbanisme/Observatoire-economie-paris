@@ -79,11 +79,14 @@ hr {
   .txtCle {
     margin:0;
     text-align: center;
-    &.border {
-      margin:5px;
+    &.left {
+      @media (min-width: 576px) {
+        text-align: left;
+      }
+
     }
   }
-.cle {
+  .cle {
   text-align: center;
   font-size: 18px;
   color: $Theme7;
@@ -94,16 +97,18 @@ hr {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-around;
+      align-items: center;
+      @media (max-width: 576px) {
+        display:block;
+      }
       div {
-        margin:10px;
-        width:10em;
+        margin:10px auto;
+        min-width:10em;
         }
       }
-    .oneCle{
-      margin:10px;
-    }
-
-
+  .oneCle {
+  margin:10px;
+  }
 .quote {
   font-size: 16px;
   line-height: 27px;
@@ -160,10 +165,11 @@ hr {
 }
 .illustration {
   max-height: 90px;
-}
-
-img {
-  width:inherit;
+  &.margin-left {
+    @media (min-width: 576px) {
+      margin-left: 6em;
+    }
+  }
 }
 
 /* Link the series colors to axis colors */
