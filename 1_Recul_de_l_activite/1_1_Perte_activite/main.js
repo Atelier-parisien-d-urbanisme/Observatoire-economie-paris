@@ -92,7 +92,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             },
         }],
         exporting: {
-            filename: 'perte-activite__Observatoire-economie-parisienne__Apur',
+            filename: 'perte-activite-carte1__Observatoire-economie-parisienne__Apur',
             buttons: {
                 contextButton: {
                     menuItems: [
@@ -214,7 +214,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             },
         }],
         exporting: {
-          filename: 'perte-activite__Observatoire-economie-parisienne__Apur',
+          filename: 'perte-activite-carte2__Observatoire-economie-parisienne__Apur',
             buttons: {
                 contextButton: {
                     menuItems: [
