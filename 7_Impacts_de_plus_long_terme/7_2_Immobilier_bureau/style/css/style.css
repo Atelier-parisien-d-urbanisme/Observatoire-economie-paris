@@ -79,14 +79,17 @@ hr {
   margin: 0;
   text-align: center;
 }
+@media (min-width: 576px) {
+  .txtCle.left {
+    text-align: left;
+  }
+}
 
 .cle {
   text-align: center;
   font-size: 18px;
   color: #a4c95b;
   font-family: Roboto-black;
-  font-family: "Roboto";
-  font-weight: bold;
 }
 
 .duoCle {
@@ -94,9 +97,15 @@ hr {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 576px) {
+  .duoCle {
+    display: block;
+  }
 }
 .duoCle div {
-  margin: 10px;
+  margin: 10px auto;
   min-width: 10em;
 }
 
@@ -156,6 +165,19 @@ hr {
 .source a:hover {
   color: #00c3ff;
   cursor: pointer;
+}
+
+.key_illustration {
+  display: inline-flex;
+}
+
+.illustration {
+  max-height: 90px;
+}
+@media (min-width: 576px) {
+  .illustration.margin-left {
+    margin-left: 6em;
+  }
 }
 
 /* Link the series colors to axis colors */
