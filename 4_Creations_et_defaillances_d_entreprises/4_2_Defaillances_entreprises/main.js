@@ -49,8 +49,36 @@ Highcharts.chart('graphique', {
               fillColor: '#FFFFFF',
               lineWidth: 2,
               lineColor: null // inherit from series,
-            }
+            },
+            dataLabels: {
+               enabled: true,
+               align: 'left',
+               crop: false,
+               useHTML: false,
+               formatter: function() {
+                   if (this.point.x == this.series.data.length - 1) {
+                     return '<span style="color: '+ this.color + '">' + Highcharts.numberFormat(this.y,0) + '</span>';
+                   } else {
+                       return null;
+                   }
+               },
+           }
         }
+    },
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 560
+            },
+            // Labels space on mobile
+            chartOptions: {
+                xAxis: {
+                    labels: {
+                        step: 4,
+                    }
+                },
+            }
+        }]
     },
     xAxis: {
     labels: {
