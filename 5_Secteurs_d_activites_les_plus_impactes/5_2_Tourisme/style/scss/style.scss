@@ -78,6 +78,11 @@ hr {
 .txtCle {
   margin:0;
   text-align: center;
+  &.left {
+    @media (min-width: 576px) {
+      text-align: left;
+    }
+}
 }
 .cle {
   text-align: center;
@@ -146,5 +151,18 @@ hr {
   &:hover {
     color: $Apur;
     cursor: pointer;
+  }
+}
+
+.key_illustration {
+  display:inline-flex;
+
+}
+.illustration {
+  max-height: 90px;
+  &.margin-left {
+    @media (min-width: 576px) {
+      margin-left: 5em;
+    }
   }
 }
