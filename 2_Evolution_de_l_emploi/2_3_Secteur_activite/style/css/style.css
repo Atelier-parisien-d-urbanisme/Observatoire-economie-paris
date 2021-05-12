@@ -94,10 +94,16 @@ hr {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 650px) {
+  .duoCle {
+    display: block;
+  }
 }
 .duoCle div {
-  margin: 10px;
-  width: 10em;
+  margin: 10px auto;
+  min-width: 10em;
 }
 
 .quote {
@@ -152,6 +158,14 @@ hr {
 .source a:hover {
   color: #00c3ff;
   cursor: pointer;
+}
+
+.key_illustration {
+  display: inline-flex;
+}
+
+.illustration {
+  max-height: 90px;
 }
 
 #graphique .highcharts-axis-labels .highcharts-xaxis-labels .highcharts-navigator-xaxis {

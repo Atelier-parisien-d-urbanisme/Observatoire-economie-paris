@@ -87,16 +87,20 @@ hr {
   color: $Theme2;
   font-family: Roboto-black;
     }
-    .duoCle {
-      margin:10px;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
-      div {
-        margin:10px;
-        width:10em;
-        }
-      }
+.duoCle {
+  margin:10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  @media (max-width: 650px) {
+    display:block;
+  }
+  div {
+    margin:10px auto;
+    min-width:10em;
+    }
+  }
 .quote {
   font-size: 16px;
   line-height: 27px;
@@ -147,6 +151,15 @@ hr {
     cursor: pointer;
   }
 }
+
+.key_illustration {
+  display:inline-flex;
+
+}
+.illustration {
+  max-height: 90px;
+}
+
 #graphique {
   .highcharts-axis-labels .highcharts-xaxis-labels .highcharts-navigator-xaxis {
     display: none;
