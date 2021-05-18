@@ -27,7 +27,10 @@ hr {
     background-image: -ms-linear-gradient(left, #f0f0f0, $Theme4, #f0f0f0);
     background-image: -o-linear-gradient(left, #f0f0f0, $Theme4, #f0f0f0);
 }
-
+.boxTitle{
+  display: inline-block;
+  width: 100%;
+}
 .maintext{
   margin: 0 auto;
   width: 70%;
