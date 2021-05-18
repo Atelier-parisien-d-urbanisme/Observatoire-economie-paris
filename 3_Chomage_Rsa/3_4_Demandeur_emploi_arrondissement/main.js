@@ -214,7 +214,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
                    load:function(){
                        this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
 
-                       title = document.getElementById('title1').innerHTML;
+                       title = document.getElementById('title2').innerHTML;
                        this.renderer.text(title, 70, 20)
                         .css({
                           color: 'black',
