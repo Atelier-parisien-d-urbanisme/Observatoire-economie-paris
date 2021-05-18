@@ -24,6 +24,11 @@ hr {
   background-image: -o-linear-gradient(left, #f0f0f0, #CE8C34, #f0f0f0);
 }
 
+.boxTitle {
+  display: inline-block;
+  width: 100%;
+}
+
 .maintext {
   margin: 0 auto;
   width: 70%;
