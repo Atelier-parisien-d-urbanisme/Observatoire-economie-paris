@@ -59,7 +59,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             joinBy: 'c_cainsee',
             borderColor: 'white',
             borderWidth: 0.5,
-            name: "Evolution du chiffre d'affaires moyen par entreprise",
+            name: "Indice de chômage",
             tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.l_cab}</span>: <b>{point.value} %</b><br/>'
           },
             states: {
@@ -168,7 +168,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             joinBy: 'c_cainsee',
             borderColor: 'white',
             borderWidth: 0.5,
-            name: "Evolution du chiffre d'affaires moyen<br> par entreprise",
+            name: "Évolution du nombre de demandeurs d'emploi de catégorie A",
             tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.l_cab}</span>: <b>{point.value} %</b><br/>'
           },
             states: {
