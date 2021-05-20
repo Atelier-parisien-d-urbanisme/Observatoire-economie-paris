@@ -1,6 +1,6 @@
 // Données pour les cartes de la perte d'activité.
 
-const data_T4_2020 = [
+const data_map1 = [
     ['T1', -5.9],
     ['T2', -5.0],
     ['T3', -4.7],
@@ -15,7 +15,7 @@ const data_T4_2020 = [
     ['T12', -5.6]
 ];
 
-const data_T1_2021 = [
+const data_map2 = [
     ['T1', -4.9],
     ['T2', -3.9],
     ['T3', -3.5],

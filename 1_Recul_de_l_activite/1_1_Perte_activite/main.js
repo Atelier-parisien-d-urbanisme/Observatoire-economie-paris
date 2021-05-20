@@ -66,7 +66,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
          },
 
         series: [{
-            data: data_T4_2020,
+            data: data_map1,
             keys: ['EPT_NUM', 'value','className'],
             joinBy: 'EPT_NUM',
             name: "Perte d'activité",
@@ -187,7 +187,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
            }
          },
         series: [{
-            data: data_T1_2021,
+            data: data_map2,
             keys: ['EPT_NUM', 'value','className'],
             joinBy: 'EPT_NUM',
             name: "Perte d'activité",
