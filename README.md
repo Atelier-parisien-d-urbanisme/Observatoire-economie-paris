@@ -20,87 +20,51 @@ La mise en œuvre de l’observatoire se traduira par le développement d’un o
 Porté par l’Atelier parisien d’urbanisme (Apur) et la Direction de l’attractivité et de l’emploi de la Ville de Paris (DAE), l’observatoire est un espace de réflexion partenarial construit de manière collective avec plus d’une trentaine d’acteurs de l’économie parisienne.
 D’autres partenaires sont également associés aux travaux d’approfondissements selon les thématiques : Les Canaux, ministère de la Culture, Observatoire régional de l'immobilier d'entreprise en Île-de-France (ORIE), Observatoire régional du foncier (ORF), Mission locale de Paris, Semaest, GIE Commerce, France Stratégie, Chambre des notaires de Paris, Ordre des avocats à la Cour de Paris, Greffe du tribunal de commerce de Paris, Direction régionale des finances publiques de Paris (DRFIP), Confédération nationale des très petites entreprises (CNTPE), Confédération des petites et moyennes entreprises (CPME), Chaire Travail, etc.
 
-Sommaire :
+--  Sommaire --
 
-1/ Recul de l’activité  
+1.| ÉVOLUTION DE L'ACTIVITÉ
 
-- Perte d’activité et prévisions
+  - Perte d’activité
+  - Masse salariale
+  - Chiffre d’affaires des TPE/PME
+  - Chiffre d'affaires des auto-entrepreneurs
+  - Fréquentation des commerces et loisirs
 
-- Consommation
-
-- Masse salariale
-
-- Chiffre d’affaires
-
-- Auto-entrepreneurs
-
-- Commerces et loisirs
-
-
-2/ Evolution de l’emploi
-
-- Emploi salarié
-
-- Emploi intérimaire
-
-- Industrie
-
-- Offres durables d’emploi
-
-- Métiers recherchés
-
-
-3/ Chômage – RSA
-
-- Le chômage
-
-- La catégorie A
-
-- Les moins de 25 ans
-
-- Les demandeurs d’emploi
-
-- Le chômage partiel et indemnisation
-
-- Les bénéficiaires du RSA
-
-4/ Créations et défaillances d’entreprises
-
-- Création d’entreprise
-
-- Défaillance d’entreprise
-
-- Ouverture de procédures collectives
-
-- Emplois menacés
-
-5/ Secteurs d’activité les plus impactés
-
-- Les cotisations
-
-- Le tourisme
-
-- La culture
-
-- Le commerce
-
-- Les start-ups
-
-
-6/ Aides et mesures de soutien  
-
-- Le Fonds de solidarité
-
-- Le Prêt garanti par l’Etat
-
-- Le report d’échéances fiscales
-
-- Le Fonds résilience
-
-7/ Impacts de plus long terme
-
-- Le télétravail
-
-- L’avenir de l’immobilier de bureaux
-
-- Le marché immobilier parisien
+2.| ÉVOLUTION DE L’EMPLOI
+  - Emploi salarié
+  - Emploi intérimaire
+  - Secteur d'activité
+  - Offres durables d’emploi
+  - Métiers recherchés
+  
+3.| CHÔMAGE – RSA
+  - Taux de chômage
+  - Demandeurs d'emploi
+  - Demandeurs d'emploi par âge
+  - Demandeurs d’emploi par arrondissement
+  - Chômage partiel
+  - Bénéficiaires du RSA
+  
+4.| MOUVEMENTS D’ENTREPRISES
+  - Créations d’entreprises
+  - Défaillances d’entreprises
+  - Ouvertures de procédures collectives
+  - Emplois menacés suite aux procédures
+  
+5.| SECTEURS D’ACTIVITÉ
+  - Cotisations impayées par secteur
+  - Tourisme
+  - Culture
+  - Commerce
+  - Start-ups
+  
+6.| MESURES DE SOUTIEN
+  - Fonds de solidarité
+  - Prêt garanti par l’Etat
+  - Report d'échéances fiscales
+  - Fonds Résilience
+  
+7.| IMPACTS DE PLUS LONG TERME
+  - Télétravail
+  - Immobilier de bureau
+  - Marché immobilier parisien
