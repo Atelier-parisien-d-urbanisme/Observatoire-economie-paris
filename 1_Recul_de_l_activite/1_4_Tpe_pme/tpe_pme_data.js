@@ -1,4 +1,4 @@
-// Données pour les cartes de la perte d'activité.
+// Données pour la carte des TPE/PME.
 
 const data_TPE = [
     ['75', -17.7],
