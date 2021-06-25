@@ -40,12 +40,12 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
         },
         colorAxis: {
             tickPixelInterval: 100,
-            reversed: true,
+            // reversed: true,
             // Manually change colored steps of the map
             stops: [
-              [0, '#990041'],
+              [0, '#F1DCE2'],
               [0.65, '#C75E8B'],
-              [0.85, '#F1DCE2']
+              [0.9, '#990041' ]
             ]
         },
         series: [{
