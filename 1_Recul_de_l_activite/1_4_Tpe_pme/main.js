@@ -43,10 +43,16 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             // reversed: true,
             // Manually change colored steps of the map
             stops: [
-              [0, '#990041'],
-              [0.65, '#C75E8B'],
-              [0.9,  '#F1DCE2' ]
-            ]
+             [0,'#81ABEC' ],
+            [0.5, '#E7C7D4'],
+             [0.95, '#990041']
+         ]
+
+            // stops: [
+            //   [0, '#990041'],
+            //   [0.65, '#C75E8B'],
+            //   [0.9,  '#F1DCE2' ]
+            // ]
         },
         series: [{
             data: data_TPE,
