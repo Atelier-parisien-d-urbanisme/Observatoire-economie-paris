@@ -50,6 +50,7 @@ Highcharts.stockChart('graphique', {
       xAxis: {
         gridLineWidth: 1,
         labels: {
+            enabled:false,
           step:1,
           formatter: function() {
             return Highcharts.dateFormat('%b %Y', this.value);
@@ -85,6 +86,7 @@ Highcharts.stockChart('graphique', {
     xAxis: {
       gapGridLineWidth: 0,
       labels: {
+          enabled:false,
         style: {
           fontSize: '8px',
           color:  '#CFCFCF'
