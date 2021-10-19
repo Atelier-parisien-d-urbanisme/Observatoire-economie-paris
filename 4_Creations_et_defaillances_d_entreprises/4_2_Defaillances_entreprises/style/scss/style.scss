@@ -94,6 +94,7 @@ hr {
       flex-flow: row wrap;
       justify-content: space-around;
       align-items: center;
+      text-align: center;
       @media (max-width: 576px) {
         display:block;
       }
