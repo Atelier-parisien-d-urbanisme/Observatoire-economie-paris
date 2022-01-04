@@ -31,6 +31,7 @@ Highcharts.chart('graphique', {
     title: {
         text: null
     },
+
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/1_Recul_de_l_activite/1_5_Auto_entrepreneurs/auto_entrepreneurs.csv',
         startColumn:0,
