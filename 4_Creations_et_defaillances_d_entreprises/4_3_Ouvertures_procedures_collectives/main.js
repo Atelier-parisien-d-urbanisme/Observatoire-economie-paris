@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#F5AA9C','#E3510E','#7E1500'],
+    colors: ['#F5AA9C','#CE8C34','#7E1500','#3D71EA'],
     style: {
      fontFamily: 'Roboto'
    },
@@ -36,7 +36,7 @@ Highcharts.chart('graphique', {
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_3_Ouvertures_procedures_collectives/ouverture_procedures_collectives.csv',
         startColumn:0,
-        endColumn:3,
+        endColumn:4,
     },
     plotOptions: {
         series: {

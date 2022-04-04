@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-  colors: ['#FCECD2', '#CE8C34','#E69818'],
+  colors: ['#FCECD2', '#CE8C34','#7E1500','#3D71EA'],
     style: {
      fontFamily: 'Roboto'
    },
@@ -34,7 +34,7 @@ Highcharts.chart('graphique1', {
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_3_Culture/culture.csv',
         startColumn:0,
-        endColumn:3,
+        endColumn:4,
     },
     tooltip: {
        shared: true,
