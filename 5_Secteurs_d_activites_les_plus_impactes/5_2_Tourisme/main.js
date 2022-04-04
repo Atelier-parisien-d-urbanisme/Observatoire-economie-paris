@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#FCECD2','#E69818', '#5A3800'],
+    colors: ['#FCECD2','#E69818', '#5A3800','#3D71EA'],
     style: {
      fontFamily: 'Roboto'
    },
@@ -33,7 +33,7 @@ Highcharts.chart('graphique1', {
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_2_Tourisme/tourisme.csv',
         startColumn:0,
-        endColumn:3,
+        endColumn:4,
     },
     plotOptions: {
         series: {
