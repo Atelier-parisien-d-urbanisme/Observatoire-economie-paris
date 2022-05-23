@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-  colors: ['#38cae9','#3333cc'],
+  colors: ['#9494FA','#3333cc','#F1BB63','#CE8C34',],
     style: {
      fontFamily: 'Roboto'
    },
@@ -58,6 +58,13 @@ Highcharts.chart('graphique', {
       }
     }
   },
+  series: [{
+    },{dashStyle: 'dash',
+  },{visible:false,
+    },{dashStyle: 'dash',visible:false,
+  }
+    ],
+
     yAxis: {
       gridLineColor: '#efefef',
       gridLineDashStyle: 'dash',
