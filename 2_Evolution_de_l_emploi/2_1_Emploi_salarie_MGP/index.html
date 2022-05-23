@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évolution de l'emploi salarié</title>
+    <link rel="stylesheet" type="text/css" href="style/css/style.css" /> <!-- main CSS -->
+  </head>
+  <body>
+
+    <p class="quote">Au 4<sup>e</sup> trimestre 2021, l’emploi salarié à Paris augmente de 0,3 % (+6 500 emplois). Il s'agit de la quatrième hausse trimestrielle successive après +0,3 % au premier trimestre, +1,7 % au deuxième trimestre et +1,2 % au troisième. Au total, fin 2021, l'emploi salarié dépasse de 3,6 % (soit +64 900 emplois) son niveau de fin 2020 et de 1% (soit +19 000 emplois) son niveau d'avant la crise sanitaire (fin 2019). Au cours de l'année 2021, la hausse du nombre d'emplois salariés a été plus forte à Paris qu'à l'échelle régionale (+2,2 %). </p>
+
+    <div class="boxTitle">
+      <div class="maintext">
+        <div class="subtext">
+      <h2 id="title1" class="color">Évolution de l’emploi salarié à Paris (en milliers) </h2>
+      </div></div>
+    </div>
+
+
+    <div id="graphique"></div>
+
+    <p class="source"><a href="https://www.insee.fr/fr/statistiques/series/102759768" target="_blank">Sources: Insee,</a><a href="https://www.acoss.fr/home.html" target="_blank"> estimations d emploi d estimations trimestrielles Acoss-Urssaf,</a><a href="https://dares.travail-emploi.gouv.fr/" target="_blank"> Dares.</a></p>
+    <p class="subtitle">Données CVS, en fin de trimestre, mises à jour le 31/03/2022. Champ : emploi salarié total.</p>
+
+    <div class="boxCle">
+      <div class="maintext borderCle"><div class="subtext">
+      <h2>CHIFFRES CLÉS</h2>
+    </div></div>
+    <p class="title">Évolution de l’emploi salarié</p>
+    <div class="duoCle grid">
+      <div>
+        <p class="txtCle">4<sup>e</sup> trimestre 2020 -<br> 4<sup>e</sup> trimestre 2021</p>
+        <p></p>
+        <p class="txtCle">Paris : <span class="cle"> +3,6% </span></p>
+        <p class="txtCle">MGP : <span class="cle"> +2,6% </span></p>
+        <p class="txtCle">Ile-de-France : <span class="cle"> +2,2% </span></p>
+        <p class="txtCle">France : <span class="cle"> +2,8% </span></p>
+      </div>
+        <img class="illustration" src="./emploi_salarie.svg" >
+      <div>
+        <p class="txtCle">3<sup>e</sup> trimestre 2021 -<br> 4<sup>e</sup> trimestre 2021</p>
+        <p></p>
+        <p class="txtCle">Paris : <span class="cle">+0,3% </span></p>
+        <p class="txtCle">MGP : <span class="cle"> +0,2% </span></p>
+        <p class="txtCle">Ile-de-France : <span class="cle"> +0,1% </span></p>
+        <p class="txtCle">France : <span class="cle"> +0,4% </span></p>
+      </div>
+    </div>
+  </div>
+
+
+  <footer style="height:1em"></footer>
+  <!-- Script -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/js/iframeResizer.contentWindow.min.js"></script>
+
+  </body>
+</html>
