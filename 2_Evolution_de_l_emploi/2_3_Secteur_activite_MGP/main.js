@@ -30,21 +30,16 @@ let urlMGP = 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Obs
 
 let url = urlParis;
 
-// $('#btn-paris').click(function () {
+// document.getElementById('#btn-paris').addEventListener('click', function()  {
 //   url = urlParis ;
-
-// chart.redraw();
-
-// $(this).addClass('active');
-// $(this).siblings().removeClass('active');
+//   chart.redraw();
+//   $(this).addClass('active');
+//   $(this).siblings().removeClass('active');
 // });
 
-// $('#btn-mgp').click(function () {
-// console.log("mgp");
+// document.getElementById('#btn-mgp').addEventListener('click', function()  {
 // url = urlMGP ;
-
 // chart.redraw();
-
 // $(this).addClass('active');
 // $(this).siblings().removeClass('active');
 // });
