@@ -2,7 +2,7 @@ Highcharts.setOptions({
   style: {
    fontFamily: 'Roboto'
  },
-    colors: ['#009A93','#38cae9', '#000DC9','#CBD742'],
+ colors: ['#009A93','#CA8F13',],
     lang: {
       downloadPNG: "Télécharger  en image PNG",
       downloadJPEG: "Télécharger en image JPEG",
