@@ -2,7 +2,7 @@ Highcharts.setOptions({
   style: {
    fontFamily: 'Roboto'
  },
-    colors: ['#009A93'],
+    colors: ['#009A93','#38cae9', '#000DC9','#CBD742'],
     lang: {
       downloadPNG: "Télécharger  en image PNG",
       downloadJPEG: "Télécharger en image JPEG",
@@ -36,17 +36,25 @@ Highcharts.chart('graphique', {
     },
 
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_2_Emploi_interimaire/emploi_interimaire.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_2_Emploi_interimaire_MGP/emploi_interimaire.csv',
         enablePolling: true
     },
     credits: {
       enabled:false
     },
+    tooltip: {
+      // pointFormat: '{series.color}{series.name}: <b>{point.y:.2f}</b><br/>',
+      valueSuffix: '',
+      shared: true,
+      valueDecimals: 2,
+      // pointFormat: "Value: {point.y:.2f} %"
+  },
 
     plotOptions: {
       series: {
         lineWidth: 1,
           marker: {
+            symbol:'circle',
             enabledThreshold: 2,
             radius: 3,
             fillColor: '#FFFFFF',
@@ -108,9 +116,6 @@ Highcharts.chart('graphique', {
      title: {
         enabled: false,
       }
-    },
-    legend: {
-     enabled: false
     },
 
     exporting: {
