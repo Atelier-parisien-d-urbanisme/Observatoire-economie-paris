@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Secteurs d'activité</title>
+      <link rel="stylesheet" type="text/css" href="style/css/style.css" /> <!-- main CSS -->
+  </head>
+  <body>
+
+    <p class="quote"> Au cours du 1<sup>er</sup> trimestre 2022, l'emploi salarié a légèrement baissé à Paris dans les secteurs de la construction et du tertiaire non marchand alors qu'il a continué de progresser dans l'industrie et le tertiaire marchand. Hors intérim, l’emploi salarié parisien dépasse au 1<sup>er</sup> trimestre 2022 son niveau d’avant-crise (fin 2019) dans tous les grands secteurs.</p>
+
+    <div class="boxTitle">
+      <div class="maintext"><div class="subtext">
+      <h2 id="title1" class="color">Evolution de l’emploi salarié par secteur d’activité à Paris <br>(Indice base 100 : 1<sup>er</sup> trimestre 2011)</h2>
+      </div></div>
+    </div>
+
+
+    <div id="graphique"></div>
+    <div id="toggle">
+      <button id="btn-paris" class="toggle-value-btn"> Paris</button>
+      <button id="btn-mgp" class="toggle-value-btn active "> Mgp </button>
+    </div>
+    <p class="source"><a href="https://www.insee.fr/fr/statistiques/series/102759768" target="_blank">Sources: Insee, estimations d'emploi ; </a><a href="https://www.acoss.fr/home.html" target="_blank"> estimations trimestrielles Acoss-Urssaf,</a><a href="https://dares.travail-emploi.gouv.fr/" target="_blank"> Dares.</a></p>
+    <p class="subtitle">Données CVS, en fin de trimestre, mises à jour le 30/06/2022. Les données du dernier trimestre affiché sont provisoires. </p>
+    <p class="subtitle">Champ : emploi salarié total.</p>
+
+    <div class="boxCle">
+      <div class="maintext borderCle"><div class="subtext">
+      <h2>CHIFFRES CLÉS</h2>
+    </div></div>
+      <p class="title">Evolution de l’emploi salarié par secteur d’activité à Paris</p>
+    <div class="duoCle">
+      <div>
+        <p class="txtCle">1<sup>er</sup> trimestre 2021 - <br> 1<sup>er</sup> trimestre 2022 </p>
+        <p></p>
+        <p class="txtCle">Industrie :  <span class="cle"> +3,8% </span></p>
+        <p class="txtCle">Construction :<span class="cle"> +0,0% </span></p>
+        <p class="txtCle">Tertiaire marchand <br>(hors intérim) : <span class="cle"> +6,2% </span></p>
+        <p class="txtCle">Tertiaire non marchand :  <span class="cle"> +0,4% </span></p>
+      </div>
+      <img class="illustration" src="./secteur_activite.svg" >
+      <div>
+        <p class="txtCle">4<sup>e</sup> trimestre 2021 - <br> 1<sup>er</sup> trimestre 2022 </p>
+        <p></p>
+        <p class="txtCle">Industrie :  <span class="cle"> +0,4% </span></p>
+        <p class="txtCle">Construction :  <span class="cle"> -1,0% </span></p>
+        <p class="txtCle">Tertiaire marchand <br>(hors intérim) :  <span class="cle"> +1,1% </span></p>
+        <p class="txtCle">Tertiaire non marchand :  <span class="cle"> -0,1% </span></p>
+      </div>
+    </div>
+  </div>
+
+
+
+    <footer style="height:1em"></footer>
+    <!-- Script -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/js/iframeResizer.contentWindow.min.js"></script>
+  </body>
+</html>

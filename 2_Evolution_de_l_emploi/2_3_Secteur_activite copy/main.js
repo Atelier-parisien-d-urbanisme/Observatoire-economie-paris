@@ -24,37 +24,7 @@ Highcharts.setOptions({
   }
 });
 
-let urlParis = 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_3_Secteur_activite/secteur_activite.csv'
-
-let urlMGP = 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_3_Secteur_activite/secteur_activite_MGP.csv'
-
-
-$('.toggle-value').click(function () {
-  let dm_btn_Stock = $(this).attr("id").split("-")[1];
-  let infographicContainer = $("#" + dm_btn_Stock + "-container");
-  var chart = $(infographicContainer).highcharts(),
-      s = chart.series,
-      sLen = s.length;
-  
-  for(var i =0; i < sLen; i++){
-      s[i].update({
-          stacking: 'normal'   
-      }, false);   
-  }
-  chart.redraw();
-  
-  chart.update({
-      yAxis : {
-          labels: {
-              format: '{value:,.0f}',
-         },
-      }
-  });
-
-  $('#btn-' + dm_btn_Stock+ '-stock').addClass('active');
-  $('#btn-' + dm_btn_Stock+ '-percent').removeClass('active');
-});
-
+let url = 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_3_Secteur_activite/secteur_activite.csv'
 
 
 Highcharts.stockChart('graphique', {
