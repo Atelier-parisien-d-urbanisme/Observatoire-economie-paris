@@ -33,7 +33,7 @@ Highcharts.chart('graphique', {
     },
 
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_4_Offres_durables/offres_durables.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_4_Offres_durables_MGP/offres_durables.csv',
         enablePolling: true
     },
     credits: {
@@ -43,13 +43,14 @@ Highcharts.chart('graphique', {
     plotOptions: {
         series: {
           lineWidth: 1,
-            marker: {
-              enabledThreshold: 2,
-              radius: 3,
-              fillColor: '#FFFFFF',
-              lineWidth: 2,
-              lineColor: null // inherit from series,
-            },
+          marker: {
+            symbol:'circle',
+            enabledThreshold: 2,
+            radius: 3,
+            fillColor: '#FFFFFF',
+            lineWidth: 2,
+            lineColor: null // inherit from series,
+          },
             dataLabels: {
                enabled: true,
                align: 'left',
@@ -65,6 +66,9 @@ Highcharts.chart('graphique', {
            }
         }
     },
+    tooltip: {
+      shared: true,
+  },
     responsive: {
         rules: [{
             condition: {
@@ -105,10 +109,6 @@ Highcharts.chart('graphique', {
         enabled: false,
       }
      },
-    legend: {
-     enabled: false
-    },
-
     exporting: {
         filename: 'Offres-durables__Observatoire-economie-parisienne__Apur',
       chartOptions:{
