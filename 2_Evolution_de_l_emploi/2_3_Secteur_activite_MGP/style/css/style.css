@@ -181,20 +181,22 @@ hr {
   padding: 10px;
 }
 
-.toggle-value {
+#toggle {
   width: fit-content;
   margin: auto;
 }
-.toggle-value button {
-  border: 1px solid black;
-  color: black;
+#toggle button {
+  cursor: pointer;
+  background-color: #BEBEBE;
+  border: none;
+  color: white;
 }
-.toggle-value button.active {
+#toggle button.active {
   background: black;
   color: white;
   border: white;
 }
-.toggle-value button:hover {
+#toggle button:hover {
   background: black;
   transition: 0.7s;
   color: white;
