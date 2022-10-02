@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chômage partiel</title>
+    <link rel="stylesheet" type="text/css" href="style/css/style.css" /> <!-- main CSS -->
+  </head>
+
+  <body>
+
+  <p class="quote">Depuis avril 2021, le recours à l’activité partielle ne cesse de diminuer : seuls 2 945 salariés ont été placés en activité partielle à Paris en avril 2022 (soit 0,2% des salariés du privé), après 299 620 en avril 2021 et 646 940 en avril 2020.</p>
+  <div class="boxTitle">
+    <div class="maintext"><div class="subtext">
+    <h2 id="title1" class="color">Evolution du nombre de salariés indemnisés à Paris depuis mars 2020</h2>
+    </div></div>
+  </div>
+  <div  id="graphique" ></div>
+  <p class="source"><a href="https://dares.travail-emploi.gouv.fr/" target="_blank">Source : ASP-DGEFP-Dares – Extraction du SI APART du 29 mai 2022.</a></p>
+<!-- 
+  <div class="boxTitle">
+    <div class="maintext"><div class="subtext">
+    <h2 class="color">Salariés concernés par une demande d'indemnisation <br>(Part dans le total des salariés)</h2>
+    </div></div>
+  </div>
+
+  <div class="boxSubtitle">
+    <p id="title2" class="title">Juillet 2021</p>
+    <p class="subtitle map">Moyenne Paris = 4,8%</p>
+  </div>
+  <div id="map1"></div>
+
+  <p id="title3"class="title">Juillet 2020</p>
+  <p class="subtitle map">Moyenne Paris = 17,4%</p>
+  <div id="map2"></div>
+
+  <p class="source"><a href="https://dares.travail-emploi.gouv.fr/" target="_blank">Source : ASP-DGEFP-Dares – Extraction du SI APART du 8 ocotbre 2021, s'arrêtant aux données de 7 octobre 2021.</a></p> -->
+
+    <div class="boxCle">
+      <div class="maintext borderCle"><div class="subtext">
+        <h2>CHIFFRES CLÉS</h2>
+      </div></div>
+      <p class="title">Part des salariés du secteur privé indemnisés</p>
+      <div class="duoCle">
+        <div>
+          <p class="title">Avril 2022</p>
+          <p></p>
+          <p class="txtCle">Paris : <span class="cle"> 0,2% </span></p>
+          <p class="txtCle">Ile-de-France : <span class="cle">0,2%  </span></p>
+        </div>
+        <img class="illustration" src="./chomage_partiel.svg" alt="">
+        <div>
+          <p class="title">Avril 2021</p>
+          <p></p>
+          <p class="txtCle">Paris : <span class="cle"> 20% </span></p>
+          <p class="txtCle">Ile-de-France : <span class="cle"> 17% </span></p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  <footer style="height:1em"></footer>
+  <!-- Script -->
+  <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="map_chomage_partiel.js"></script>
+  <script type="text/javascript" src="https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/js/iframeResizer.contentWindow.min.js"></script>
+
+  </body>
+</html>
