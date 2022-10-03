@@ -24,7 +24,7 @@ Highcharts.setOptions({
   }
 });
 
-Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/3_Chomage_Rsa/3_1_Taux_chomage/dep_idf.geojson', function (geojson) {
+Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/3_Chomage_Rsa/3_1_Taux_chomage_MGP/dep_idf.geojson', function (geojson) {
     Highcharts.mapChart('carte', {
         chart: {
             map: geojson,
