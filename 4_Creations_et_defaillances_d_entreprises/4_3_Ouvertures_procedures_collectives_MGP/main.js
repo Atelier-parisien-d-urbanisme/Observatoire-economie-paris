@@ -24,9 +24,9 @@ Highcharts.setOptions({
   }
 });
 
-let urlParis = 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_3_Ouvertures_procedures_collectives/ouverture_procedures_collectives.csv'
+let urlParis = 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_3_Ouvertures_procedures_collectives_MGP/ouverture_procedures_collectives.csv'
 
-let urlMGP = 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_3_Ouvertures_procedures_collectives/ouverture_procedures_collectives_MGP.csv'
+let urlMGP = 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_3_Ouvertures_procedures_collectives_MGP/ouverture_procedures_collectives_MGP.csv'
 
 let url = urlParis;
 
