@@ -1,4 +1,4 @@
-// Données pour la carte des TPE/PME.
+// Données pour la carte du taux de chomage.
 
 const data_chomage = [
     ['75', +9.2],

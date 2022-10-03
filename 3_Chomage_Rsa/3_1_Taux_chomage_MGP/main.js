@@ -109,7 +109,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
                 text: "."
               },
               caption: {
-                text: "Source : Ordre des Experts-Comptables de Paris Ile-de-France, CROCIS. Evolution du chiffre d'affaires moyen par entreprise (par rapport à la meme période en 2019). https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
+                text: "Source : Insee, taux de chômage au sens du BIT et taux de chômage. Données trimestrielles CVS. Les données du dernier trimestre affiché sont provisoires. Un chômeur au sens du BIT est une personne âgée de 15 ans ou plus qui répond simultanément à trois conditions : être sans emploi durant une semaine donnée ; être disponible pour prendre un emploi dans les deux semaines ; avoir cherché activement un emploi au cours des quatre dernières semaines ou en avoir trouvé un qui commence dans moins de trois mois. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
               },
                 chart:{
                  events:{
