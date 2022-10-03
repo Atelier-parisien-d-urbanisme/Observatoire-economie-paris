@@ -396,6 +396,7 @@ series: [
   {
       yAxis: 1,
       type: 'spline',
+      visible : false,
       data: {
       },
       lineWidth: 1,
