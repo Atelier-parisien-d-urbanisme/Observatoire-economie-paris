@@ -27,10 +27,14 @@ Highcharts.chart('graphique', {
     credits: {
       enabled:false
     },
+    tooltip: {
+      shared: true,
+  },
     plotOptions: {
         series: {
           lineWidth: 1,
             marker: {
+              symbol:'circle',
               enabledThreshold: 2,
               radius: 3,
               fillColor: '#FFFFFF',
@@ -92,9 +96,9 @@ Highcharts.chart('graphique', {
         enabled: false,
       }
      },
-    legend: {
-     enabled: false,
-    },
+    // legend: {
+    //  enabled: false,
+    // },
     exporting: {
       filename: 'Chomage-partiel__Observatoire-economie-parisienne__Apur',
       chartOptions:{

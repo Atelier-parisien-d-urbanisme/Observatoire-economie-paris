@@ -33,7 +33,7 @@ Highcharts.chart('graphique', {
         text: null
     },
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_1_Creations_entreprises/creations_entreprises.csv'
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_1_Creations_entreprises_MGP/creations_entreprises.csv'
     },
     credits: {
       enabled:false
