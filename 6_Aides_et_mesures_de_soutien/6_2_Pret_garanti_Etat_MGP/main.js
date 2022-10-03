@@ -59,16 +59,17 @@ Highcharts.chart('graphique', {
     labels: {
     format: '{value}',
   },
-}]
+}],
+
+tooltip: {
+  shared:true,
+  pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>',
+    valueDecimals: 0
+}
 ,
 series: [{
     type:'column',
     yAxis: 0,
-    data: {
-    },
-    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>',
-    valueDecimals: 0
-  },
   dataLabels: {
                enabled: true,
                format: '{y}',
@@ -79,7 +80,23 @@ series: [{
                 color:'#009FE3',
             }
            },
+},
+{
+  type:'column',
+  color:'#00587E',
+  yAxis: 0,
+dataLabels: {
+             enabled: true,
+             format: '{y}',
+             style: {
+              fontSize: '10px',
+              fontFamily: 'Roboto',
+              textOutline: 0,
+              color:'#00587E',
+          }
+         },
 }],
+
      exporting: {
        filename: 'Pret-garanti-Etat__Observatoire-economie-parisienne__Apur',
        chartOptions:{
@@ -123,8 +140,5 @@ series: [{
      },
      credits: {
        enabled:false
-       },
-       legend: {
-         enabled:false,
        },
 });
