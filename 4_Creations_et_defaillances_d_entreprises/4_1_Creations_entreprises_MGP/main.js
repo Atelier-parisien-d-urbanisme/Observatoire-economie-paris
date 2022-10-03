@@ -42,7 +42,7 @@ Highcharts.chart('graphique', {
   },
 
   data: {
-      csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_1_Creations_entreprises_MGP/41_creations_totaux.csv',
+      csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_1_Creations_entreprises_MGP/part_autoEnrepreneur.csv',
       enablePolling: true
   },
 
