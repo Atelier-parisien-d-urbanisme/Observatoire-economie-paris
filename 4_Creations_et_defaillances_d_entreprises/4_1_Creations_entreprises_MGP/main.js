@@ -1,6 +1,6 @@
 Highcharts.setOptions({
   // colors: ['#FADFD9','#f0836d'],
-  colors: ['#f0836d','#7E1500',],
+  colors: ['#f0836d','#7E1500','#FADFD9'],
     style: {
      fontFamily: 'Roboto'
    },
@@ -335,7 +335,7 @@ Highcharts.chart('graphiqueOld', {
         text: null
     },
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_1_Creations_entreprises_MGP/creations_entreprises.csv'
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_1_Creations_entreprises_MGP/creation_entreprise_PartEntrepreneurs.csv'
     },
     credits: {
       enabled:false
@@ -364,7 +364,7 @@ Highcharts.chart('graphiqueOld', {
   gridLineColor: '#efefef',
   gridLineDashStyle: 'dash',
   title: {
-      text: null
+      text: null,
   },
   labels: {
     format: '{value}',
@@ -372,48 +372,75 @@ Highcharts.chart('graphiqueOld', {
       return Highcharts.numberFormat(this.value, 0, '.', ' ');
     },
           style: {
-            color: '#f0836d'
+         
           }
       },
   opposite: true
 }],
+plotOptions: {
+  series: {
+    lineWidth: 1,
+      marker: {
+        symbol:'circle',
+        radius: 2,
+        fillColor: '#FFFFFF',
+        lineWidth: 2,
+        lineColor: null // inherit from series,
+      }
+  }
+},
 series: [
       {
         yAxis: 0,
-        type: 'column',
-        lineWidth:0,
-        marker: {
-          enabled:false,
-
-        },
-        data: {
-        },
+        type: 'spline',
+        dashStyle: 'Dot',
         tooltip: {pointFormat: '<span style="color: grey">{series.name}</span>: <b>{point.y} %</b><br/>',
         valueDecimals: 0,
-        color:'#f0836d'
+        // lineWidth:3,
       }
     },
   {
-      yAxis: 1,
+      yAxis: 0,
       type: 'spline',
-      visible : false,
-      data: {
-      },
-      lineWidth: 1,
-        marker: {
-          symbol:'circle',
-          enabledThreshold: 2,
-          radius: 3,
-          fillColor: '#FFFFFF',
-          lineWidth: 2,
-          lineColor: null // inherit from series,
-        }
-    ,
+      dashStyle: 'Dot',
       tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
       valueDecimals: 0,
-      color: '#F3D9D4'
     },
-  }],
+    
+  },
+  {   
+    yAxis: 1,
+    type: 'spline',
+    visible : false,
+    lineWidth: 0.5,
+    color: '#f0836d',
+      marker: {
+        enabled : false,
+      },
+    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
+    valueDecimals: 0,
+
+  },
+  
+},
+{
+  yAxis: 1,
+  type: 'spline',
+  visible : false,
+  color :'#7E1500',
+    lineWidth: 0.5,
+      marker: {
+        enabled : false,
+      }
+,
+  tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
+  valueDecimals: 0,
+},
+
+}
+
+
+],
 
   //   xAxis: {
   //   labels: {
