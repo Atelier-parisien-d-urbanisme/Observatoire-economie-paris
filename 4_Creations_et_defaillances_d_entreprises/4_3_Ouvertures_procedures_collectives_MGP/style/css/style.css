@@ -199,4 +199,25 @@ hr {
   stroke-width: 2px;
 }
 
+#toggle {
+  width: fit-content;
+  margin: auto;
+}
+#toggle button {
+  cursor: pointer;
+  background-color: #BEBEBE;
+  border: none;
+  color: white;
+}
+#toggle button.active {
+  background: black;
+  color: white;
+  border: white;
+}
+#toggle button:hover {
+  background: black;
+  transition: 0.7s;
+  color: white;
+}
+
 /*# sourceMappingURL=style.css.map */
