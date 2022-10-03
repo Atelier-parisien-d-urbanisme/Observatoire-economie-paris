@@ -43,11 +43,19 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             tickPixelInterval: 100,
             // reversed: true,
             // Manually change colored steps of the map
-            stops: [
-             [0,'#81ABEC' ],
-            [0.5, '#E7C7D4'],
-             [0.95, '#990041']
-         ]
+        //     stops: [
+        //      [0,'#81ABEC' ],
+        //     [0.5, '#E7C7D4'],
+        //      [0.95, '#990041'],
+        //  ],
+        //  minColor: '#D3D3EA',
+        //  maxColor: '#3660C0',
+
+         stops: [
+          [0, '#CCA661'],
+          [0.4, '#D3D3EA'],
+          [0.95, '#3660C0']
+      ]
 
             // stops: [
             //   [0, '#990041'],
