@@ -169,3 +169,25 @@ hr {
     }
   }
 }
+
+#toggle{
+  width: fit-content;
+  margin: auto;
+  button {
+    cursor: pointer;
+    // border: 1px solid black;
+    background-color: #BEBEBE	;
+    border: none;
+    color: white;
+     &.active {
+      background:black;
+      color: white;
+      border: white;
+    }
+    &:hover {
+      background: black;
+      transition: 0.7s;
+      color: white;
+    }
+  }
+}
