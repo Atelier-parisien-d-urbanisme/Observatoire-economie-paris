@@ -168,9 +168,9 @@ responsive: {
 
 
 
-// Highcharts.chart('graphique2', {
+// Highcharts.chart('graphiqueOld', {
 //   chart: {
-//       type: 'spline',
+//       type: 'column',
 //       height:400,
 //       style: {
 //        fontFamily: 'Roboto'
@@ -393,7 +393,7 @@ plotOptions: {
 series: [
       {
         yAxis: 0,
-        type: 'spline',
+        type: 'column',
         dashStyle: 'Dot',
         tooltip: {pointFormat: '<span style="color: grey">{series.name}</span>: <b>{point.y} %</b><br/>',
         valueDecimals: 0,
@@ -404,7 +404,7 @@ series: [
     },
   {
       yAxis: 0,
-      type: 'spline',
+      type: 'column',
       dashStyle: 'Dot',
       tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
       valueDecimals: 0,

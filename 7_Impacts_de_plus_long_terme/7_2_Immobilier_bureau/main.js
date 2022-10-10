@@ -79,7 +79,7 @@ Highcharts.chart('graphique', {
     },
     tooltip: {
         headerFormat: '<b>{point.x}</b><br/>',
-        pointFormat: '{series.name}: {point.y} m²<br/>Île-de-France: {point.stackTotal} m²'
+        pointFormat: '{series.name}: {point.y} m²<br/>Total: {point.stackTotal} m²'
     },
     plotOptions: {
         column: {

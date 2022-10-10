@@ -49,7 +49,15 @@ Highcharts.chart('graphique', {
       valueDecimals: 2,
       // pointFormat: "Value: {point.y:.2f} %"
   },
-
+  series : [
+    {
+      // color: '#E69818',
+    },
+    {
+      // color:'#7E1500',
+      visible : false,
+    }
+  ],
     plotOptions: {
       series: {
         lineWidth: 1,
