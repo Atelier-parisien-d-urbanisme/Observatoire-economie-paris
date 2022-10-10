@@ -111,6 +111,7 @@ hr {
 }
 .duoCle div {
   margin: 10px auto;
+  text-align-last: center;
   min-width: 10em;
 }
 

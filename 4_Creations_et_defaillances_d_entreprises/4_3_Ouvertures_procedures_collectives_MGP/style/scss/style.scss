@@ -106,6 +106,7 @@ hr {
         }
         div {
           margin:10px auto;
+          text-align-last: center;
           min-width:10em;
           }
         }
@@ -128,6 +129,7 @@ hr {
   margin-left:10px;
   margin-right: 10px;
   text-align: center;
+  
   font-weight: bolder;
   color:$Theme4;
   &.left {
