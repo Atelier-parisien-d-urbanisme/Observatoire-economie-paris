@@ -39,7 +39,14 @@ Highcharts.chart('graphique', {
     credits: {
       enabled:false
     },
+    series : [
+      {
 
+      },
+      {
+        visible:false,
+      }
+    ],
     plotOptions: {
         series: {
           lineWidth: 1,

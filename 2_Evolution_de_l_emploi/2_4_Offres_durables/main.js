@@ -40,6 +40,8 @@ Highcharts.chart('graphique', {
       enabled:false
     },
 
+
+
     plotOptions: {
         series: {
           lineWidth: 1,
