@@ -91,27 +91,27 @@ Highcharts.chart('graphique', {
       {
          yAxis: 0,
          name: 'Paris Centre Ouest',
-         tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/>Île-de-France: {point.stackTotal} m²'
+         tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/> Total: {point.stackTotal} m²'
        },
      },{
         yAxis: 0,
         name: 'Reste Paris',
-        tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/>Île-de-France: {point.stackTotal} m²'
+        tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/> Total: {point.stackTotal} m²'
       },
     },{
        yAxis: 0,
        name: 'Croissant Ouest et La Défense',
-       tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/>Île-de-France: {point.stackTotal} m²'
+       tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/> Total: {point.stackTotal} m²'
      },
    },{
       yAxis: 0,
       name: '1ère Couronne Hors Croissant Ouest',
-      tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/>Île-de-France: {point.stackTotal} m²'
+      tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/> Total: {point.stackTotal} m²'
     },
   },{
      yAxis: 0,
      name: '2ème Couronne',
-     tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/>Île-de-France: {point.stackTotal} m²'
+     tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} m²</b><br/> Total: {point.stackTotal} m²'
    },
  },  {
     type:'spline',
