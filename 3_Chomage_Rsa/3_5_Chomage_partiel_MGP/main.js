@@ -27,6 +27,17 @@ Highcharts.chart('graphique', {
     credits: {
       enabled:false
     },
+    series : [
+      {
+
+      },
+      {
+        visible:false,
+      },
+      {
+        visible:false,
+      }
+    ],
     tooltip: {
       shared: true,
   },
