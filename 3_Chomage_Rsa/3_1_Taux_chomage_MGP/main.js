@@ -53,7 +53,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
 
          stops: [
           [0, '#CCA661'],
-          [0.4, '#D3D3EA'],
+          [0.5, '#D3D3EA'],
           [0.95, '#3660C0']
       ]
 
@@ -67,7 +67,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             data: data_chomage,
             keys: ['C_DEP', 'value','className'],
             joinBy: 'C_DEP',
-            name: "Evolution du chiffre d'affaires moyen par entreprise",
+            name: "Evolution du taux de chômage (au sens du BIT)",
             borderColor: 'white',
             borderWidth: 0.5,
             tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_DEP}</span>: <b>{point.value} %</b><br/>'
