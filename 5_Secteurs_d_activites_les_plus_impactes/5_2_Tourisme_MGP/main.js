@@ -241,6 +241,7 @@ Highcharts.chart('graphique2', {
       },
       {
         color:'#7E1500',
+        visible:false,
       }
     ],
     xAxis: {
