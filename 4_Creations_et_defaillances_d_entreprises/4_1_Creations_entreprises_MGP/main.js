@@ -358,25 +358,29 @@ Highcharts.chart('graphiqueOld', {
           color: 'grey'
           }
       },
-}, { //--- Secondary yAxis
-  min:0,
-  className: 'highcharts-color-1',
-  gridLineColor: '#efefef',
-  gridLineDashStyle: 'dash',
-  title: {
-      text: null,
-  },
-  labels: {
-    format: '{value}',
-    formatter: function() {
-      return Highcharts.numberFormat(this.value, 0, '.', ' ');
-    },
-          style: {
-            color: '#CECECE'
-          }
-      },
-  opposite: true
-}],
+},
+
+// { //--- Secondary yAxis
+//   min:0,
+//   className: 'highcharts-color-1',
+//   gridLineColor: '#efefef',
+//   gridLineDashStyle: 'dash',
+//   title: {
+//       text: null,
+//   },
+//   labels: {
+//     format: '{value}',
+//     formatter: function() {
+//       return Highcharts.numberFormat(this.value, 0, '.', ' ');
+//     },
+//           style: {
+//             color: '#CECECE'
+//           }
+//       },
+//   opposite: true
+// }
+
+],
 plotOptions: {
   series: {
     lineWidth: 1,
@@ -411,62 +415,68 @@ series: [
     },
     
   },
-  {   
-    yAxis: 1,
-    type: 'spline',
-    visible : false,
-    lineWidth: 0.5,
-    color: '#f0836d',
-      marker: {
-        enabled : false,
-      },
-    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
-    valueDecimals: 0,
-
+  {
+    showInLegend:false,
   },
-  dataLabels: {
-    enabled: true,
-    align: 'left',
-    crop: false,
-    useHTML: false,
-    formatter: function() {
-        if (this.point.x == this.series.data.length - 1) {
-          return '<span style="color: '+ this.color + '">' + Highcharts.numberFormat(this.y,0) + '</span>';
-        } else {
-            return null;
-        }
-    },
-}
+  {
+    showInLegend:false,
+  },
+//   {   
+//     yAxis: 1,
+//     type: 'spline',
+//     visible : false,
+//     lineWidth: 0.5,
+//     color: '#f0836d',
+//       marker: {
+//         enabled : false,
+//       },
+//     tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
+//     valueDecimals: 0,
+
+//   },
+//   dataLabels: {
+//     enabled: true,
+//     align: 'left',
+//     crop: false,
+//     useHTML: false,
+//     formatter: function() {
+//         if (this.point.x == this.series.data.length - 1) {
+//           return '<span style="color: '+ this.color + '">' + Highcharts.numberFormat(this.y,0) + '</span>';
+//         } else {
+//             return null;
+//         }
+//     },
+// }
   
-},
-{
-  yAxis: 1,
-  type: 'spline',
-  visible : false,
-  color :'#7E1500',
-    lineWidth: 0.5,
-      marker: {
-        enabled : false,
-      }
-,
-  tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
-  valueDecimals: 0,
-},
-dataLabels: {
-  enabled: true,
-  align: 'left',
-  crop: false,
-  useHTML: false,
-  formatter: function() {
-      if (this.point.x == this.series.data.length - 1) {
-        return '<span style="color: '+ this.color + '">' + Highcharts.numberFormat(this.y,0) + '</span>';
-      } else {
-          return null;
-      }
-  },
-}
+//   },
+//   {
+//     yAxis: 1,
+//     type: 'spline',
+//     visible : false,
+//     color :'#7E1500',
+//       lineWidth: 0.5,
+//         marker: {
+//           enabled : false,
+//         }
+//   ,
+//     tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
+//     valueDecimals: 0,
+//   },
+//   dataLabels: {
+//     enabled: true,
+//     align: 'left',
+//     crop: false,
+//     useHTML: false,
+//     formatter: function() {
+//         if (this.point.x == this.series.data.length - 1) {
+//           return '<span style="color: '+ this.color + '">' + Highcharts.numberFormat(this.y,0) + '</span>';
+//         } else {
+//             return null;
+//         }
+//     },
+//   }
 
-}
+//   }
 
 
 ],
