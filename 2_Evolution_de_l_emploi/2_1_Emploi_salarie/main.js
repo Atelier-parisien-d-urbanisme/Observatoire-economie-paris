@@ -30,6 +30,7 @@ Highcharts.chart('graphique', {
         style: {
          fontFamily: 'Roboto'
        },
+       marginRight : 40,
     },
     title: {
         text: null
