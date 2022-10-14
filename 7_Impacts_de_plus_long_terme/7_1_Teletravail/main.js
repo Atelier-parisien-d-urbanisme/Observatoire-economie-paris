@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#00c3ff','#a4c95b','#DAB464', '#3D71EA'],
+    colors: ['#00c3ff','#a4c95b','#DAB464', '#3D71EA','black'],
     lang: {
       downloadPNG: "Télécharger  en image PNG",
       downloadJPEG: "Télécharger en image JPEG",
