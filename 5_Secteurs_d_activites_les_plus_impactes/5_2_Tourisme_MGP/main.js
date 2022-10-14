@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#FCECD2','#E69818', '#5A3800','#3D71EA'],
+    colors: ['#FCECD2','#E69818', '#5A3800','#3D71EA','black'],
     style: {
      fontFamily: 'Roboto'
    },
