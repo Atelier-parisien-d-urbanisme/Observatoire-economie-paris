@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#009A93'],
+    colors: ['#009A93','#CA8F13',],
     lang: {
       downloadPNG: "Télécharger  en image PNG",
       downloadJPEG: "Télécharger en image JPEG",
@@ -43,12 +43,20 @@ Highcharts.chart('graphique', {
     credits: {
       enabled:false
     },
-
+    tooltip: {
+      pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} %</b><br/>',
+       shared: true,
+   },
+   series: [
+    {},
+    {visible: false},
+  ],
     plotOptions: {
         series: {
           lineWidth: 1,
             marker: {
               enabledThreshold: 2,
+                 symbol: 'circle',
               radius: 3,
               fillColor: '#FFFFFF',
               lineWidth: 2,
@@ -109,9 +117,9 @@ Highcharts.chart('graphique', {
         enabled: false,
       },
      },
-    legend: {
-     enabled: false
-    },
+    // legend: {
+    //  enabled: false
+    // },
     tooltip: {
         pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
         valueDecimals: 0

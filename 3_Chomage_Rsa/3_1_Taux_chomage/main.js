@@ -24,6 +24,131 @@ Highcharts.setOptions({
   }
 });
 
+Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/3_Chomage_Rsa/3_1_Taux_chomage_MGP/dep_idf.geojson', function (geojson) {
+    Highcharts.mapChart('carte', {
+        chart: {
+            map: geojson,
+            height:600
+        },
+        title: {
+            text: null
+        },
+        mapNavigation: {
+            enabled: true,
+            buttonOptions: {
+                verticalAlign: 'bottom'
+            }
+        },
+        colorAxis: {
+            tickPixelInterval: 100,
+            // reversed: true,
+            // Manually change colored steps of the map
+        //     stops: [
+        //      [0,'#81ABEC' ],
+        //     [0.5, '#E7C7D4'],
+        //      [0.95, '#990041'],
+        //  ],
+        //  minColor: '#D3D3EA',
+        //  maxColor: '#3660C0',
+
+         stops: [
+          [0, '#CCA661'],
+          [0.5, '#D3D3EA'],
+          [0.95, '#3660C0']
+      ]
+
+            // stops: [
+            //   [0, '#990041'],
+            //   [0.65, '#C75E8B'],
+            //   [0.9,  '#F1DCE2' ]
+            // ]
+        },
+        series: [{
+            data: data_chomage,
+            keys: ['C_DEP', 'value','className'],
+            joinBy: 'C_DEP',
+            name: "Evolution du taux de chômage (au sens du BIT)",
+            borderColor: 'white',
+            borderWidth: 0.5,
+            tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.L_DEP}</span>: <b>{point.value} %</b><br/>'
+          },
+            states: {
+                hover: {
+                    color: '#38cae9'
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                allowOverlap: true,
+                format: '{point.properties.L_DEP}',
+                style: {
+                 // fontSize: '9px',
+                 fontFamily: 'Roboto',
+                 fontWeight: 'light',
+                 color: 'white',
+                 textOutline: 0
+             }
+            },
+        }],
+        exporting: {
+          filename: 'taux_chomage_IdF__Observatoire-economie-parisienne__Apur',
+            buttons: {
+                contextButton: {
+                    menuItems: [
+                        'printChart',
+                        'separator',
+                        'downloadPNG',
+                        'downloadJPEG',
+                        'downloadPDF',
+                        'downloadSVG'
+                    ]
+                }
+            },
+            chartOptions:{
+              title: {
+                text: "."
+              },
+              caption: {
+                text: "Source : Insee, taux de chômage au sens du BIT et taux de chômage. Données trimestrielles CVS. Les données du dernier trimestre affiché sont provisoires. Un chômeur au sens du BIT est une personne âgée de 15 ans ou plus qui répond simultanément à trois conditions : être sans emploi durant une semaine donnée ; être disponible pour prendre un emploi dans les deux semaines ; avoir cherché activement un emploi au cours des quatre dernières semaines ou en avoir trouvé un qui commence dans moins de trois mois. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
+              },
+                chart:{
+                 events:{
+                     load:function(){
+                        // add logo, titles, and sources update in in the html page
+                         this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
+
+                         title = document.getElementById('title1').innerHTML;
+                         this.renderer.text(title, 70, 20)
+                          .css({
+                            color: 'black',
+                            fontFamily: 'Roboto',
+                            fontSize: 14,
+                            fontWeight: 'bold',
+                            width: 400
+                          }).add().toFront();
+
+                          // ref = document.getElementById('ref1').innerHTML;
+                          // this.renderer.text(ref, 10, 600)
+                          //  .css({
+                          //    color: 'black',
+                          //    fontFamily: 'Roboto',
+                          //    fontSize: 14,
+                          //    fontWeight: 'light',
+                          //    width: 400
+                          //  }).add().toFront();
+                     }
+                 }
+             }
+         }
+
+        },
+        credits: {
+          enabled:false
+          },
+    });
+
+});
+
 
 Highcharts.chart('graphique', {
     chart: {

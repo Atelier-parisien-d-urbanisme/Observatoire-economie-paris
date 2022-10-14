@@ -36,7 +36,7 @@ Highcharts.chart('graphique1', {
     },
 
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_4_Commerce/commerce.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_4_Commerce_MGP/commerce.csv',
         enablePolling: true,
         endcolumn:2,
     },
@@ -202,7 +202,7 @@ Highcharts.chart('graphique2', {
     },
 
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_4_Commerce/commerce2.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_4_Commerce_MGP/commerce2.csv',
         enablePolling: true
     },
 
@@ -263,8 +263,8 @@ Highcharts.chart('graphique2', {
     yAxis: {
       gridLineColor: '#efefef',
       gridLineDashStyle: 'dash',
-      min:150000,
-      max:185000,
+      // min:150000,
+      // max:185000,
       labels: {
         format: '{value}',
         formatter: function() {
@@ -278,12 +278,22 @@ Highcharts.chart('graphique2', {
         enabled: false,
       }
      },
-    legend: {
-     enabled: false
-    },
+    // legend: {
+    //  enabled: false
+    // },
+    series : [
+      {
+        color: '#E69818',
+      },
+      {
+        color:'#7E1500',
+        visible : false,
+      }
+    ],
     tooltip: {
         pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
-        valueDecimals: 0
+        valueDecimals: 0,
+        shared : true,
     },
     exporting: {
       filename: 'Commerce-emploi_salarie__Observatoire-economie-parisienne__Apur',

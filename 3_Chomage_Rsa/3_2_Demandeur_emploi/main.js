@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-  colors: ['#38cae9','#3333cc'],
+  colors: ['#9494FA','#3333cc','#F1BB63','#CE8C34',],
     style: {
      fontFamily: 'Roboto'
    },
@@ -39,7 +39,7 @@ Highcharts.chart('graphique', {
     },
 
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_2_Demandeur_emploi/demandeur_emploi.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_2_Demandeur_emploi_MGP/demandeur_emploi.csv',
         enablePolling: true
     },
 
@@ -58,6 +58,13 @@ Highcharts.chart('graphique', {
       }
     }
   },
+  series: [{
+    },{dashStyle: 'dash',
+  },{visible:false,
+    },{dashStyle: 'dash',visible:false,
+  }
+    ],
+
     yAxis: {
       gridLineColor: '#efefef',
       gridLineDashStyle: 'dash',

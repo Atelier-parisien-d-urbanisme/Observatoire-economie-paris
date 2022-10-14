@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#f0836d'],
+  colors: ['#f0836d','#7E1500','#FADFD9'],
     style: {
      fontFamily: 'Roboto'
    },
@@ -33,17 +33,22 @@ Highcharts.chart('graphique', {
     },
 
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_2_Defaillances_entreprises/defaillances_entreprises.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_2_Defaillances_entreprises_MGP/defaillances_entreprises.csv',
         enablePolling: true
     },
 
     credits: {
       enabled:false
     },
+
+    series :[
+      {},{visible:false,}
+    ],
     plotOptions: {
         series: {
           lineWidth: 1,
             marker: {
+              Symbol:'circle',
               enabledThreshold: 2,
               radius: 3,
               fillColor: '#FFFFFF',
@@ -89,6 +94,9 @@ Highcharts.chart('graphique', {
       }
     }
   },
+  tooltip: {
+    shared: true,
+  },
     yAxis: {
       gridLineColor: '#efefef',
       gridLineDashStyle: 'dash',
@@ -105,9 +113,9 @@ Highcharts.chart('graphique', {
         enabled: false,
       }
      },
-    legend: {
-     enabled: false
-    },
+    // legend: {
+    //  enabled: false
+    // },
     exporting: {
       filename: 'Defaillances_entreprises__Observatoire-economie-parisienne__Apur',
       chartOptions:{
@@ -152,3 +160,6 @@ Highcharts.chart('graphique', {
         }
 
 });
+
+
+

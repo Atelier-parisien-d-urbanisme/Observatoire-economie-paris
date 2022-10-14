@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#009A93'],
+  colors: ['#009A93','#CA8F13',],
     style: {
      fontFamily: 'Roboto'
    },
@@ -39,19 +39,25 @@ Highcharts.chart('graphique', {
     credits: {
       enabled:false
     },
+    series : [
+      {
 
-
-
+      },
+      {
+        visible:false,
+      }
+    ],
     plotOptions: {
         series: {
           lineWidth: 1,
-            marker: {
-              enabledThreshold: 2,
-              radius: 3,
-              fillColor: '#FFFFFF',
-              lineWidth: 2,
-              lineColor: null // inherit from series,
-            },
+          marker: {
+            symbol:'circle',
+            enabledThreshold: 2,
+            radius: 3,
+            fillColor: '#FFFFFF',
+            lineWidth: 2,
+            lineColor: null // inherit from series,
+          },
             dataLabels: {
                enabled: true,
                align: 'left',
@@ -67,6 +73,9 @@ Highcharts.chart('graphique', {
            }
         }
     },
+    tooltip: {
+      shared: true,
+  },
     responsive: {
         rules: [{
             condition: {
@@ -107,10 +116,6 @@ Highcharts.chart('graphique', {
         enabled: false,
       }
      },
-    legend: {
-     enabled: false
-    },
-
     exporting: {
         filename: 'Offres-durables__Observatoire-economie-parisienne__Apur',
       chartOptions:{

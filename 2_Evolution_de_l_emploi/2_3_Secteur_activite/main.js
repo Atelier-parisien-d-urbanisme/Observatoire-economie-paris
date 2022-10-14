@@ -1,31 +1,51 @@
 Highcharts.setOptions({
-    colors: ['#38cae9', '#000DC9','#009A93','#CBD742'],
-    lang: {
-      downloadPNG: "Télécharger  en image PNG",
-      downloadJPEG: "Télécharger en image JPEG",
-      downloadPDF: "Télécharger  en document PDF",
-      downloadSVG: "Télécharger  en document Vectoriel SVG",
-      printChart: "Imprimer le graphique",
-      months: [
-          'Janvier', 'Février', 'Mars', 'Avril',
-          'Mai', 'Juin', 'Juillet', 'Août',
-          'Septembre', 'Octobre', 'Novembre', 'Décembre'
-      ],
-      shortMonths:['Janvier', 'Février', 'Mars', 'Avril',
-      'Mai', 'Juin', 'Juillet', 'Août',
-      'Septembre', 'Octobre', 'Novembre', 'Décembre'],
-      weekdays: [
-          'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
-          'Jeudi', 'Vendredi', 'Samedi'
-      ],
-      years: [
-          '2020','2021'
-      ]
-  }
+  colors: ['#38cae9', '#000DC9','#009A93','#CBD742'],
+  lang: {
+    downloadPNG: "Télécharger  en image PNG",
+    downloadJPEG: "Télécharger en image JPEG",
+    downloadPDF: "Télécharger  en document PDF",
+    downloadSVG: "Télécharger  en document Vectoriel SVG",
+    printChart: "Imprimer le graphique",
+    months: [
+        'Janvier', 'Février', 'Mars', 'Avril',
+        'Mai', 'Juin', 'Juillet', 'Août',
+        'Septembre', 'Octobre', 'Novembre', 'Décembre'
+    ],
+    shortMonths:['Janvier', 'Février', 'Mars', 'Avril',
+    'Mai', 'Juin', 'Juillet', 'Août',
+    'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+    weekdays: [
+        'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
+        'Jeudi', 'Vendredi', 'Samedi'
+    ],
+    years: [
+        '2020','2021'
+    ]
+}
 });
 
+let urlParis = 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_3_Secteur_activite/secteur_activite.csv'
 
-Highcharts.stockChart('graphique', {
+let urlMGP = 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_3_Secteur_activite/secteur_activite_MGP.csv'
+
+let url = urlParis;
+
+// document.getElementById('#btn-paris').addEventListener('click', function()  {
+//   url = urlParis ;
+//   chart.redraw();
+//   $(this).addClass('active');
+//   $(this).siblings().removeClass('active');
+// });
+
+
+
+
+
+
+
+function getGraphique() {
+  graphChart = new 
+  Highcharts.stockChart('graphique', {
     chart: {
         type: 'spline',
         height: 600,
@@ -40,7 +60,7 @@ Highcharts.stockChart('graphique', {
       enabled: false
     },
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/2_Evolution_de_l_emploi/2_3_Secteur_activite/secteur_activite.csv',
+        csvURL: url,
         enablePolling: true
     },
     xAxis: {
@@ -118,7 +138,7 @@ Highcharts.stockChart('graphique', {
     legend: {
       enabled:true
     },
-
+  
      tooltip: {
          pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
          valueDecimals: 0
@@ -137,7 +157,7 @@ Highcharts.stockChart('graphique', {
                 load:function(){
                    // add logo, titles, and sources update in in the html page
                     this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
-
+  
                     title = document.getElementById('title1').innerHTML;
                     this.renderer.text(title, 70, 20)
                      .css({
@@ -164,4 +184,55 @@ Highcharts.stockChart('graphique', {
              }
          }
      },
+  });
+}
+getGraphique();
+
+
+// var btnmgp = document.querySelector('#btn-mgp');
+
+// // This will run when the .click-me element is clicked
+// btnmgp.addEventListener('click', function (event) {
+//   console.log('hey')
+//   url = urlMGP ;
+//   // var chart =  document.querySelector("graphique").highcharts.stockChart();
+//   graphChart.redraw();
+//   btnmgp.addClass('active');
+//   // $(this).siblings().removeClass('active');
+// });
+
+// document.getElementById('btn-mgp').addEventListener('click', function () {
+//   // Using an if statement to check the class
+//   if (this.classList.contains('active')) {
+//     // The box that we clicked has a class of bad so let's remove it and add the good class
+//    this.classList.remove('active');
+//   //  this.classList.add('good');
+//   } else {
+//     // The user obviously can't follow instructions so let's alert them of what is supposed to happen next
+//     this.classList.add('active');
+//     url = urlMGP ;
+//     // var chart =  document.querySelector("graphique").highcharts.stockChart();
+//     graphChart.redraw();
+//   }
+// });
+
+mgpBtn = document.getElementById('btn-mgp');
+
+mgpBtn.addEventListener('click', function () {
+  url = urlMGP;
+  graphChart.destroy();
+  getGraphique();
+  this.classList.add('active');
+  parisBtn.classList.remove('active');
+});
+
+
+parisBtn = document.getElementById('btn-paris');
+
+parisBtn.addEventListener('click', function () {
+  url = urlParis;
+  graphChart.destroy();
+  getGraphique();
+  this.classList.add('active');
+  mgpBtn.classList.remove('active');
 });

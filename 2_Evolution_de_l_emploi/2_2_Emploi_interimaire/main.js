@@ -2,7 +2,7 @@ Highcharts.setOptions({
   style: {
    fontFamily: 'Roboto'
  },
-    colors: ['#009A93'],
+ colors: ['#009A93','#CA8F13',],
     lang: {
       downloadPNG: "Télécharger  en image PNG",
       downloadJPEG: "Télécharger en image JPEG",
@@ -42,11 +42,27 @@ Highcharts.chart('graphique', {
     credits: {
       enabled:false
     },
-
+    tooltip: {
+      // pointFormat: '{series.color}{series.name}: <b>{point.y:.2f}</b><br/>',
+      valueSuffix: '',
+      shared: true,
+      valueDecimals: 2,
+      // pointFormat: "Value: {point.y:.2f} %"
+  },
+  series : [
+    {
+      // color: '#E69818',
+    },
+    {
+      // color:'#7E1500',
+      visible : false,
+    }
+  ],
     plotOptions: {
       series: {
         lineWidth: 1,
           marker: {
+            symbol:'circle',
             enabledThreshold: 2,
             radius: 3,
             fillColor: '#FFFFFF',
@@ -108,9 +124,6 @@ Highcharts.chart('graphique', {
      title: {
         enabled: false,
       }
-    },
-    legend: {
-     enabled: false
     },
 
     exporting: {

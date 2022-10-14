@@ -106,6 +106,7 @@ hr {
         }
         div {
           margin:10px auto;
+          text-align-last: center;
           min-width:10em;
           }
         }
@@ -128,6 +129,7 @@ hr {
   margin-left:10px;
   margin-right: 10px;
   text-align: center;
+  
   font-weight: bolder;
   color:$Theme4;
   &.left {
@@ -188,4 +190,26 @@ hr {
 
 .highcharts-yaxis .highcharts-axis-line {
 	stroke-width: 2px;
+}
+
+#toggle{
+  width: fit-content;
+  margin: auto;
+  button {
+    cursor: pointer;
+    // border: 1px solid black;
+    background-color: #BEBEBE	;
+    border: none;
+    color: white;
+     &.active {
+      background:black;
+      color: white;
+      border: white;
+    }
+    &:hover {
+      background: black;
+      transition: 0.7s;
+      color: white;
+    }
+  }
 }

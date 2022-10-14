@@ -1,0 +1,191 @@
+@font-face {
+  font-family: Roboto;
+  src: url('../Roboto/Roboto-Light.ttf') format("truetype");
+}
+@font-face {
+  font-family: Roboto-bold;
+  src: url('../Roboto/Roboto-Bold.ttf') format("truetype");
+}
+@font-face {
+  font-family: Roboto-black;
+  src: url('../Roboto/Roboto-Black.ttf') format("truetype");
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+}
+
+$Theme4: #f0836d;
+$Apur: #00c3ff;
+
+hr {
+  border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, $Theme4, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, $Theme4, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, $Theme4, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, $Theme4, #f0f0f0);
+}
+
+.boxTitle{
+  display: inline-block;
+  width: 100%;
+}
+.maintext{
+  margin: 0 auto;
+  width: 70%;
+  margin-top: 30px;
+  height: 1px;
+  border-top: 1px solid black;
+  position: relative;
+  margin-bottom: 30px;
+  &.borderCle {
+    margin-top: 0px;
+    height: 1px;
+    border-top: 0px;
+    }
+	}
+.subtext{
+	width:auto;
+	height:auto;
+	text-align:center;
+	position:absolute;
+  top:-10px;
+	right:0;
+	left:0;
+	}
+.subtext h2{
+	padding:7px 12px;
+	background:#ffffff;
+	display:inline;
+	font-family: Roboto-black;
+	font-size:14px;
+  color: black;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break:clone;
+  line-height: 20px;
+  padding-top:0;
+  padding-bottom:0;
+  &.color {
+    color:$Theme4;
+  }
+	}
+
+  .boxCle {
+    margin: 50px;
+    border: solid;
+    border-width: 1px;
+    -webkit-box-shadow: 11px 11px 0px -3px rgba(0,0,0,0.06);
+    box-shadow: 11px 11px 0px -3px rgba(0,0,0,0.06);
+  }
+  .txtCle {
+    margin:0;
+    text-align: center;
+    &.left {
+      @media (min-width: 576px) {
+        text-align: left;
+      }
+    }
+  }
+  .cle {
+    text-align: center;
+    font-size: 18px;
+    color: $Theme4;
+    font-family: Roboto-black;
+      }
+      .duoCle {
+        margin:10px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        @media (max-width: 576px) {
+          display:block;
+        }
+        div {
+          margin:10px auto;
+          min-width:10em;
+          }
+        }
+  .oneCle {
+    margin:10px;
+  }
+.quote {
+  font-size: 16px;
+  line-height: 27px;
+
+}
+.quote_mark {
+  height:20px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.title {
+  margin: 4px;
+  margin-left:10px;
+  margin-right: 10px;
+  text-align: center;
+  font-weight: bolder;
+  color:$Theme4;
+  &.left {
+    text-align: left;
+  }
+}
+.subtitle {
+  margin:0;
+  margin-bottom:4px;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 12px;
+  color: black;
+}
+
+.subtitle_table {
+  font-size: 12px;
+  line-height: 12px;
+}
+.source {
+  margin:0;
+  margin-top:1em;
+}
+.source a {
+  font-size: 12px;
+  line-height: 27px;
+  font-style: italic;
+  color: black;
+  text-decoration: overline dotted;
+  &:hover {
+    color: $Apur;
+    cursor: pointer;
+  }
+}
+
+.key_illustration {
+  display:inline-flex;
+
+}
+.illustration {
+  max-height: 90px;
+  &.margin-left {
+    @media (min-width: 576px) {
+      margin-left: 3em;
+    }
+  }
+}
+
+/* Link the series colors to axis colors */
+
+.highcharts-axis.highcharts-color-0 {
+	stroke: #38cae9;
+}
+.highcharts-axis.highcharts-color-1 {
+  fill: #D3BD00;
+	stroke: #D3BD00;
+}
+
+.highcharts-yaxis .highcharts-axis-line {
+	stroke-width: 2px;
+}
