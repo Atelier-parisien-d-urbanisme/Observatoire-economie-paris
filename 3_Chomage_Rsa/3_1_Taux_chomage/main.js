@@ -63,6 +63,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
             //   [0.9,  '#F1DCE2' ]
             // ]
         },
+        
         series: [{
             data: data_chomage,
             keys: ['C_DEP', 'value','className'],
