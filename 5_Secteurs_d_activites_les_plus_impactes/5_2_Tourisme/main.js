@@ -25,9 +25,9 @@ Highcharts.setOptions({
 });
 
 
-let urlParis = 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_2_Tourisme_MGP/tourisme.csv'
+let urlParis = 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_2_Tourisme/tourisme.csv'
 
-let urlMGP ='https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_2_Tourisme_MGP/tourisme_MGP.csv'
+let urlMGP ='https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_2_Tourisme/tourisme_MGP.csv'
 
 let url = urlParis;
 
@@ -186,7 +186,7 @@ Highcharts.chart('graphique2', {
     },
 
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_2_Tourisme_MGP/tourisme2.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_2_Tourisme/tourisme2.csv',
         enablePolling: true
     },
 

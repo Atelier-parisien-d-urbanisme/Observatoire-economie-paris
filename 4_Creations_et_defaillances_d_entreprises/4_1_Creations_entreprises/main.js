@@ -43,7 +43,7 @@ Highcharts.chart('graphique', {
   },
 
   data: {
-      csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_1_Creations_entreprises_MGP/creations_tot.csv',
+      csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_1_Creations_entreprises/creations_tot.csv',
       enablePolling: true
   },
 
@@ -335,7 +335,7 @@ Highcharts.chart('graphiqueOld', {
         text: null
     },
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_1_Creations_entreprises_MGP/creations_entreprises.csv'
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_1_Creations_entreprises/creations_entreprises.csv'
     },
     credits: {
       enabled:false
@@ -410,7 +410,7 @@ series: [
       yAxis: 0,
       type: 'column',
       dashStyle: 'Dot',
-      tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
+      tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}%</b><br/>',
       valueDecimals: 0,
     },
     

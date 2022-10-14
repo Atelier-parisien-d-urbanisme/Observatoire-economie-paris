@@ -33,7 +33,7 @@ Highcharts.chart('graphique', {
         text: null
     },
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/6_Aides_et_mesures_de_soutien/6_1_Fonds_solidarite_MGP/fonds_solidarite.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/6_Aides_et_mesures_de_soutien/6_1_Fonds_solidarite/fonds_solidarite.csv',
         startColumn:0,
         endColumn:3,
     },
