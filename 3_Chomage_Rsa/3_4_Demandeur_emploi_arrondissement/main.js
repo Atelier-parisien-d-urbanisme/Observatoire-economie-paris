@@ -25,118 +25,123 @@ Highcharts.setOptions({
 
 
 Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/3_Chomage_Rsa/3_4_Demandeur_emploi_arrondissement/1234_arr.geojson', function (geojson) {
-    Highcharts.mapChart('map1', {
-        chart: {
-            map: geojson,
-            height:300
-        },
-        mapNavigation: {
-            enabled: true,
-            buttonOptions: {
-                verticalAlign: 'bottom'
-            }
-        },
-        title: {
-              text: undefined
-          },
-          tooltip: {
-             shared: true,
-         },
-        colorAxis: {
-            tickPixelInterval: 80,
-            reversed: false,
-            minColor: '#D3D3EA',
-           maxColor: '#3660C0',
-        //    stops: [
-        //     [0, '#3060cf'],
-        //     [0.8, '#fffbbc'],
-        //     [0.95, '#c4463a']
-        // ]
-        },
-        series: [{
-            data: map1_data,
-            keys: ['c_cainsee', 'value','className'],
-            joinBy: 'c_cainsee',
-            borderColor: 'white',
-            borderWidth: 0.5,
-            name: "Indice de chômage",
-            tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.l_cab}</span>: <b>{point.value} %</b><br/>'
-          },
-            states: {
-                hover: {
-                    color: '#38cae9'
-                }
-            },
 
-            dataLabels: {
+    fetchMap1().then(map1Data => {
+        Highcharts.mapChart('map1', {
+            chart: {
+                map: geojson,
+                height:300
+            },
+            mapNavigation: {
                 enabled: true,
-                format: '{point.properties.l_cab}',
-                style: {
-                  width: 50,
-                 // fontSize: '9px',
-                 fontFamily: 'Roboto',
-                 fontWeight: 'light',
-                 color: 'white',
-                 textOutline: 0
-             }
+                buttonOptions: {
+                    verticalAlign: 'bottom'
+                }
             },
-        }],
-        legend: {
-        layout: 'vertical',
-        align: 'left',
-        verticalAlign: 'top',
-        title: {
-           text: '%',
-           style: {
-               fontStyle: 'italic'
-           }
-       }},
-        exporting: {
-          filename: 'Demandeur-d-emploi-par-arrondissement__Observatoire-economie-parisienne__Apur',
-          chartOptions:{
-            // add logo, titles, and sources updated in in the html page
             title: {
-              text: "."
+                text: undefined
             },
-            caption: {
-              text: "Source : Recensement de la population (Insee) - 2017, Pôle Emploi. L’indice de chômage est le rapport entre le nombre de demandeurs d’emploi (catégorie A) inscrits à Pôle emploi et la population active âgée de 15 à 64 ans du recensement de la population. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
+            tooltip: {
+                shared: true,
             },
-              chart:{
-               events:{
-                   load:function(){
-                       this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
+            colorAxis: {
+                tickPixelInterval: 80,
+                reversed: false,
+                minColor: '#D3D3EA',
+            maxColor: '#3660C0',
+            //    stops: [
+            //     [0, '#3060cf'],
+            //     [0.8, '#fffbbc'],
+            //     [0.95, '#c4463a']
+            // ]
+            },
+            series: [{
+                data: map1Data,
+                keys: ['c_cainsee', 'value','className'],
+                joinBy: 'c_cainsee',
+                borderColor: 'white',
+                borderWidth: 0.5,
+                name: "Indice de chômage",
+                tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.l_cab}</span>: <b>{point.value} %</b><br/>'
+            },
+                states: {
+                    hover: {
+                        color: '#38cae9'
+                    }
+                },
 
-                       title = document.getElementById('title1').innerHTML;
-                       this.renderer.text(title, 70, 20)
-                        .css({
-                          color: 'black',
-                          fontFamily: 'Roboto',
-                          fontSize: 14,
-                          fontWeight: 'bold',
-                          width: 400
-                        }).add().toFront();
-                   }
-               }
-           }
-         },
-            buttons: {
-                contextButton: {
-                    menuItems: [
-                        'printChart',
-                        'separator',
-                        'downloadPNG',
-                        'downloadJPEG',
-                        'downloadPDF',
-                        'downloadSVG'
-                    ]
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.properties.l_cab}',
+                    style: {
+                    width: 50,
+                    // fontSize: '9px',
+                    fontFamily: 'Roboto',
+                    fontWeight: 'light',
+                    color: 'white',
+                    textOutline: 0
+                }
+                },
+            }],
+            legend: {
+            layout: 'vertical',
+            align: 'left',
+            verticalAlign: 'top',
+            title: {
+            text: '%',
+            style: {
+                fontStyle: 'italic'
+            }
+        }},
+            exporting: {
+            filename: 'Demandeur-d-emploi-par-arrondissement__Observatoire-economie-parisienne__Apur',
+            chartOptions:{
+                // add logo, titles, and sources updated in in the html page
+                title: {
+                text: "."
+                },
+                caption: {
+                text: "Source : Recensement de la population (Insee) - 2017, Pôle Emploi. L’indice de chômage est le rapport entre le nombre de demandeurs d’emploi (catégorie A) inscrits à Pôle emploi et la population active âgée de 15 à 64 ans du recensement de la population. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
+                },
+                chart:{
+                events:{
+                    load:function(){
+                        this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
+
+                        title = document.getElementById('title1').innerHTML;
+                        this.renderer.text(title, 70, 20)
+                            .css({
+                            color: 'black',
+                            fontFamily: 'Roboto',
+                            fontSize: 14,
+                            fontWeight: 'bold',
+                            width: 400
+                            }).add().toFront();
+                    }
                 }
             }
-        },
-        credits: {
-          enabled:false
-          },
+            },
+                buttons: {
+                    contextButton: {
+                        menuItems: [
+                            'printChart',
+                            'separator',
+                            'downloadPNG',
+                            'downloadJPEG',
+                            'downloadPDF',
+                            'downloadSVG'
+                        ]
+                    }
+                }
+            },
+            credits: {
+            enabled:false
+            },
+        });
+
     });
 
+   
     Highcharts.mapChart('map2', {
         chart: {
             map: geojson,
