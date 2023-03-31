@@ -82,7 +82,31 @@ Highcharts.chart('graphique1', {
         tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>',
         valueDecimals: 0
        }
-    }],
+    },{
+      type:'column',
+      name: '2021',
+      data: {
+      },
+      tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>',
+      valueDecimals: 0
+     }
+  },{
+    type:'column',
+    name: '2022',
+    data: {
+    },
+    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>',
+    valueDecimals: 0
+   }
+},{
+  type:'column',
+  name: '2023',
+  data: {
+  },
+  tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>',
+  valueDecimals: 0
+ }
+}],
     exporting: {
       filename: 'Liquidations_judiciaires__Observatoire-economie-parisienne__Apur',
       chartOptions:{
