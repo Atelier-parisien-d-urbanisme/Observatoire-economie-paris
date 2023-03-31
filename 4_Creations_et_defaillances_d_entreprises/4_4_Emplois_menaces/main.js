@@ -137,7 +137,7 @@ Highcharts.chart('graphique2', {
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/4_Creations_et_defaillances_d_entreprises/4_4_Emplois_menaces/procedures_observations.csv',
         startColumn:0,
-        endColumn:3,
+        // endColumn:3,
     },
     plotOptions: {
         series: {
