@@ -29,7 +29,7 @@
 
 
   function fetchMap1() {
-    const csvUrl = 'https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/3_Chomage_Rsa/3_4_Demandeur_emploi_arrondissement/map1Data.csv';
+    const csvUrl = 'https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/3_Chomage_Rsa/3_4_Demandeur_emploi_arrondissement/map2Data.csv';
   
     return fetch(csvUrl)
       .then(response => response.text())
@@ -45,7 +45,7 @@
 
 
   function fetchMap2() {
-    const csvUrl = 'https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/3_Chomage_Rsa/3_4_Demandeur_emploi_arrondissement/map2Data.csv';
+    const csvUrl = 'https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/3_Chomage_Rsa/3_4_Demandeur_emploi_arrondissement/map1Data.csv';
   
     return fetch(csvUrl)
       .then(response => response.text())
