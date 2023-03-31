@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#F5AA9C','#CE8C34','#7E1500','#3D71EA'],
+    colors: ['#F5AA9C','#CE8C34','#7E1500','#3D71EA','#38cae9'],
     style: {
      fontFamily: 'Roboto'
    },
@@ -145,7 +145,7 @@ function getGraphique() {
   graphChart = new 
   Highcharts.chart('graphique', {
     chart: {
-      type:'line',
+      type:'spline',
     },
       title: {
           text: null
@@ -153,7 +153,7 @@ function getGraphique() {
       data: {
           csvURL: url,
           startColumn:0,
-          endColumn:4,
+          // endColumn:4,
       },
       plotOptions: {
           series: {
@@ -161,7 +161,7 @@ function getGraphique() {
               marker: {
                 enabledThreshold: 2,
                 radius: 3,
-                sumbols:'circle',
+                symbol:'circle',
                 fillColor: '#FFFFFF',
                 lineWidth: 2,
                 lineColor: null // inherit from series,

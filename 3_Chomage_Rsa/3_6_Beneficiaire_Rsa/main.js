@@ -45,6 +45,7 @@ Highcharts.stockChart('graphique', {
     plotOptions: {
         series: {
           lineWidth: 1,
+          
             marker: {
               enabled:true,
               enabledThreshold: 2,
