@@ -42,4 +42,3 @@ const map2_data = [
     ['75120', -19.2]
 ];
 
-console.log(map1_data)

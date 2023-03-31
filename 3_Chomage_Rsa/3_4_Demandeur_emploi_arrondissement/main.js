@@ -142,112 +142,117 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
     });
 
    
-    Highcharts.mapChart('map2', {
-        chart: {
-            map: geojson,
-            height:300
-        },
-        mapNavigation: {
-            enabled: true,
-            buttonOptions: {
-                verticalAlign: 'bottom'
-            }
-        },
-        title: {
-              text: undefined
-          },
-        colorAxis: {
-            tickPixelInterval: 40,
-            reversed: false,
-            minColor: '#EBC684',
-            maxColor: '#3660C0',
-           stops: [
-            [0, '#CCA661'],
-            [0.5, '#D3D3EA'],
-            [0.95, '#3660C0']
-        ]
-        },
-        series: [{
-            data: map2_data,
-            keys: ['c_cainsee', 'value','className'],
-            joinBy: 'c_cainsee',
-            borderColor: 'white',
-            borderWidth: 0.5,
-            name: "Évolution du nombre de demandeurs d'emploi de catégorie A",
-            tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.l_cab}</span>: <b>{point.value} %</b><br/>'
-          },
-            states: {
-                hover: {
-                    color: '#38cae9'
+
+    fetchMap1().then(map2Data => {
+        Highcharts.mapChart('map2', {
+            chart: {
+                map: geojson,
+                height:300
+            },
+            mapNavigation: {
+                enabled: true,
+                buttonOptions: {
+                    verticalAlign: 'bottom'
                 }
             },
-            dataLabels: {
-                enabled: true,
-                format: '{point.properties.l_cab}',
-                style: {
-                width: 50,
-                 // fontSize: '9px',
-                 fontFamily: 'Roboto',
-                 fontWeight: 'light',
-                 color: 'white',
-                 textOutline: 0
-             }
-            },
-        }],
-        legend: {
-        layout: 'vertical',
-        align: 'left',
-        verticalAlign: 'top',
-        title: {
-           text: '%',
-           style: {
-               fontStyle: 'italic'
-           }
-       }},
-        exporting: {
-          filename: 'Demandeur-d-emploi-par-arrondissement__Observatoire-economie-parisienne__Apur',
-          chartOptions:{
-            // add logo, titles, and sources updated in in the html page
             title: {
-              text: "."
+                  text: undefined
+              },
+            colorAxis: {
+                tickPixelInterval: 40,
+                reversed: false,
+                minColor: '#EBC684',
+                maxColor: '#3660C0',
+               stops: [
+                [0, '#CCA661'],
+                [0.5, '#D3D3EA'],
+                [0.95, '#3660C0']
+            ]
             },
-            caption: {
-              text: "Source : Pôle Emploi. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
-            },
-              chart:{
-               events:{
-                   load:function(){
-                       this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
-
-                       title = document.getElementById('title2').innerHTML;
-                       this.renderer.text(title, 70, 20)
-                        .css({
-                          color: 'black',
-                          fontFamily: 'Roboto',
-                          fontSize: 14,
-                          fontWeight: 'bold',
-                          width: 400
-                        }).add().toFront();
+            series: [{
+                data:map2Data,
+                keys: ['c_cainsee', 'value','className'],
+                joinBy: 'c_cainsee',
+                borderColor: 'white',
+                borderWidth: 0.5,
+                name: "Évolution du nombre de demandeurs d'emploi de catégorie A",
+                tooltip: {pointFormat: '<span style="color:#38cae9">{point.properties.l_cab}</span>: <b>{point.value} %</b><br/>'
+              },
+                states: {
+                    hover: {
+                        color: '#38cae9'
+                    }
+                },
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.properties.l_cab}',
+                    style: {
+                    width: 50,
+                     // fontSize: '9px',
+                     fontFamily: 'Roboto',
+                     fontWeight: 'light',
+                     color: 'white',
+                     textOutline: 0
+                 }
+                },
+            }],
+            legend: {
+            layout: 'vertical',
+            align: 'left',
+            verticalAlign: 'top',
+            title: {
+               text: '%',
+               style: {
+                   fontStyle: 'italic'
+               }
+           }},
+            exporting: {
+              filename: 'Demandeur-d-emploi-par-arrondissement__Observatoire-economie-parisienne__Apur',
+              chartOptions:{
+                // add logo, titles, and sources updated in in the html page
+                title: {
+                  text: "."
+                },
+                caption: {
+                  text: "Source : Pôle Emploi. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
+                },
+                  chart:{
+                   events:{
+                       load:function(){
+                           this.renderer.image('https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/logo_apur.png', 0, 0, 50, 30).add();
+    
+                           title = document.getElementById('title2').innerHTML;
+                           this.renderer.text(title, 70, 20)
+                            .css({
+                              color: 'black',
+                              fontFamily: 'Roboto',
+                              fontSize: 14,
+                              fontWeight: 'bold',
+                              width: 400
+                            }).add().toFront();
+                       }
                    }
                }
-           }
-         },
-            buttons: {
-                contextButton: {
-                    menuItems: [
-                        'printChart',
-                        'separator',
-                        'downloadPNG',
-                        'downloadJPEG',
-                        'downloadPDF',
-                        'downloadSVG'
-                    ]
+             },
+                buttons: {
+                    contextButton: {
+                        menuItems: [
+                            'printChart',
+                            'separator',
+                            'downloadPNG',
+                            'downloadJPEG',
+                            'downloadPDF',
+                            'downloadSVG'
+                        ]
+                    }
                 }
-            }
-        },
-        credits: {
-          enabled:false
-          },
+            },
+            credits: {
+              enabled:false
+              },
+        });
     });
+
+    
 
 });
