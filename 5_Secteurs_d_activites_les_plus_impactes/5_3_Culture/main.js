@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-  colors: ['#FCECD2', '#CE8C34','#7E1500','#3D71EA'],
+  colors: ['#FCECD2', '#CE8C34','#7E1500','#3D71EA','#38cae9'],
     style: {
      fontFamily: 'Roboto'
    },
@@ -26,7 +26,7 @@ Highcharts.setOptions({
 
 Highcharts.chart('graphique1', {
   chart: {
-    type:'line',
+    type:'spline',
   },
     title: {
         text: null
@@ -34,7 +34,7 @@ Highcharts.chart('graphique1', {
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/5_Secteurs_d_activites_les_plus_impactes/5_3_Culture/culture.csv',
         startColumn:0,
-        endColumn:4,
+        // endColumn:4,
     },
     tooltip: {
        shared: true,
@@ -96,6 +96,25 @@ series: [{
     valueDecimals: 0
    }
 },
+{
+  type:'spline',
+    yAxis: 0,
+    data: {
+    },
+    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} €</b><br/>',
+    valueDecimals: 0
+   }
+},
+{
+  type:'spline',
+    yAxis: 0,
+    data: {
+    },
+    tooltip: {pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} €</b><br/>',
+    valueDecimals: 0
+   }
+},
+
 ],
      exporting: {
        filename: 'Culture__Observatoire-economie-parisienne__Apur',
