@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#FCECD2','#E69818', '#5A3800','#3D71EA','black'],
+    colors: ['#FCECD2','#E69818', '#5A3800','#3D71EA','#38cae9'],
     style: {
      fontFamily: 'Roboto'
    },
@@ -37,6 +37,7 @@ let url = urlParis;
 function getGraphique() {
   graphChart = new Highcharts.chart('graphique1', {
     chart: {
+      type:"spline"
     },
       title: {
           text: null
@@ -44,7 +45,7 @@ function getGraphique() {
       data: {
           csvURL: url,
           startColumn:0,
-          endColumn:4,
+          // endColumn:4,
       },
       plotOptions: {
           series: {
