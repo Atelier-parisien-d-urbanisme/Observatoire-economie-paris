@@ -27,7 +27,7 @@ Highcharts.setOptions({
 
 // https://carto2.apur.org/apur/rest/services/OPENDATA/COMMUNE/MapServer/0/query?where=1%3D1&outFields=N_SQ_CO,C_COINSEE,L_CO,C_POSTAL,C_AGGLO,C_METROP,N_SQ_EPCI,SHAPE_Length,SHAPE_Area&outSR=4326&f=json
 
-Highcharts.getJSON('https://carto2.apur.org/apur/rest/services/OPENDATA/COMMUNE/MapServer/0/query?where=1%3D1&outFields=N_SQ_CO,C_COINSEE,L_CO,C_POSTAL,C_AGGLO,C_METROP,N_SQ_EPCI,SHAPE_Length,SHAPE_Area&outSR=4326&f=json', function (geojson) {
+Highcharts.getJSON('https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_7_carteMgp/mgpCom.geojson', function (geojson) {
 
     fetchMapMGP().then(mapMGP => {
         Highcharts.mapChart('map1', {
