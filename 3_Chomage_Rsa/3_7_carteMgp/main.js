@@ -60,7 +60,7 @@ Highcharts.getJSON('https://carto2.apur.org/apur/rest/services/OPENDATA/COMMUNE/
             },
             series: [{
                 data: mapMGP,
-                keys: ['C_COINSEE', 'value','className'],
+                keys: ['cainsee', 'value','className'],
                 joinBy: 'C_COINSEE',
                 borderColor: 'white',
                 borderWidth: 0.5,

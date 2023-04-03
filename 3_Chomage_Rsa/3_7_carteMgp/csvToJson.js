@@ -29,7 +29,7 @@
 
 
   function fetchMapMGP() {
-    const csvUrl = 'https://atelier-parisien-d-urbanisme.github.io/Observatoire-economie-paris/3_Chomage_Rsa/3_4_Demandeur_emploi_arrondissement/map2Data.csv';
+    const csvUrl = 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_7_carteMgp/mapDataMGP.csv';
   
     return fetch(csvUrl)
       .then(response => response.text())
@@ -39,7 +39,9 @@
         const data = lines[1].split(';');
   
         const mapMGP = headers.map((code, index) => [code, parseFloat(data[index].replace(',', '.'))]);
+        console.log(mapMGP);
         return mapMGP;
+   
       });
   }
 
