@@ -60,7 +60,7 @@ Highcharts.getJSON('https://raw.githubusercontent.com/Atelier-parisien-d-urbanis
             },
             series: [{
                 data: mapMGP,
-                keys: ['cainsee', 'value','className'],
+                keys: ['c_cainsee', 'value','className'],
                 joinBy: 'c_cainsee',
                 borderColor: 'white',
                 borderWidth: 0.5,
