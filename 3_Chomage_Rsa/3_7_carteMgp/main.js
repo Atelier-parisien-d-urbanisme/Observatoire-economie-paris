@@ -27,7 +27,7 @@ Highcharts.setOptions({
 
 // https://carto2.apur.org/apur/rest/services/OPENDATA/COMMUNE/MapServer/0/query?where=1%3D1&outFields=N_SQ_CO,C_COINSEE,L_CO,C_POSTAL,C_AGGLO,C_METROP,N_SQ_EPCI,SHAPE_Length,SHAPE_Area&outSR=4326&f=json
 
-Highcharts.getJSON('https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_7_carteMgp/mgpCom.geojson', function (geojson) {
+Highcharts.getJSON('https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_7_carteMgp/mgpArrBois.geojson', function (geojson) {
 
     fetchMapMGP().then(mapMGP => {
         Highcharts.mapChart('map1', {
@@ -61,7 +61,7 @@ Highcharts.getJSON('https://raw.githubusercontent.com/Atelier-parisien-d-urbanis
             series: [{
                 data: mapMGP,
                 keys: ['cainsee', 'value','className'],
-                joinBy: 'C_COINSEE',
+                joinBy: 'c_cainsee',
                 borderColor: 'white',
                 borderWidth: 0.5,
                 name: "TEST",
@@ -75,7 +75,7 @@ Highcharts.getJSON('https://raw.githubusercontent.com/Atelier-parisien-d-urbanis
 
                 dataLabels: {
                     enabled: true,
-                    format: '{point.properties.L_CO}',
+                    format: '{point.properties.l_cab}',
                     style: {
                     width: 50,
                     // fontSize: '9px',
