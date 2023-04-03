@@ -39,7 +39,6 @@
         const data = lines[1].split(';');
   
         const mapMGP = headers.map((code, index) => [code, parseFloat(data[index].replace(',', '.'))]);
-        console.log(mapMGP);
         return mapMGP;
    
       });

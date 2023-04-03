@@ -33,7 +33,7 @@ Highcharts.getJSON('https://raw.githubusercontent.com/Atelier-parisien-d-urbanis
         Highcharts.mapChart('map1', {
             chart: {
                 map: geojson,
-                height:300
+                height:400
             },
             mapNavigation: {
                 enabled: true,
