@@ -143,7 +143,7 @@ Highcharts.getJSON('https://atelier-parisien-d-urbanisme.github.io/Observatoire-
 
    
 
-    fetchMap1().then(map2Data => {
+    fetchMap2().then(map2Data => {
         Highcharts.mapChart('map2', {
             chart: {
                 map: geojson,
