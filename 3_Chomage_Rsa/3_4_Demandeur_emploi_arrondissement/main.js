@@ -49,12 +49,20 @@ Highcharts.getJSON('https://raw.githubusercontent.com/Atelier-parisien-d-urbanis
                 reversed: false,
             //     minColor: '#D3D3EA',
             // maxColor: '#3660C0',
-            stops: [
-                [0, '#CCA661'],
-                [0.5, '#D3D3EA'],
-                [0.95, '#3660C0']
-                ]
+            // stops: [
+            //     [0, '#'],
+            //     [0.5, '#D3D3EA'],
+            //     [0.95, '#3660C0']
+            //     ]
+                stops: [
+                    [0.15, '#CCA661'],
+                    [0.35, '#E8D7BA'],
+                    [0.5, '#D3D3EA'],
+                    [0.65, '#7791CC'],
+                    [0.85, '#02267A']
+                    ],
             },
+          
             series: [{
                 data: map1Data,
                 keys: ['c_cainsee', 'value','className'],
@@ -161,8 +169,8 @@ Highcharts.getJSON('https://raw.githubusercontent.com/Atelier-parisien-d-urbanis
             colorAxis: {
                 tickPixelInterval: 40,
                 reversed: false,
-                minColor: '#EBC684',
-                maxColor: '#3660C0',
+                // minColor: '#EBC684',
+                // maxColor: '#3660C0',
                stops: [
                 [0.15, '#99722D'],
                 [0.35, '#CCA661'],
@@ -170,6 +178,7 @@ Highcharts.getJSON('https://raw.githubusercontent.com/Atelier-parisien-d-urbanis
                 [0.65, '#3660C0'],
                 [0.85, '#02267A']
                 ]
+                
             },
             series: [{
                 data:map2Data,
