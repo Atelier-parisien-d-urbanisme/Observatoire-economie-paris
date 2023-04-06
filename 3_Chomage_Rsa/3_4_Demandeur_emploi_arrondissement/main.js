@@ -24,7 +24,7 @@ Highcharts.setOptions({
 });
 
 
-Highcharts.getJSON('https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_7_carteMgp/mgpArrBois.geojson', function (geojson) {
+Highcharts.getJSON('https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_4_Demandeur_emploi_arrondissement/mgpArrBois.geojson', function (geojson) {
 
     fetchMap1().then(map1Data => {
         Highcharts.mapChart('map1', {
