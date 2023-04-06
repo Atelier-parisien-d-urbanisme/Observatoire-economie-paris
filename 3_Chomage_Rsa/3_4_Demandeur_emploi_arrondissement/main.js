@@ -164,9 +164,9 @@ Highcharts.getJSON('https://raw.githubusercontent.com/Atelier-parisien-d-urbanis
                 minColor: '#EBC684',
                 maxColor: '#3660C0',
                stops: [
-                [0, '#CCA661'],
+                [0.3, '#CCA661'],
                 [0.5, '#D3D3EA'],
-                [0.95, '#3660C0']
+                [0.7, '#3660C0']
                 ]
             },
             series: [{
