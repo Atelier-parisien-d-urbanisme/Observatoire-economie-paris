@@ -29,7 +29,7 @@
 
 
   function fetchMapMGP() {
-    const csvUrl = 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_7_carteMgp/demandeurs_emploi_MGP.csv';
+    const csvUrl = 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_7_carteMgp/demandeur_emploi_MGP1.csv';
   
     return fetch(csvUrl)
       .then(response => response.text())
