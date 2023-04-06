@@ -47,13 +47,13 @@ Highcharts.getJSON('https://raw.githubusercontent.com/Atelier-parisien-d-urbanis
             colorAxis: {
                 tickPixelInterval: 80,
                 reversed: false,
-                minColor: '#D3D3EA',
-            maxColor: '#3660C0',
-            //    stops: [
-            //     [0, '#3060cf'],
-            //     [0.8, '#fffbbc'],
-            //     [0.95, '#c4463a']
-            // ]
+            //     minColor: '#D3D3EA',
+            // maxColor: '#3660C0',
+            stops: [
+                [0, '#CCA661'],
+                [0.5, '#D3D3EA'],
+                [0.95, '#3660C0']
+                ]
             },
             series: [{
                 data: map1Data,
@@ -167,7 +167,7 @@ Highcharts.getJSON('https://raw.githubusercontent.com/Atelier-parisien-d-urbanis
                 [0, '#CCA661'],
                 [0.5, '#D3D3EA'],
                 [0.95, '#3660C0']
-            ]
+                ]
             },
             series: [{
                 data:map2Data,
