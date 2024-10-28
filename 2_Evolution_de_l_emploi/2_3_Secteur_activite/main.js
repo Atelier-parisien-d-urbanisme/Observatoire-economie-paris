@@ -61,7 +61,12 @@ function getGraphique() {
     },
     data: {
         csvURL: url,
-        enablePolling: true
+        enablePolling: true,
+        parsed: function () {
+          let categories = this.columns[0]; 
+          categories.shift();
+          graphChart.xAxis[0].setCategories(categories);
+        }
     },
     xAxis: {
     labels: {
