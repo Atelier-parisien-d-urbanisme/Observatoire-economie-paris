@@ -39,7 +39,12 @@ Highcharts.stockChart('graphique', {
     },
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_3_Demandeur_emploi_age/demandeur_emploi_age.csv',
-        enablePolling: true
+        enablePolling: true,
+        parsed: function() {
+          const categories = this.columns[0];
+          categories.shift();
+          this.chart.xAxis[0].setCategories(categories);
+        },
     },
     xAxis: {
     labels: {
