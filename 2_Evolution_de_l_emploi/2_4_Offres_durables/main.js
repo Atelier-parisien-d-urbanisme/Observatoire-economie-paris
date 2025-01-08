@@ -60,7 +60,7 @@ Highcharts.chart('graphique', {
           },
             dataLabels: {
                enabled: true,
-               align: 'left',
+               align: 'right',
                crop: false,
                useHTML: false,
                formatter: function() {
