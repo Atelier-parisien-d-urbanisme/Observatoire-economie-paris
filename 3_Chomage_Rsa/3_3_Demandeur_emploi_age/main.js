@@ -135,7 +135,7 @@ Highcharts.stockChart('graphique', {
      tooltip: {
        shared: true,
        formatter: function() {
-          let tooltip = `<span style="font-size:10px;font-family: 'Roboto', sans-serif;">${this.name}</span><br/>`; // Affiche la catégorie ou la valeur de l'axe X
+          let tooltip = ``; // Affiche la catégorie ou la valeur de l'axe X
           let index = 0; // Compteur pour suivre la position des valeurs
 
           this.points.forEach(point => {
