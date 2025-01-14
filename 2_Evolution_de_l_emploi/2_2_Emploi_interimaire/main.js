@@ -46,7 +46,7 @@ Highcharts.chart('graphique', {
       // pointFormat: '{series.color}{series.name}: <b>{point.y:.2f}</b><br/>',
       valueSuffix: '',
       shared: true,
-      valueDecimals: 2,
+      valueDecimals: 0,
       // pointFormat: "Value: {point.y:.2f} %"
   },
   series : [
