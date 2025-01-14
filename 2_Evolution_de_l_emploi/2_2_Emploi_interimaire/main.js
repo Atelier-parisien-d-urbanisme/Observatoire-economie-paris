@@ -48,7 +48,8 @@ Highcharts.chart('graphique', {
       shared: true,
       valueDecimals: 0,
       formatter: function() {
-        return Highcharts.numberFormat(this.y, 0, ',', ' ');
+        return Highcharts.numberFormat(this.y, 0, '.', ' ');
+      },
 
       // pointFormat: "Value: {point.y:.2f} %"
   },
