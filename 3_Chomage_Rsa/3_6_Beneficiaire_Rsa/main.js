@@ -92,9 +92,33 @@ Highcharts.stockChart('graphique', {
       }
      },
      tooltip: {
-         pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} </b><br/>',
-         valueDecimals: 0
+        shared: true,
+        formatter: function() {
+           let tooltip = ``; // Affiche la catégorie ou la valeur de l'axe X
+           let index = 0; // Compteur pour suivre la position des valeurs
+ 
+           this.points.forEach(point => {
+               let value = point.y;
+               let formattedValue;
+ 
+               // Vérifie si la valeur est un nombre
+               if (typeof value === 'number') {
+                   // Formate la valeur numérique et remplace le séparateur décimal
+                   formattedValue = Highcharts.numberFormat(value, 0, '.', ' ').replace('.', ' ');
+               } else {
+                   // Si ce n'est pas un nombre, conserve la valeur brute
+                   formattedValue = value;
+               }
+               // Ajoute le point au tooltip
+               tooltip += `<span style="color:${point.color}">\u25CF</span> ${point.series.name}: <b>${formattedValue}</b><br/>`;
+ 
+               index++; // Incrémente le compteur
+           });
+ 
+           return tooltip;
+         }
      },
+    
      exporting: {
        filename: 'Beneficiaires-RSA__Observatoire-economie-parisienne__Apur',
        chartOptions:{
