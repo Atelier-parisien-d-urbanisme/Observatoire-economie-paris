@@ -65,7 +65,7 @@ Highcharts.chart('graphique', {
                useHTML: false,
                formatter: function() {
                    if (this.point.x == this.series.data.length - 1) {
-                     return '<span style="color: '+ this.color + '">' + Highcharts.numberFormat(this.y,0) + '</span>';
+                     return '<span style="color: '+ this.color + '">' + Highcharts.numberFormat(this.y,0,'.',' ') + '</span>';
                    } else {
                        return null;
                    }
