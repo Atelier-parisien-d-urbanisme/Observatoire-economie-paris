@@ -94,9 +94,7 @@ Highcharts.stockChart('graphique', {
      tooltip: {
        pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
        valueDecimals: 0
-   },
-
-     },
+       },
     
      exporting: {
        filename: 'Beneficiaires-RSA__Observatoire-economie-parisienne__Apur',
