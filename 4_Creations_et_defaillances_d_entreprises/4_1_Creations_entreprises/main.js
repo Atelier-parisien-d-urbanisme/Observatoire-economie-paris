@@ -21,7 +21,8 @@ Highcharts.setOptions({
       weekdays: [
           'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
           'Jeudi', 'Vendredi', 'Samedi'
-      ]
+      ],
+      thousandsSep:' ',
   }
 });
 
