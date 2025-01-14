@@ -134,7 +134,11 @@ Highcharts.stockChart('graphique', {
     },
      tooltip: {
          pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
-         valueDecimals: 0
+         valueDecimals: 0,
+         formatter: function() {
+             return Highcharts.numberFormat(this.y, 0, '.', ' ');         
+         },
+
      },
      exporting: {
        filename: 'Demandeur-d-emploi-par-age__Observatoire-economie-parisienne__Apur',
