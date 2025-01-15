@@ -20,7 +20,8 @@ Highcharts.setOptions({
       weekdays: [
           'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
           'Jeudi', 'Vendredi', 'Samedi'
-      ]
+      ],
+      thousandsSep:' ',
   }
 });
 
@@ -73,13 +74,7 @@ Highcharts.chart('graphique', {
            }
         }
     },
-    tooltip: {
-      shared: true,
-      formatter: function() {
-        return Highcharts.numberFormat(this.y, 0, '.', ' ');
-      },
-
-  },
+    
     responsive: {
         rules: [{
             condition: {
