@@ -42,16 +42,7 @@ Highcharts.chart('graphique', {
     credits: {
       enabled:false
     },
-    tooltip: {
-      // pointFormat: '{series.color}{series.name}: <b>{point.y:.2f}</b><br/>',
-      valueSuffix: '',
-      shared: true,
-      valueDecimals: 0,
-      formatter: function() {
-        return Highcharts.numberFormat(this.y, 0, '.', ' ');
-      },
-    // pointFormat: "Value: {point.y:.2f} %"
-  },
+    
   series : [
     {
       // color: '#E69818',
