@@ -20,7 +20,8 @@ Highcharts.setOptions({
       ],
       years: [
           '2020','2021'
-      ]
+      ],
+      thousandsSep:' ',
   }
 });
 
