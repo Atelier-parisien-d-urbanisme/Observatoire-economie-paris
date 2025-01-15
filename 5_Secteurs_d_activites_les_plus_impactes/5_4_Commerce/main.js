@@ -20,7 +20,8 @@ Highcharts.setOptions({
      weekdays: [
          'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
          'Jeudi', 'Vendredi', 'Samedi'
-     ]
+     ],
+    thousandsSep:' ',
  }
 });
 
@@ -41,8 +42,9 @@ Highcharts.chart('graphique1', {
         endcolumn:2,
     },
     tooltip: {
-        headerFormat: '<b>{point.x}</b><br/>',
-        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+      formatter: function () {
+        return `<span style="font-size:10px;font-family: 'Roboto', sans-serif;">${this.point.name.replace("a","")}</span></b><br/><span style="color:${this.point.color};font-family: 'Roboto', sans-serif;">\u25CF </span>${this.series.name}: <b>${this.point.y}</b><br/>`;
+        }
     },
     plotOptions: {
       column: {
