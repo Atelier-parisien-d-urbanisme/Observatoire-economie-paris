@@ -78,10 +78,16 @@ Highcharts.chart('graphique', {
 
     legend: {
     },
-    tooltip: {
-        headerFormat: '<b>{point.x}</b><br/>',
-        pointFormat: '{series.name}: {point.y} m²<br/>Total: {point.stackTotal} m²'
-    },
+     tooltip: {
+      formatter: function () {
+        let formattedValue ;
+        if (this.point.stackTotal != null )
+          formattedValue = `<br/>Total: ${this.point.stackTotal} m²`
+        else        
+          formattedValue = ``;
+        return `<span style="font-size:10px;font-family: 'Roboto', sans-serif;">${this.point.name.replace("a","")}</span></b><br/><span style="color:${this.point.color};font-family: 'Roboto', sans-serif;">\u25CF </span>${this.series.name}: <b>${this.point.y} m2</b>`+formattedValue;
+      }
+    }, 
     plotOptions: {
         column: {
             stacking: 'normal',
