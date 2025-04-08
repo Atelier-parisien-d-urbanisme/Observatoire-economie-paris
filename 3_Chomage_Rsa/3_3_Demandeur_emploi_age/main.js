@@ -1,5 +1,5 @@
 Highcharts.setOptions({
-    colors: ['#3D71EA','#38cae9','#DAB464','#CA8F13'],
+    colors: ['#38cae9', '#2A8BA0','#3D71EA','#DAB464','#CA8F13', '#B36B6B'],
     style: {
      fontFamily: 'Roboto'
    },
@@ -28,9 +28,7 @@ Highcharts.setOptions({
 Highcharts.stockChart('graphique', {
     chart: {
         type: 'spline',
-         style: {
-          fontFamily: 'Roboto'
-        }
+         height: 400,
     },
     title: {
         text: null
@@ -39,36 +37,75 @@ Highcharts.stockChart('graphique', {
       enabled: false
     },
     data: {
-        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_3_Demandeur_emploi_age/demandeur_emploi_age.csv',
+        csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_6_Beneficiaire_Rsa/beneficiaire_rsa.csv',
         enablePolling: true,
-        parsed: function() {
-          const categories = this.columns[0];
-          categories.shift();
+        parsed: function () {
+          const rows = this.columns;
+          
+          const categories = rows[0].slice(1); // Sauter l'en-tête, garder les dates
           this.chart.xAxis[0].setCategories(categories);
-        },
+        
+          // Redéfinir les séries avec les bons x/y manuellement
+          const series = [];
+        
+          for (let i = 1; i < rows.length; i++) {
+            const name = rows[i][0]; // Nom de la série
+            const data = [];
+        
+            for (let j = 1; j < rows[i].length; j++) {
+              const value = parseFloat(rows[i][j]);
+              data.push(isNaN(value) ? null : value);
+            }
+        
+            series.push({ name, data });
+          }
+        
+          // Met à jour les séries du graphique
+          while (this.chart.series.length) {
+            this.chart.series[0].remove(false);
+          }
+        
+          series.forEach(serie => this.chart.addSeries(serie, false));
+          this.chart.redraw();
+      },
+
+
+
+    },
+    navigator: {
+      enabled:false,
+    },
+    plotOptions: {
+        series: {
+          lineWidth: 1,
+          
+            marker: {
+              enabled:true,
+              enabledThreshold: 2,
+              symbol:'circle',
+              radius: 3,
+              fillColor: '#FFFFFF',
+              lineWidth: 2,
+              lineColor: null // inherit from series,
+            }
+        }
+    },
+    rangeSelector:{
+      enabled:false
+    },
+    credits: {
+      enabled:false
     },
     xAxis: {
-    labels: {
-    step: 1,
-    rotation: -45,
-    style: {
-      fontSize: '8px',
-      }
-    }
-  },
-  series: [
-    {},
-    {visible: false},
-    {visible: false},
-  ],
-
+          gapGridLineWidth: 0
+    },
+    legend: {
+      enabled:true
+    },
     yAxis: {
-    opposite:false,
-    gridLineColor: '#efefef',
-    gridLineDashStyle: 'dash',
-     title: {
-        enabled: false,
-      },
+      opposite:false,
+      gridLineColor: '#efefef',
+      gridLineDashStyle: 'dash',
       labels: {
         format: '{value}',
         formatter: function() {
@@ -78,71 +115,23 @@ Highcharts.stockChart('graphique', {
                   color: '#CFCFCF'
               }
           },
-     },
-    navigator: {
-      enabled:false
-    },
-    plotOptions: {
-        series: {
-          lineWidth: 1,
-          showInNavigator: true,
-          marker: {
-            symbol:'circle',
-            enabled: true,   //only enabled when there are a single spline. Here, only one is pre-selected so it is set to "true"
-            radius: 3,
-            fillColor: '#FFFFFF',
-            lineWidth: 2,
-            lineColor: null // inherit from series,
-          },
-          dataLabels: {
-             enabled: true,
-             align: 'right',
-             crop: false,
-             useHTML: false,
-             formatter: function() {
-                 if (this.point.x == this.series.data.length - 1) {
-                   return '<span style="color: '+ this.color + '">' + Highcharts.numberFormat(this.y,0,'.',' ') + '</span>';
-                 } else {
-                     return null;
-                 }
-             },
-         }
+     title: {
+        enabled: false,
       }
-  },
-  responsive: {
-      rules: [{
-          condition: {
-              maxWidth: 560
-          },
-          // Labels space on mobile
-          chartOptions: {
-              xAxis: {
-                  labels: {
-                      step: 4,
-                  }
-              },
-          }
-      }]
-  },
-    rangeSelector:{
-      enabled:false
-    },
-    credits: {
-      enabled:false
-    },
-    legend: {
-      enabled:true
-    },
-    
+     },
+     tooltip: {
+         pointFormat: `<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>`,
+         valueDecimals: 0
+     },
      exporting: {
-       filename: 'Demandeur-d-emploi-par-age__Observatoire-economie-parisienne__Apur',
+       filename: 'Beneficiaires-RSA__Observatoire-economie-parisienne__Apur',
        chartOptions:{
          // add logo, titles, and sources updated in in the html page
          title: {
            text: "."
          },
          caption: {
-           text: "Source : Pôle emploi-Dares, STMT ; données CVS-CJO : Ursaaf. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
+           text: "Source : Caf de Paris – données mensuelles semi-définitives. https://www.apur.org/fr/geo-data/observatoire-economie-parisienne-donnees-conjoncturelles"
          },
            chart:{
             events:{
