@@ -39,11 +39,37 @@ Highcharts.stockChart('graphique', {
     data: {
         csvURL: 'https://raw.githubusercontent.com/Atelier-parisien-d-urbanisme/Observatoire-economie-paris/main/3_Chomage_Rsa/3_6_Beneficiaire_Rsa/beneficiaire_rsa.csv',
         enablePolling: true,
-        parsed: function() {
-          const categories = this.columns[0]; 
-          categories.shift(); 
+        parsed: function () {
+          const rows = this.columns;
+          
+          const categories = rows[0].slice(1); 
           this.chart.xAxis[0].setCategories(categories);
-        }
+        
+      
+          const series = [];
+        
+          for (let i = 1; i < rows.length; i++) {
+            const name = rows[i][0]; 
+            const data = [];
+        
+            for (let j = 1; j < rows[i].length; j++) {
+              const value = parseFloat(rows[i][j]);
+              data.push(isNaN(value) ? null : value);
+            }
+        
+            series.push({ name, data });
+          }
+        
+          while (this.chart.series.length) {
+            this.chart.series[0].remove(false);
+          }
+        
+          series.forEach(serie => this.chart.addSeries(serie, false));
+          this.chart.redraw();
+      },
+
+
+
     },
     navigator: {
       enabled:false,
@@ -93,10 +119,9 @@ Highcharts.stockChart('graphique', {
       }
      },
      tooltip: {
-       pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
-       valueDecimals: 0
-       },
-    
+         pointFormat: `<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>`,
+         valueDecimals: 0
+     },
      exporting: {
        filename: 'Beneficiaires-RSA__Observatoire-economie-parisienne__Apur',
        chartOptions:{
